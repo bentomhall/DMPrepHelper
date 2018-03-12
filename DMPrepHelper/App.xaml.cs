@@ -5,8 +5,12 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
+using Windows.UI.Input;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +18,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Diagnostics;
 
 namespace DMPrepHelper
 {
@@ -30,7 +35,10 @@ namespace DMPrepHelper
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            Storage = new StorageHelper();
         }
+
+        public StorageHelper Storage { get; private set; }
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -40,6 +48,9 @@ namespace DMPrepHelper
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
+
+            this.DebugSettings.IsBindingTracingEnabled = true;
+
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -71,6 +82,19 @@ namespace DMPrepHelper
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+
+            var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            coreTitleBar.ExtendViewIntoTitleBar = true;
+
+            var viewTitleBar = ApplicationView.GetForCurrentView().TitleBar;
+            viewTitleBar.ButtonBackgroundColor = Colors.Transparent;
+            viewTitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+            viewTitleBar.ButtonForegroundColor = (Color)Resources["SystemBaseHighColor"];
+
+            Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
+            //rootFrame.Navigated +=;
+
+            rootFrame.PointerPressed += On_PointerPressed;
         }
 
         /// <summary>
@@ -95,6 +119,26 @@ namespace DMPrepHelper
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+
+
+        private void App_BackRequested(object sender, Windows.UI.Core.BackRequestedEventArgs e)
+        {
+            if (e.Handled == false)
+            {
+                //e.Handled = On_BackRequested();
+            }
+        }
+
+        private void On_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            bool isXButton1Pressed = e.GetCurrentPoint(sender as UIElement).Properties.PointerUpdateKind == PointerUpdateKind.XButton1Pressed;
+
+            if (isXButton1Pressed)
+            {
+                //e.Handled = On_BackRequested();
+            }
         }
     }
 }

@@ -1,0 +1,145 @@
+[
+    {
+        "Name": "Frozen Coast",
+        "Tier": 2.5,
+      "Monsters": {
+        "giant": 0.3,
+        "human": 0.2,
+        "beast": 0.5
+      } ,
+        "AdventuresPerHex": 0.5,
+        "AdventureTypes": [
+            "magitech ruin",
+            "wilderness",
+            "urban ruin",
+            "lair",
+            "underground"
+        ]
+    },
+    {
+        "Name": "Orc-Lands",
+        "Tier": 2.5,
+      "Monsters": {
+        "orc": 0.3,
+        "undead": 0.05,
+        "fiend": 0.05,
+        "wood elf": 0.1,
+        "beast": 0.5
+      },
+        "AdventuresPerHex": 0.3,
+        "AdventureTypes": [
+            "wilderness",
+            "urban ruin",
+            "ruin",
+            "camp",
+            "graveyard",
+            "lair"
+        ]
+    },
+    {
+        "Name": "Sea of Grass",
+        "Tier": 1.5,
+      "Monsters": {
+        "beast": 0.6,
+        "fiend": 0.05,
+        "undead": 0.1,
+        "bandit": 0.1,
+        "cultist":  0.15
+      },
+        "AdventuresPerHex": 0.1,
+        "AdventureTypes": [
+            "graveyard",
+            "wilderness",
+            "ruin",
+            "camp",
+            "underground"
+        ]
+    },
+    {
+        "Name": "Jungle of Fangs",
+      "Monsters": {
+        "halfling": 0.2,
+        "beast": 0.5,
+        "yuan-ti": 0.15,
+        "monster": 0.15
+      },
+        "AdventuresPerHex": 0.2,
+        "AdventureTypes": [
+            "ruin",
+            "graveyard",
+            "camp",
+            "wilderness",
+            "magitech ruin"
+        ]
+    },
+    {
+        "Name": "Nocthian Plateau",
+        "Tier": 3,
+      "Monsters": {
+        "giant": 0.4,
+        "monster": 0.4,
+        "beast": 0.1,
+        "dragon": 0.1
+      },
+        "AdventuresPerHex": 0.5,
+        "AdventureTypes": [
+            "magitech ruin",
+            "graveyard",
+            "ruin",
+            "lair",
+            "wilderness",
+            "urban ruin",
+            "underground"
+        ]
+    },
+    {
+        "Name": "Lost Coast",
+        "Tier": 2,
+      "Monsters": {
+        "human": 0.2,
+        "wood elf": 0.2,
+        "fiend": 0.1,
+        "undead": 0.05,
+        "beast": 0.45
+      },
+        "AdventuresPerHex": 0.3,
+        "AdventureTypes": [
+            "wilderness",
+            "urban ruin",
+            "ruin",
+            "graveyard",
+            "camp",
+            "lair"
+        ]
+    },
+    {
+        "Name": "Blood-Thirst Wildlands",
+        "Tier": 3,
+      "Monsters": {
+        "monster": 0.5,
+        "beast": 0.4,
+        "goblin": 0.1
+      },
+        "AdventuresPerHex": 1,
+        "AdventureTypes": [
+            "wilderness",
+            "camp",
+            "lair"
+        ]
+    },
+    {
+        "Name": "Moon's Vegeance",
+      "Monsters": {
+        "monster": 0.3,
+        "giant": 0.3,
+        "dragon": 0.2,
+        "beast": 0.2
+      },
+        "AdventuresPerHex": 0.6,
+        "AdventureTypes": [
+            "wilderness",
+            "lair",
+            "camp"
+        ]
+    }
+]
