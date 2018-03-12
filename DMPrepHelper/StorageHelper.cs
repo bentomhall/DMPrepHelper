@@ -57,6 +57,20 @@ namespace DMPrepHelper
             return sGenerator;
         }
 
+        public string GetConfigText(DataFile type)
+        {
+            return dataText[type].Result;
+        }
+
+        public async Task SaveConfigText(DataFile type, string text)
+        {
+            //var filename = new Uri("ms-appx:////Assets/" + dataFiles[type]);
+            var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+            var file = await folder.GetFileAsync("Assets/" + dataFiles[type]);
+            await FileIO.WriteTextAsync(file, text);
+            return;
+        }
+
         private SettlementGenerator sGenerator;
         private NPCGenerator nPCGenerator;
 

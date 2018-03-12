@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StorageHelper.cs" />
+    <Compile Include="ViewModels\ConfigEditorViewModel.cs" />
     <Compile Include="ViewModels\DungeonGeneratorViewModel.cs" />
     <Compile Include="ViewModels\DungeonViewModel.cs" />
     <Compile Include="ViewModels\NotifyChangedBase.cs" />

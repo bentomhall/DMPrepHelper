@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using DMPrepHelper.ViewModels;
+using System.Windows.Input;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +27,12 @@ namespace DMPrepHelper.Views
         public ConfigEditorPage()
         {
             this.InitializeComponent();
+            var storage = ((App)Application.Current).Storage;
+            ViewModel = new ConfigEditorViewModel(storage);
+            SelectionCommand = ViewModel.SelectItemCommand;
         }
+
+        public ConfigEditorViewModel ViewModel { get; private set; }
+        public ICommand SelectionCommand { get; set; }
     }
 }
