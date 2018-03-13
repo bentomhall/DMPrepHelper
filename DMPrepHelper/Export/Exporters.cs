@@ -73,7 +73,13 @@ namespace DMPrepHelper.Export
 
         private string FormatData(AdventureData d)
         {
-            throw new NotImplementedException();
+            var output = new List<string>()
+            {
+                $"A {d.SubType} {d.AdventureType} adventure for level {d.Level} characters.",
+                $"A {d.Scale} site with {d.Size} separate areas.",
+                $"Mainly occupied by {d.PrimaryMonster} with {(d.HasBoss ? "a" : "no")} boss monster"
+            };
+            return string.Join(Environment.NewLine, output);
         }
     }
 
