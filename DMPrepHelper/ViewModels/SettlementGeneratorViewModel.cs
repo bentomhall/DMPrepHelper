@@ -40,10 +40,7 @@ namespace DMPrepHelper.ViewModels
 
         public ObservableCollection<SettlementViewModel> SelectedViewModels
         {
-            get
-            {
-                return selectedViewModels;
-            }
+            get => selectedViewModels;
             set => SetProperty(ref selectedViewModels, value);
         }
 
@@ -97,20 +94,6 @@ namespace DMPrepHelper.ViewModels
                 SettlementModels.Add(new SettlementViewModel(settlement));
             }
             
-        }
-
-        public ICommand SelectAllCommand
-        {
-            get
-            {
-                if (selectAllCommand == null) { selectAllCommand = new RelayCommand<object>(param => DidSelectAll()); }
-                return selectAllCommand;
-            }
-        }
-
-        public void DidSelectAll()
-        {
-            SelectedViewModels = vms;
         }
 
         public ICommand ExportCommand

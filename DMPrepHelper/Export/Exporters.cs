@@ -19,6 +19,12 @@ namespace DMPrepHelper.Export
             return string.Join(separator, data);
         }
 
+        public string Marshal(IEnumerable<T> t, string separator)
+        {
+            var data = t.Select(x => FormatData(x));
+            return string.Join(separator, data);
+        }
+
         public abstract string FormatData(object o);
     }
 
@@ -75,12 +81,40 @@ namespace DMPrepHelper.Export
     {
         public override string FormatData(object o)
         {
-            return FormatData(o as SettlementData);
+            return FormatData(o as Settlement);
         }
 
         private string FormatData(Settlement d)
         {
-            throw new NotImplementedException();
+            var personExporter = new PersonExporter();
+            var output = new List<string>()
+            {
+                $"{d.Name}, a(n) {d.Role} {d.Size} ({d.Population} inhabitants)",
+                $"Location: near {d.NearestCity}",
+                "Demographics:",
+                FormatDictionary(d.Demographics),
+                "Tech Levels:",
+                FormatDictionary(d.TechLevels),
+                "NPCs:",
+                personExporter.Marshal(d.NPCs,Environment.NewLine + "+++++++++++++++++++++" + Environment.NewLine),
+                "Unavailable Items by Category:"
+            };
+            foreach (KeyValuePair<string, List<string>> kvp in d.UnavailableItems)
+            {
+                output.Add($"{kvp.Key}");
+                output.AddRange(kvp.Value.Select(x => x.ToString()));
+            }
+            return string.Join(Environment.NewLine, output);
+        }
+
+        private string FormatDictionary(Dictionary<string,int> d)
+        {
+            var output = new List<string>();
+            foreach (KeyValuePair<string, int> kvp in d)
+            {
+                output.Add($"{kvp.Key} : {kvp.Value}");
+            }
+            return string.Join(Environment.NewLine, output);
         }
     }
 }

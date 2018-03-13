@@ -37,20 +37,20 @@ namespace DMPrepHelper.Views
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var selected = new ObservableCollection<SettlementViewModel>(e.AddedItems as IList<SettlementViewModel>);
-            var removed = new List<SettlementViewModel>(e.RemovedItems as IList<SettlementViewModel>);
+            var removed = e.RemovedItems;
+            var selected = e.AddedItems;
             if (removed.Count != 0)
             {
                 foreach (var r in removed)
                 {
-                    vm.SelectedViewModels.Remove(r);
+                    vm.SelectedViewModels.Remove(r as SettlementViewModel);
                 }
             }
             if (selected.Count != 0)
             {
                 foreach (var a in selected)
                 {
-                    vm.SelectedViewModels.Add(a);
+                    vm.SelectedViewModels.Add(a as SettlementViewModel);
                 }
             }
         }
@@ -58,7 +58,6 @@ namespace DMPrepHelper.Views
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             DataList.SelectAll();
-            vm.DidSelectAll();
         }
     }
 }

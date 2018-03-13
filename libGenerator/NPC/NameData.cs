@@ -32,7 +32,11 @@ namespace LibGenerator.NPC
         public string GetName(string gender)
         {
             var given = RandomName(gender);
-            return $"{given} {Combiner} {r.Choice(Family)}";
+            if (Family.Count == 0)
+            {
+                return given;
+            }
+            return $"{given}{Combiner}{r.Choice(Family)}";
         }
 
 
