@@ -16,6 +16,8 @@ namespace DMPrepHelper.ViewModels
             npc = new PersonData();
         }
 
+        public PersonData RawData { get => npc; }
+
         public PersonViewModel(PersonData data)
         {
             npc = data;

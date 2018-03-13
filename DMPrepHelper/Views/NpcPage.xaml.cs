@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using DMPrepHelper.ViewModels;
 using System.Diagnostics;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -38,6 +39,35 @@ namespace DMPrepHelper.Views
             CreateButton.IsEnabled = true;
         }
 
-        public NPCGeneratorViewModel ViewModel;
+        private NPCGeneratorViewModel vm;
+
+        public NPCGeneratorViewModel ViewModel { get => vm; set => vm = value; }
+
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var addedItems = e.AddedItems;
+            var removedItems = e.RemovedItems;
+            if (removedItems.Count != 0)
+            {
+                foreach (var r in removedItems)
+                {
+                    vm.SelectedModels.Remove(r as PersonViewModel);
+                }
+            }
+            if (addedItems.Count != 0)
+            {
+                foreach (var a in addedItems)
+                {
+                    var model = a as PersonViewModel;
+                    vm.SelectedModels.Add(model);
+                }
+            }
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataGrid.SelectAll();
+            vm.DidSelectAll();
+        }
     }
 }

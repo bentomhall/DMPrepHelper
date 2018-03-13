@@ -1,4 +1,7 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using LibGenerator.NPC;
 
@@ -9,10 +12,19 @@ namespace DMPrepHelper.ViewModels
         private NPCGenerator generator;
         private bool canGenerate = true;
         private RelayCommand<object> generateCommand;
+        private RelayCommand<object> exportCommand;
+        private ObservableCollection<PersonViewModel> selectedModels = new ObservableCollection<PersonViewModel>();
         private ObservableCollection<string> nations;
         private ObservableCollection<PersonViewModel> models = new ObservableCollection<PersonViewModel>() { };
         private string selected;
         private int number = 1;
+        private StorageHelper storageHelper;
+
+        public ObservableCollection<PersonViewModel> SelectedModels
+        {
+            get => selectedModels ?? new ObservableCollection<PersonViewModel>();
+            set => SetProperty(ref selectedModels, value);
+        }
 
         public ObservableCollection<string> Nations
         {
@@ -35,6 +47,7 @@ namespace DMPrepHelper.ViewModels
 
         public NPCGeneratorViewModel(StorageHelper storage)
         {
+            storageHelper = storage;
             generator = storage.GetNPCGenerator();
             Nations = new ObservableCollection<string>(generator.GetValidNations());
         }
@@ -63,6 +76,26 @@ namespace DMPrepHelper.ViewModels
             }
             ViewModels = viewModels;
             OnPropertyChanged(nameof(ViewModels));
+        }
+
+        public void DidSelectAll()
+        {
+            SelectedModels = ViewModels;
+        }
+
+        public ICommand ExportCommand
+        {
+            get
+            {
+                if (exportCommand == null) { exportCommand = new RelayCommand<object>(param => ExportSelected()); }
+                return exportCommand;
+            }
+        }
+
+        private async Task ExportSelected()
+        {
+            var data = SelectedModels.Select(x => x.RawData);
+            await storageHelper.WriteFile(Export.ExportTypes.Person, data);
         }
     }
 }

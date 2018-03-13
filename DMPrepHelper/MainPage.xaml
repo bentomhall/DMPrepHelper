@@ -31,11 +31,6 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Style="{StaticResource TitleTextBlockStyle}" FontSize="28" VerticalAlignment="Center" Text=""/>
-                        <CommandBar Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" DefaultLabelPosition="Right" Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                            <AppBarButton Label="Export Selected" Icon="Share"/>
-                            <AppBarButton Label="Select All" Icon="SelectAll"/>
-                        </CommandBar>
-
                     </Grid>
                 </DataTemplate>
             </NavigationView.HeaderTemplate>

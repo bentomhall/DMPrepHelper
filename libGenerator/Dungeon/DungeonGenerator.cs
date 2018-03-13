@@ -13,6 +13,12 @@ namespace LibGenerator.Dungeon
             locations = ConfigurationLoader.GetConfiguration<LocationData>("data/dungeonData.json");
         }
 
+        public DungeonGenerator(IEnumerable<RegionData> r, IEnumerable<LocationData> l)
+        {
+            regions = r.ToList();
+            locations = l.ToList();
+        }
+
         public AdventureData GenerateAdventure(RegionData selectedRegion)
         {
             var randomType = selectedRegion.GetRandomLocationType();

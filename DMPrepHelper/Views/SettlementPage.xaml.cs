@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using LibGenerator.Settlement;
 using DMPrepHelper.ViewModels;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -33,5 +34,31 @@ namespace DMPrepHelper.Views
 
         public SettlementGeneratorViewModel ViewModel { get => vm; }
         private SettlementGeneratorViewModel vm;
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selected = new ObservableCollection<SettlementViewModel>(e.AddedItems as IList<SettlementViewModel>);
+            var removed = new List<SettlementViewModel>(e.RemovedItems as IList<SettlementViewModel>);
+            if (removed.Count != 0)
+            {
+                foreach (var r in removed)
+                {
+                    vm.SelectedViewModels.Remove(r);
+                }
+            }
+            if (selected.Count != 0)
+            {
+                foreach (var a in selected)
+                {
+                    vm.SelectedViewModels.Add(a);
+                }
+            }
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataList.SelectAll();
+            vm.DidSelectAll();
+        }
     }
 }

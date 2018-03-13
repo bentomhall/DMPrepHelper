@@ -16,6 +16,8 @@ namespace DMPrepHelper.ViewModels
             OnPropertyChanged(nameof(PrimaryMonster));
         }
 
+        public AdventureData RawData { get => data; }
+
         public string AdventureType { get => $"Level {data.Level} {data.AdventureType} ({data.SubType})"; }
         public string Region { get => data.Region; }
         public string Size { get => $"A {data.Scale} site with {data.Size} areas."; }

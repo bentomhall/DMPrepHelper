@@ -40,6 +40,8 @@ namespace DMPrepHelper.ViewModels
             OnPropertyChanged(nameof(Demographics));
         }
 
+        public Settlement RawData { get => settlement; }
+
         public string Size
         {
             get => $"{settlement.Size} ({settlement.Role}): Population {settlement.Population}";

@@ -10,7 +10,7 @@ using Windows.Storage;
 
 namespace DMPrepHelper.Export
 {
-    public class ExportBase<T> : IExporter<T>
+    public abstract class ExportBase<T> : IExporter<T>
     {
         public string Marshal(IEnumerable<T> t)
         {
@@ -19,13 +19,24 @@ namespace DMPrepHelper.Export
             return string.Join(separator, data);
         }
 
-        // dummy implementation
-        string FormatData(object obj) { return ""; }
+        public abstract string FormatData(object o);
+    }
+
+    public enum ExportTypes
+    {
+        Person,
+        Dungeon,
+        Settlement
     }
 
 
-    public class PersonExporter : ExportBase<PersonData>
+    public class PersonExporter : ExportBase<PersonData>, IExporter<PersonData>
     {
+        public override string FormatData(object o)
+        {
+            return FormatData(o as PersonData);
+        }
+
         private string FormatData(PersonData d)
         {
             var output = new List<string>()
@@ -47,17 +58,27 @@ namespace DMPrepHelper.Export
         }
     }
 
-    public class DungeonExporter : ExportBase<AdventureData>
+    public class DungeonExporter : ExportBase<AdventureData>, IExporter<AdventureData>
     {
+        public override string FormatData(object o)
+        {
+            return FormatData(o as AdventureData);
+        }
+
         private string FormatData(AdventureData d)
         {
             throw new NotImplementedException();
         }
     }
 
-    public class SettlementExporter : ExportBase<SettlementData>
+    public class SettlementExporter : ExportBase<Settlement>, IExporter<Settlement>
     {
-        private string FormatData(SettlementData d)
+        public override string FormatData(object o)
+        {
+            return FormatData(o as SettlementData);
+        }
+
+        private string FormatData(Settlement d)
         {
             throw new NotImplementedException();
         }

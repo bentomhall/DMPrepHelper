@@ -14,10 +14,33 @@ namespace DMPrepHelper.ViewModels
         private int number = 1;
         private string region = "";
         private ObservableCollection<string> regions;
-        private DungeonGenerator generator = new DungeonGenerator();
+        private RelayCommand<object> selectAllCommand;
+        private RelayCommand<object> exportCommand;
+        private DungeonGenerator generator;
         private bool CanExecute => (!String.IsNullOrWhiteSpace(SelectedRegion));
         private RelayCommand<object> generateCommand;
         private ObservableCollection<DungeonViewModel> vms;
+        private ObservableCollection<DungeonViewModel> selectedVMs;
+        private StorageHelper storage;
+
+        public DungeonGeneratorViewModel(StorageHelper s)
+        {
+            storage = s;
+            generator = s.GetDungeonGenerator();
+            Regions = new ObservableCollection<string>(generator.GetValidRegions());
+        }
+
+        public ObservableCollection<DungeonViewModel> SelectedViewModels
+        {
+            get
+            {
+                if (selectedVMs == null) { selectedVMs = new ObservableCollection<DungeonViewModel>(); }
+                return selectedVMs;
+            }
+            set => SetProperty(ref selectedVMs, value);
+            
+        }
+
 
         public ObservableCollection<string> Regions
         {
@@ -58,6 +81,34 @@ namespace DMPrepHelper.ViewModels
                 vms.Add(vm);
             }
             ViewModels = vms;
+        }
+
+        public ICommand SelectAllCommand
+        {
+            get
+            {
+                if (selectAllCommand == null) { selectAllCommand = new RelayCommand<object>(param => DidSelectAll()); }
+                return selectAllCommand;
+            }
+        }
+
+        private void DidSelectAll()
+        {
+            SelectedViewModels = vms;
+        }
+
+        public ICommand ExportCommand
+        {
+            get
+            {
+                if (exportCommand == null) { exportCommand = new RelayCommand<object>(param => ExportSelected().RunSynchronously()); }
+                return exportCommand;
+            }
+        }
+
+        private async Task ExportSelected()
+        {
+            await storage.WriteFile(Export.ExportTypes.Dungeon, selectedVMs.Select(x => x.RawData));
         }
 
     }

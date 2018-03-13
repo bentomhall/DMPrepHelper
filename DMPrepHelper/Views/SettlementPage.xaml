@@ -44,13 +44,21 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal" Background="White" Grid.Row="0" Padding="12">
             <ComboBox ItemsSource="{x:Bind ViewModel.Cities, Mode=OneWay}" Header="Nearest City" Margin="12,0,0,0" SelectedItem="{x:Bind ViewModel.SelectedCity, Mode=TwoWay}"/>
             <ComboBox ItemsSource="{x:Bind ViewModel.Sizes, Mode=OneWay}" Header="Possible Sizes"  Margin="12,0,0,0" SelectedItem="{x:Bind ViewModel.SelectedSize, Mode=TwoWay}"/>
             <TextBox Header="How Many?" Text="{x:Bind ViewModel.Number, Mode=TwoWay}" Margin="12,0,0,0"/>
             <Button Content="Go!" Command="{x:Bind ViewModel.GenerateCommand}" Width="128" Margin="24,0,0,0" VerticalAlignment="Stretch"/>
         </StackPanel>
-        <ListView Grid.Row="1" ItemsSource="{x:Bind ViewModel.SettlementModels, Mode=OneWay}" SelectionMode="Multiple">
+        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+            <AppBarButton Label="Export Selected" Icon="Share" Command="{x:Bind ViewModel.ExportCommand}" />
+            <AppBarButton Label="Select All" Icon="SelectAll" Click="AppBarButton_Click" />
+        </StackPanel>
+        <ListView x:Name="DataList" Grid.Row="1" ItemsSource="{x:Bind ViewModel.SettlementModels, Mode=OneWay}" SelectionChanged="ListView_SelectionChanged" SelectionMode="Multiple">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="vm:SettlementViewModel">
                     <Grid Margin="4,12,16,12" MaxHeight="800" Background="{ThemeResource SystemControlBackgroundAltMediumBrush}">

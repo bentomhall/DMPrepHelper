@@ -57,6 +57,17 @@ namespace DMPrepHelper
             return sGenerator;
         }
 
+        public DungeonGenerator GetDungeonGenerator()
+        {
+            if (dGenerator == null)
+            {
+                var regions = Deserialize<RegionData>(DataFile.Region);
+                var locations = Deserialize<LocationData>(DataFile.Dungeon);
+                dGenerator = new DungeonGenerator(regions, locations);
+            }
+            return dGenerator;
+        }
+
         public string GetConfigText(DataFile type)
         {
             return dataText[type].Result;
@@ -73,6 +84,7 @@ namespace DMPrepHelper
 
         private SettlementGenerator sGenerator;
         private NPCGenerator nPCGenerator;
+        private DungeonGenerator dGenerator;
 
         private Task<List<T>> DeserializeAsync<T>(DataFile type)
         {
@@ -88,6 +100,73 @@ namespace DMPrepHelper
                 data.Wait();
             }
             return JsonConvert.DeserializeObject<List<T>>(data.Result);
+        }
+
+        private async Task<StorageFile> ChooseFileLocation(Export.ExportTypes type)
+        {
+            string filename;
+            switch (type)
+            {
+                case Export.ExportTypes.Person:
+                    filename = "generated NPC";
+                    break;
+                case Export.ExportTypes.Dungeon:
+                    filename = "generated location";
+                    break;
+                case Export.ExportTypes.Settlement:
+                    filename = "generated settlement";
+                    break;
+                default:
+                    filename = "generated data";
+                    break;
+            }
+
+            var picker = new Windows.Storage.Pickers.FileSavePicker
+            {
+                SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary,
+                SuggestedFileName = filename
+            };
+            picker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
+            var file = await picker.PickSaveFileAsync();
+            return file;
+        }
+
+        public async Task WriteFile<T>(Export.ExportTypes export, IEnumerable<T> data)
+        {
+            var file = await ChooseFileLocation(export);
+            var writer = new Export.ExportWriter(file);
+            switch (export)
+            {
+                case Export.ExportTypes.Dungeon:
+                    await WriteDungeon(writer, data as IEnumerable<AdventureData>);
+                    break;
+                case Export.ExportTypes.Person:
+                    await WriteNPC(writer, data as IEnumerable<PersonData>);
+                    break;
+                case Export.ExportTypes.Settlement:
+                    await WriteSettlement(writer, data as IEnumerable<Settlement>);
+                    break;
+            }
+            return;
+
+        }
+
+        private async Task WriteNPC(Export.ExportWriter e, IEnumerable<PersonData> data)
+        {
+            var exporter = new Export.PersonExporter();
+            await e.WriteFile(exporter, data);
+        }
+
+        private async Task WriteSettlement(Export.ExportWriter e, IEnumerable<Settlement> data)
+        {
+            var exporter = new Export.SettlementExporter();
+            await e.WriteFile(exporter, data);
+        }
+
+        private async Task WriteDungeon(Export.ExportWriter e, IEnumerable<AdventureData> data)
+        {
+            var exporter = new Export.DungeonExporter();
+            await e.WriteFile(exporter, data);
         }
 
 
