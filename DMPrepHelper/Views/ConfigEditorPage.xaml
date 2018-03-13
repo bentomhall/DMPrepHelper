@@ -6,44 +6,96 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="4,4,4,8"/>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" MaxWidth="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" HorizontalAlignment="Stretch">
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Cities">
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Cities" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="MapPin"/>
+                    <SymbolIcon Symbol="People"/>
                     <TextBlock Text="Cities" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
-            <Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Dungeons" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                    <SymbolIcon Symbol="MapPin"/>
-                    <TextBlock Text="Cities" Margin="12,0,0,0"/>
+                    <SymbolIcon Symbol="Map"/>
+                    <TextBlock Text="Dungeons" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
-            <Button>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                    <SymbolIcon Symbol="MapPin"/>
-                    <TextBlock Text="Cities" Margin="12,0,0,0"/>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Items" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Orientation="Horizontal"  >
+                    <SymbolIcon Symbol="Emoji"/>
+                    <TextBlock Text="Items" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
-            <Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Nations" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="MapPin"/>
-                    <TextBlock Text="Cities" Margin="12,0,0,0"/>
+                    <SymbolIcon Symbol="World"/>
+                    <TextBlock Text="Nations" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
-            <Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Names" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Symbol="AddFriend"/>
+                    <TextBlock Text="Names" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Personalities" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="MapPin"/>
-                    <TextBlock Text="Cities" Margin="12,0,0,0"/>
+                    <SymbolIcon Symbol="Emoji2"/>
+                    <TextBlock Text="Personalities" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Professions" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="Account"/>
+                    <TextBlock Text="Professions" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Cultures" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="Contact2"/>
+                    <TextBlock Text="Cultures" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Regions" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="World"/>
+                    <TextBlock Text="Regions" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Rumors" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="PostUpdate"/>
+                    <TextBlock Text="Rumors" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Settlement Types" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Orientation="Horizontal" >
+                    <SymbolIcon Symbol="Street"/>
+                    <TextBlock Text="Town Sizes" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Settlement Roles" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="Filter"/>
+                    <TextBlock Text="Town Roles" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
         </StackPanel>
-        <TextBox Text="{x:Bind ViewModel.DisplayText, Mode=TwoWay}" Background="Wheat" Grid.Column="1"></TextBox>
+        <Button Grid.Column="0"  Command="{x:Bind ViewModel.SaveItemCommand}" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <SymbolIcon Symbol="Save"/>
+                <TextBlock Text="Save" Margin="12,0,0,0"/>
+            </StackPanel>
+        </Button>
+        <TextBox Text="{x:Bind ViewModel.DisplayText, Mode=TwoWay}" MaxHeight="1080" Background="Wheat" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="24,0,0,0"></TextBox>
     </Grid>
 </Page>

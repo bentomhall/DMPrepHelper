@@ -76,7 +76,7 @@ namespace DMPrepHelper
 
         private Task<List<T>> DeserializeAsync<T>(DataFile type)
         {
-            var data = dataText[type];
+            var data = dataText[type]; //get the text to deserialize, which has been loaded by now
             return new Task<List<T>>(() => JsonConvert.DeserializeObject<List<T>>(data.Result));
         }
 

@@ -11,7 +11,7 @@ namespace DMPrepHelper.ViewModels
     public class ConfigEditorViewModel : NotifyChangedBase
     {
         private StorageHelper storage;
-        private ConfigLabel selectedItem;
+        private string selectedItem;
         private Dictionary<string, DataFile> fileTypes = new Dictionary<string, DataFile>()
         {
             {"Cities", DataFile.City },
@@ -27,7 +27,7 @@ namespace DMPrepHelper.ViewModels
             {"Settlement Types", DataFile.SettlementType },
             {"Settlement Roles", DataFile.SettlementRole }
         };
-        private RelayCommand<object> selectItem;
+        private RelayCommand<string> selectItem;
         private RelayCommand<object> saveSelected;
         private bool canExecute = true;
         private string displayText;
@@ -36,25 +36,6 @@ namespace DMPrepHelper.ViewModels
         public ConfigEditorViewModel(StorageHelper s)
         {
             storage = s;
-            Labels = new ObservableCollection<ConfigLabel>()
-            {
-                new ConfigLabel{ ConfigType=DataFile.City, Icon="MapPin", Label="Cities", Command=SelectItemCommand},
-                new ConfigLabel{ ConfigType=DataFile.Dungeon, Icon="ReportHacked", Label="Dungeons", Command=SelectItemCommand},
-                new ConfigLabel{ ConfigType=DataFile.ItemRank, Icon="Switch", Label="Item Ranks", Command=SelectItemCommand},
-                new ConfigLabel{ ConfigType=DataFile.Nation, Icon="World", Label="Nations", Command=SelectItemCommand},
-                new ConfigLabel{ ConfigType=DataFile.NpcName, Icon="AddFriend", Label="Names", Command=SelectItemCommand}
-            };
-            selectedItem = new ConfigLabel();
-        }
-
-        public ConfigLabel SelectedItem
-        {
-            get => selectedItem;
-            set
-            {
-                SetProperty(ref selectedItem, value);
-                DidSelectItem();
-            }
         }
 
         public string DisplayText { get => displayText; set => SetProperty(ref displayText, value); }
@@ -65,7 +46,7 @@ namespace DMPrepHelper.ViewModels
             {
                 if (selectItem == null)
                 {
-                    selectItem = new RelayCommand<object>(param => DidSelectItem(), param => canExecute);
+                    selectItem = new RelayCommand<string>(DidSelectItem);
                 }
                 return selectItem;
             }
@@ -86,26 +67,20 @@ namespace DMPrepHelper.ViewModels
         public ObservableCollection<ConfigLabel> Labels { get; private set; }
 
 
-        private void DidSelectItem()
+        private void DidSelectItem(string label)
         {
-            var label = selectedItem.Label;
-            var dataType = selectedItem.ConfigType;
+            selectedItem = label;
+            var dataType = fileTypes[label];
             DisplayText = storage.GetConfigText(dataType);
             return;
         }
 
         private async Task DidSaveItem()
         {
-            var dataType = selectedItem.ConfigType;
+            var dataType = fileTypes[selectedItem];
             await storage.SaveConfigText(dataType, displayText);
             
         }
-
-
-
-
-
-
     }
 
     public class ConfigLabel : NotifyChangedBase
