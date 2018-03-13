@@ -87,22 +87,30 @@ namespace DMPrepHelper.Export
         private string FormatData(Settlement d)
         {
             var personExporter = new PersonExporter();
+            var internalSeparator = "+++++++++++++++++++++";
             var output = new List<string>()
             {
                 $"{d.Name}, a(n) {d.Role} {d.Size} ({d.Population} inhabitants)",
                 $"Location: near {d.NearestCity}",
+                internalSeparator,
                 "Demographics:",
                 FormatDictionary(d.Demographics),
+                internalSeparator,
                 "Tech Levels:",
                 FormatDictionary(d.TechLevels),
+                internalSeparator,
                 "NPCs:",
-                personExporter.Marshal(d.NPCs,Environment.NewLine + "+++++++++++++++++++++" + Environment.NewLine),
+                personExporter.Marshal(d.NPCs, Environment.NewLine+internalSeparator+Environment.NewLine),
                 "Unavailable Items by Category:"
             };
             foreach (KeyValuePair<string, List<string>> kvp in d.UnavailableItems)
             {
-                output.Add($"{kvp.Key}");
-                output.AddRange(kvp.Value.Select(x => x.ToString()));
+                if (kvp.Value.Count != 0)
+                {
+                    output.Add(internalSeparator);
+                    output.Add($"{kvp.Key}");
+                    output.AddRange(kvp.Value.Select(x => x.ToString()));
+                }
             }
             return string.Join(Environment.NewLine, output);
         }
