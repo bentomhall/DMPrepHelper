@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using DMPrepHelper.ViewModels;
+using LibGenerator.Dungeon;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +27,36 @@ namespace DMPrepHelper.Views
         public DungeonPage()
         {
             this.InitializeComponent();
+            var storage = ((App)Application.Current).Storage;
+            vm = new DungeonGeneratorViewModel(storage);
+        }
+
+        private DungeonGeneratorViewModel vm;
+        public DungeonGeneratorViewModel ViewModel { get => vm; }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var removed = e.RemovedItems;
+            var selected = e.AddedItems;
+            if (removed.Count != 0)
+            {
+                foreach (var r in removed)
+                {
+                    vm.SelectedViewModels.Remove(r as DungeonViewModel);
+                }
+            }
+            if (selected.Count != 0)
+            {
+                foreach (var a in selected)
+                {
+                    vm.SelectedViewModels.Add(a as DungeonViewModel);
+                }
+            }
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataList.SelectAll();
         }
     }
 }

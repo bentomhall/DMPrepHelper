@@ -20,7 +20,8 @@
                 <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader Content="Main pages"/>
                 <NavigationViewItem x:Uid="NPCNavItem" Icon="People" Content="NPC Generator" Tag="npcs"/>
-                <NavigationViewItem x:Uid="SettlementNavItem" Icon="MapPin" Content="Settlement Generator" Tag="towns"/>
+                <NavigationViewItem x:Uid="SettlementNavItem" Icon="Street" Content="Settlement Generator" Tag="towns"/>
+                <NavigationViewItem x:Uid="DungeonNavItem" Icon="Map" Content="Dungeon Generator" Tag="dungeon"/>
                 <NavigationViewItem x:Uid="ConfigNavItem" Icon="Globe" Content="Config Editor" Tag="configs"/>
             </NavigationView.MenuItems>
             <NavigationView.HeaderTemplate>

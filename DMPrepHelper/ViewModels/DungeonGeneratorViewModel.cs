@@ -9,17 +9,16 @@ using LibGenerator.Dungeon;
 
 namespace DMPrepHelper.ViewModels
 {
-    class DungeonGeneratorViewModel : NotifyChangedBase
+    public class DungeonGeneratorViewModel : NotifyChangedBase
     {
         private int number = 1;
         private string region = "";
         private ObservableCollection<string> regions;
-        private RelayCommand<object> selectAllCommand;
         private RelayCommand<object> exportCommand;
         private DungeonGenerator generator;
-        private bool CanExecute => (!String.IsNullOrWhiteSpace(SelectedRegion));
+        private bool CanExecute = true;
         private RelayCommand<object> generateCommand;
-        private ObservableCollection<DungeonViewModel> vms;
+        private ObservableCollection<DungeonViewModel> vms = new ObservableCollection<DungeonViewModel>();
         private ObservableCollection<DungeonViewModel> selectedVMs;
         private StorageHelper storage;
 
@@ -56,7 +55,7 @@ namespace DMPrepHelper.ViewModels
             }
         }
 
-        public ObservableCollection<DungeonViewModel> ViewModels { get => (vms ?? new ObservableCollection<DungeonViewModel>()); set => SetProperty(ref vms, value); }
+        public ObservableCollection<DungeonViewModel> ViewModels { get => vms; set => SetProperty(ref vms, value); }
 
         public int AdventuresToGenerate { get => number; set => SetProperty(ref number, value); }
         public string SelectedRegion { get => region; set => SetProperty(ref region, value); }
@@ -74,34 +73,19 @@ namespace DMPrepHelper.ViewModels
 
         private void CreateVM()
         {
-            if (vms == null) { vms = new ObservableCollection<DungeonViewModel>(); }
             for (int i=0; i < number; i++)
             {
                 var vm = new DungeonViewModel(generator.GenerateAdventure(SelectedRegion));
                 vms.Add(vm);
             }
-            ViewModels = vms;
-        }
-
-        public ICommand SelectAllCommand
-        {
-            get
-            {
-                if (selectAllCommand == null) { selectAllCommand = new RelayCommand<object>(param => DidSelectAll()); }
-                return selectAllCommand;
-            }
-        }
-
-        private void DidSelectAll()
-        {
-            SelectedViewModels = vms;
+            OnPropertyChanged(nameof(ViewModels));
         }
 
         public ICommand ExportCommand
         {
             get
             {
-                if (exportCommand == null) { exportCommand = new RelayCommand<object>(param => ExportSelected().RunSynchronously()); }
+                if (exportCommand == null) { exportCommand = new RelayCommand<object>(param => ExportSelected()); }
                 return exportCommand;
             }
         }

@@ -77,7 +77,7 @@ namespace DMPrepHelper.Export
             {
                 $"A {d.SubType} {d.AdventureType} adventure for level {d.Level} characters.",
                 $"A {d.Scale} site with {d.Size} separate areas.",
-                $"Mainly occupied by {d.PrimaryMonster} with {(d.HasBoss ? "a" : "no")} boss monster"
+                $"Mainly occupied by {d.PrimaryMonster}-type creatures with {(d.HasBoss ? "a" : "no")} boss monster."
             };
             return string.Join(Environment.NewLine, output);
         }
