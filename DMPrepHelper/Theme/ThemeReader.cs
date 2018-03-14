@@ -20,10 +20,9 @@ namespace DMPrepHelper.Theme
         public async Task<ThemeFile> LoadTheme(string name, bool isRegistered)
         {
             StorageFile file;
-            if (isRegistered)
+            if (!isRegistered)
             {
                 file = await GetThemeFile(name);
-                await RegisterTheme(name, file.Name);
             }
             else
             {
@@ -41,6 +40,10 @@ namespace DMPrepHelper.Theme
             };
             picker.FileTypeFilter.Add(".setting");
             var file = await picker.PickSingleFileAsync();
+            if (file == null)
+            {
+                throw new OperationCanceledException("File Picking Canceled");
+            }
             var folder = dataFolder ?? await GetDataDirectory();
             await RegisterTheme(name, file.Name);  
             return await file.CopyAsync(folder);

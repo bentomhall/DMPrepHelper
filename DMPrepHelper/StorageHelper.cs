@@ -55,7 +55,7 @@ namespace DMPrepHelper
 
         public NPCGenerator GetNPCGenerator()
         {
-            if (nPCGenerator == null) { 
+            if (nPCGenerator == null) {
                 var culture = DeserializeAsync<CultureData>(DataFile.Race);
                 var names = DeserializeAsync<NameData>(DataFile.NpcName);
                 var personalities = DeserializeAsync<string>(DataFile.Personality);
