@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using LibGenerator.NPC;
 using LibGenerator.Dungeon;
 using LibGenerator.Settlement;
+using DMPrepHelper.Theme;
 
 namespace DMPrepHelper
 {
@@ -19,11 +20,34 @@ namespace DMPrepHelper
             {
                 dataText[value] = GetConfigData(value);
             }
+            var garbage = JsonConvert.DeserializeObject("{}");
+        }
+
+        
+        async Task<string> GetConfigData( DataFile fileType, string themeName, bool isRegistered)
+        {
+            if (theme == null)
+            {
+                theme = await themeReader.LoadTheme(themeName, isRegistered);
+            }
+            return await theme.GetText(fileType);
+        }
+
+        async Task<List<T>> DeserializeThemedTextAsync<T>(DataFile fileType)
+        {
+            if (theme == null) { throw new InvalidOperationException("Theme cannot be null"); }
+            var text = await theme.GetText(fileType);
+            return JsonConvert.DeserializeObject<List<T>>(text);
+        }
+
+        public async Task LoadNewTheme(string themeName, bool isRegistered)
+        {
+            if (theme != null) { theme.Dispose(); };
+            theme = await themeReader.LoadTheme(themeName, isRegistered);
         }
 
         async Task<string> GetConfigData(DataFile fileType)
         {
-            //var localFolder = ApplicationData.Current.LocalFolder;
             var filename = new Uri("ms-appx:////Assets/" + dataFiles[fileType]);
             var file = await StorageFile.GetFileFromApplicationUriAsync(filename);
             return await FileIO.ReadTextAsync(file);
@@ -75,7 +99,6 @@ namespace DMPrepHelper
 
         public async Task SaveConfigText(DataFile type, string text)
         {
-            //var filename = new Uri("ms-appx:////Assets/" + dataFiles[type]);
             var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
             var file = await folder.GetFileAsync("Assets/" + dataFiles[type]);
             await FileIO.WriteTextAsync(file, text);
@@ -95,10 +118,6 @@ namespace DMPrepHelper
         private List<T> Deserialize<T>(DataFile type)
         {
             var data = dataText[type];
-            if (!data.IsCompleted)
-            {
-                data.Wait();
-            }
             return JsonConvert.DeserializeObject<List<T>>(data.Result);
         }
 
@@ -171,7 +190,8 @@ namespace DMPrepHelper
 
 
         Dictionary<DataFile, Task<string>> dataText = new Dictionary<DataFile, Task<string>>();
-
+        ThemeFile theme;
+        ThemeReader themeReader = new ThemeReader();
         Dictionary<DataFile, string> dataFiles = new Dictionary<DataFile, string>
         {
             {DataFile.City, "cityData.json" },

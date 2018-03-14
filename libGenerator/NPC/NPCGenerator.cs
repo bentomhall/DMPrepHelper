@@ -8,14 +8,6 @@ namespace LibGenerator.NPC
 {
     public class NPCGenerator
     {
-        public NPCGenerator()
-        {
-            cultures = ConfigurationLoader.GetConfiguration<CultureData>("data/races.json");
-            names = ConfigurationLoader.GetConfiguration<NameData>("data/npcNames.json");
-            personalities = ConfigurationLoader.GetConfiguration<string>("data/personality.json");
-            professions = ConfigurationLoader.GetConfiguration<string>("data/professions.json");
-            nations = ConfigurationLoader.GetConfiguration<NationData>("data/nations.json");
-        }
 
         public NPCGenerator(Task<List<CultureData>> c, Task<List<NameData>> n, Task<List<string>> personalities, List<string> proffs, List<NationData> nations)
         {

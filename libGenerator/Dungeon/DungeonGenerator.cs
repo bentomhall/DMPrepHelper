@@ -7,11 +7,6 @@ namespace LibGenerator.Dungeon
 {
     public class DungeonGenerator
     {
-        public DungeonGenerator()
-        {
-            regions = ConfigurationLoader.GetConfiguration<RegionData>("data/regionData.json");
-            locations = ConfigurationLoader.GetConfiguration<LocationData>("data/dungeonData.json");
-        }
 
         public DungeonGenerator(IEnumerable<RegionData> r, IEnumerable<LocationData> l)
         {

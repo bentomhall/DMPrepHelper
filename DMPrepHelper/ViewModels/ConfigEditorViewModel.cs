@@ -58,7 +58,7 @@ namespace DMPrepHelper.ViewModels
             {
                 if (saveSelected == null)
                 {
-                    saveSelected = new RelayCommand<object>(param => DidSaveItem().RunSynchronously(), param => canExecute);
+                    saveSelected = new RelayCommand<object>(param => DidSaveItem(), param => canExecute);
                 }
                 return saveSelected;
             }
