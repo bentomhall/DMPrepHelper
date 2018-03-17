@@ -9,6 +9,7 @@ using LibGenerator.NPC;
 using LibGenerator.Dungeon;
 using LibGenerator.Settlement;
 using DMPrepHelper.Theme;
+using System.Diagnostics;
 
 namespace DMPrepHelper
 {
@@ -48,9 +49,40 @@ namespace DMPrepHelper
 
         async Task<string> GetConfigData(DataFile fileType)
         {
-            var filename = new Uri("ms-appx:////Assets/" + dataFiles[fileType]);
-            var file = await StorageFile.GetFileFromApplicationUriAsync(filename);
-            return await FileIO.ReadTextAsync(file);
+            var file = await GetModifiedFile(fileType);
+            string text;
+            if (file == null)
+            {
+                var defaultFile = await GetDefaultFile(fileType);
+                text = await FileIO.ReadTextAsync(defaultFile);
+                file = await ApplicationData.Current.LocalFolder.CreateFileAsync(dataFiles[fileType]);
+                await FileIO.WriteTextAsync(file, text);
+            }
+            else
+            {
+                text = await FileIO.ReadTextAsync(file);
+            }
+            localFiles[fileType] = file;
+            return text;
+        }
+
+        async Task<StorageFile> GetModifiedFile(DataFile fileType)
+        {
+            if (localFiles.TryGetValue(fileType, out StorageFile savedFile))
+            {
+                return savedFile;
+            }
+            var folder = ApplicationData.Current.LocalFolder;
+            var filename = dataFiles[fileType];
+            StorageFile file = await folder.TryGetItemAsync(filename) as StorageFile;
+            return file;
+
+        }
+
+        async Task<StorageFile> GetDefaultFile(DataFile fileType)
+        {
+            var filename = new Uri(@"ms-appx:////Assets/" + dataFiles[fileType]);
+            return await StorageFile.GetFileFromApplicationUriAsync(filename);
         }
 
         public NPCGenerator GetNPCGenerator()
@@ -99,9 +131,8 @@ namespace DMPrepHelper
 
         public async Task SaveConfigText(DataFile type, string text)
         {
-            var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-            var file = await folder.GetFileAsync("Assets/" + dataFiles[type]);
-            await FileIO.WriteTextAsync(file, text);
+            var file = localFiles[type];
+            await FileIO.WriteTextAsync(file, text, Windows.Storage.Streams.UnicodeEncoding.Utf8);
             return;
         }
 
@@ -109,15 +140,19 @@ namespace DMPrepHelper
         private NPCGenerator nPCGenerator;
         private DungeonGenerator dGenerator;
 
-        private Task<List<T>> DeserializeAsync<T>(DataFile type)
+        private async Task<List<T>> DeserializeAsync<T>(DataFile type)
         {
-            var data = dataText[type]; //get the text to deserialize, which has been loaded by now
-            return new Task<List<T>>(() => JsonConvert.DeserializeObject<List<T>>(data.Result));
+            var data = dataText[type];
+            return await data.ContinueWith(x => JsonConvert.DeserializeObject<List<T>>(x.Result));
         }
 
         private List<T> Deserialize<T>(DataFile type)
         {
             var data = dataText[type];
+            if (!data.IsCompletedSuccessfully)
+            {
+                data.Wait(-1); //will block thread.
+            }
             return JsonConvert.DeserializeObject<List<T>>(data.Result);
         }
 
@@ -188,7 +223,7 @@ namespace DMPrepHelper
             await e.WriteFile(exporter, data);
         }
 
-
+        Dictionary<DataFile, StorageFile> localFiles = new Dictionary<DataFile, StorageFile>();
         Dictionary<DataFile, Task<string>> dataText = new Dictionary<DataFile, Task<string>>();
         ThemeFile theme;
         ThemeReader themeReader = new ThemeReader();

@@ -14,10 +14,6 @@ namespace LibGenerator.NPC
             asyncCulture = c;
             asyncNames = n;
             asyncPersonalities = personalities;
-            
-            asyncCulture.Start();
-            asyncNames.Start();     
-            asyncPersonalities.Start();
             professions = proffs;
             this.nations = nations;
         }
