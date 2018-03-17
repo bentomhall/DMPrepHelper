@@ -21,30 +21,6 @@ namespace DMPrepHelper
             {
                 dataText[value] = GetConfigData(value);
             }
-            var garbage = JsonConvert.DeserializeObject("{}");
-        }
-
-        
-        async Task<string> GetConfigData( DataFile fileType, string themeName, bool isRegistered)
-        {
-            if (theme == null)
-            {
-                theme = await themeReader.LoadTheme(themeName, isRegistered);
-            }
-            return await theme.GetText(fileType);
-        }
-
-        async Task<List<T>> DeserializeThemedTextAsync<T>(DataFile fileType)
-        {
-            if (theme == null) { throw new InvalidOperationException("Theme cannot be null"); }
-            var text = await theme.GetText(fileType);
-            return JsonConvert.DeserializeObject<List<T>>(text);
-        }
-
-        public async Task LoadNewTheme(string themeName, bool isRegistered)
-        {
-            if (theme != null) { theme.Dispose(); };
-            theme = await themeReader.LoadTheme(themeName, isRegistered);
         }
 
         async Task<string> GetConfigData(DataFile fileType)

@@ -42,14 +42,15 @@ namespace LibGenerator.NPC
             var gender = culture.GetGender();
             var religion = culture.GetReligion();
             var subrace = culture.GetSubrace();
-            var nameList = names.First(x => x.Culture.ToLower() == culture.Culture.ToLower());
+            var particularCulture = culture.GetCulture();
+            var nameList = names.First(x => x.Culture.ToLower() == particularCulture.ToLower());
             var name = nameList.GetName(gender);
             var age = r.Choice(new List<string>() { "young", "middle-aged", "old", "ancient" });
             return new PersonData()
             {
                 Name = name,
                 Nation = nation,
-                Culture = culture.Culture,
+                Culture = particularCulture,
                 Gender = gender,
                 Religion = religion,
                 Race = race,
@@ -83,14 +84,15 @@ namespace LibGenerator.NPC
             var gender = culture.GetGender();
             var religion = culture.GetReligion();
             var subrace = culture.GetSubrace();
-            var nameList = names.First(x => x.Culture == culture.Culture);
+            var particularCulture = culture.GetCulture();
+            var nameList = names.First(x => x.Culture.ToLower() == particularCulture.ToLower());
             var name = nameList.GetName(gender);
             var age = r.Choice(new List<string>() { "young", "middle-aged", "old", "ancient" });
             return new PersonData()
             {
                 Name = name,
                 Nation = nation.Name,
-                Culture = culture.Culture,
+                Culture = particularCulture,
                 Gender = gender,
                 Religion = religion,
                 Race = race,

@@ -7,7 +7,7 @@ namespace LibGenerator.Dungeon
     public class RegionData
     {
         public string Name { get; set; }
-        public string Tier { get; set; }
+        public List<string> Tier { get; set; }
         public Dictionary<string, double> Monsters
         {
             get => monsterTable;
@@ -22,6 +22,11 @@ namespace LibGenerator.Dungeon
 
         private Dictionary<string, double> monsterTable;
         private WeightedChoiceSet monsters;
+
+        public string GetTier()
+        {
+            return r.Choice(Tier);
+        }
 
         public void SetMonsters(Dictionary<string, double> m)
         {

@@ -22,7 +22,7 @@ namespace LibGenerator.Dungeon
             {
                 Region = selectedRegion.Name,
                 AdventureType = type.Name,
-                Level = GetRandomLevel(selectedRegion.Tier),
+                Level = GetRandomLevel(selectedRegion.GetTier()),
                 PrimaryMonster = selectedRegion.GetRandomMonster(r.NextDouble()),
                 Scale = type.Scale,
                 Size = type.GetSize(),

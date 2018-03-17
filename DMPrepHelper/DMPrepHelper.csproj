@@ -111,7 +111,6 @@
     <Compile Include="ViewModels\NotifyChangedBase.cs" />
     <Compile Include="ViewModels\NPCGeneratorViewModel.cs" />
     <Compile Include="ViewModels\PersonViewModel.cs" />
-    <Compile Include="ViewModels\RegionDataViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\SettlementGeneratorViewModel.cs" />
     <Compile Include="ViewModels\SettlementViewModel.cs" />
@@ -171,7 +170,19 @@
     <Content Include="Assets\settlementTypes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="DefaultAssets\cityData.json" />
     <None Include="DMPrepHelper_TemporaryKey.pfx" />
+    <None Include="DefaultAssets\dungeonData.json" />
+    <None Include="DefaultAssets\itemRanks.json" />
+    <None Include="DefaultAssets\nations.json" />
+    <None Include="DefaultAssets\npcNames.json" />
+    <None Include="DefaultAssets\personality.json" />
+    <None Include="DefaultAssets\professions.json" />
+    <None Include="DefaultAssets\races.json" />
+    <None Include="DefaultAssets\regionData.json" />
+    <None Include="DefaultAssets\rumors.json" />
+    <None Include="DefaultAssets\settlementRoles.json" />
+    <None Include="DefaultAssets\settlementTypes.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />

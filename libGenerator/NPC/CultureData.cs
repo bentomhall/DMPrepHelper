@@ -10,7 +10,7 @@ namespace LibGenerator.NPC
     {
         public string Race { get; set; }
         public string Nation { get; set; }
-        public string Culture { get; set; }
+        public List<string> Culture { get; set; }
         public Dictionary<string, double> Gender { get; set; }
         public List<string> Religiosity { get; set; }
         public Dictionary<string, double> Subrace { get; set; }
@@ -31,6 +31,11 @@ namespace LibGenerator.NPC
             }
             var roll = r.NextDouble();
             return genders.Match(roll);
+        }
+
+        public string GetCulture()
+        {
+            return r.Choice(Culture);
         }
 
         public string GetReligion()
