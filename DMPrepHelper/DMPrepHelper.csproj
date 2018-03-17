@@ -105,7 +105,11 @@
     <Compile Include="StorageHelper.cs" />
     <Compile Include="Theme\ThemeFile.cs" />
     <Compile Include="Theme\ThemeReader.cs" />
+    <Compile Include="ViewModels\CityConfigViewModel.cs" />
+    <Compile Include="ViewModels\ConfigDataTemplateSelector.cs" />
     <Compile Include="ViewModels\ConfigEditorViewModel.cs" />
+    <Compile Include="ViewModels\ConfigTemplates.cs" />
+    <Compile Include="ViewModels\DungeonConfigViewModel.cs" />
     <Compile Include="ViewModels\DungeonGeneratorViewModel.cs" />
     <Compile Include="ViewModels\DungeonViewModel.cs" />
     <Compile Include="ViewModels\NotifyChangedBase.cs" />
@@ -203,6 +207,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\ConfigEditorDataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ConfigEditorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -244,7 +252,9 @@
       <Name>libGenerator</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Themes\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

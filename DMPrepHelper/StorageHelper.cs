@@ -116,13 +116,13 @@ namespace DMPrepHelper
         private NPCGenerator nPCGenerator;
         private DungeonGenerator dGenerator;
 
-        private async Task<List<T>> DeserializeAsync<T>(DataFile type)
+        public async Task<List<T>> DeserializeAsync<T>(DataFile type)
         {
             var data = dataText[type];
             return await data.ContinueWith(x => JsonConvert.DeserializeObject<List<T>>(x.Result));
         }
 
-        private List<T> Deserialize<T>(DataFile type)
+        public List<T> Deserialize<T>(DataFile type)
         {
             var data = dataText[type];
             if (!data.IsCompletedSuccessfully)
@@ -201,7 +201,6 @@ namespace DMPrepHelper
 
         Dictionary<DataFile, StorageFile> localFiles = new Dictionary<DataFile, StorageFile>();
         Dictionary<DataFile, Task<string>> dataText = new Dictionary<DataFile, Task<string>>();
-        ThemeFile theme;
         ThemeReader themeReader = new ThemeReader();
         Dictionary<DataFile, string> dataFiles = new Dictionary<DataFile, string>
         {

@@ -34,5 +34,6 @@ namespace DMPrepHelper.Views
 
         public ConfigEditorViewModel ViewModel { get; private set; }
         public ICommand SelectionCommand { get; set; }
+        public IConfigDisplay Display { get; }
     }
 }

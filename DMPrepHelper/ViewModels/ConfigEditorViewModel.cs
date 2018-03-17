@@ -31,11 +31,17 @@ namespace DMPrepHelper.ViewModels
         private RelayCommand<object> saveSelected;
         private bool canExecute = true;
         private string displayText;
-
+        private IConfigDisplay displayItem;
 
         public ConfigEditorViewModel(StorageHelper s)
         {
             storage = s;
+        }
+
+        public IConfigDisplay DisplayItem
+        {
+            get => displayItem;
+            set => SetProperty(ref displayItem, value);
         }
 
         public string DisplayText { get => displayText; set => SetProperty(ref displayText, value); }
@@ -65,13 +71,27 @@ namespace DMPrepHelper.ViewModels
         }
 
         public ObservableCollection<ConfigLabel> Labels { get; private set; }
-
+        public bool RichContentViewVisible => DisplayItem != null;
+        public bool TextContentViewVisible => !RichContentViewVisible;
 
         private void DidSelectItem(string label)
         {
             selectedItem = label;
             var dataType = fileTypes[label];
-            DisplayText = storage.GetConfigText(dataType);
+            IConfigDisplay item = null;
+            switch (dataType)
+            {
+                case DataFile.City:
+                    item = new CityConfigViewModel(storage);
+                    DisplayItem = item;
+                    break;
+                default:
+                    break;
+            }
+            if (item == null)
+            {
+                DisplayItem = new GenericDisplay() { DisplayText = storage.GetConfigText(dataType) };
+            }
             return;
         }
 
@@ -89,5 +109,25 @@ namespace DMPrepHelper.ViewModels
         public string Icon { get; set; }
         public DataFile ConfigType { get; set; }
         public ICommand Command { get; set; }
+    }
+
+    public interface IConfigDisplay
+    {
+        ObservableCollection<string> ItemNames { get; }
+        ICommand AddItemCommand { get; }
+        ICommand RemoveItemCommand { get; }
+        ICommand SelectItemCommand { get; }
+        ICommand SaveConfigCommand { get; }
+    }
+
+    public class GenericDisplay : NotifyChangedBase, IConfigDisplay
+    {
+        public ObservableCollection<string> ItemNames { get; }
+        public ICommand AddItemCommand { get; }
+        public ICommand RemoveItemCommand { get; }
+        public ICommand SelectItemCommand { get; }
+        public ICommand SaveConfigCommand { get; }
+
+        public string DisplayText { get; set; }
     }
 }
