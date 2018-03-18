@@ -28,7 +28,7 @@ namespace DMPrepHelper.ViewModels
         {
             storage = s;
             storedData = GetStoredData();
-            ItemNames = new ObservableCollection<string>(storedData.Select(x => x.Name));
+            
 
         }
         public ObservableCollection<string> ItemNames { get => items; set => SetProperty(ref items, value); }
@@ -121,6 +121,11 @@ namespace DMPrepHelper.ViewModels
                 default:
                     break;
             }
+        }
+
+        public void SetItems()
+        {
+            ItemNames = new ObservableCollection<string>(storedData.Select(x => x.Name));
         }
 
         #region Commands

@@ -13,7 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using DMPrepHelper.ViewModels;
-using System.Windows.Input;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,39 +21,23 @@ namespace DMPrepHelper.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ConfigEditorPage  : Page
+    public sealed partial class CityConfigPage : Page
     {
         private StorageHelper storage;
-
-        public ConfigEditorPage()
+        public CityConfigPage()
         {
             this.InitializeComponent();
             storage = ((App)Application.Current).Storage;
-            ViewModel = new ConfigEditorViewModel(storage);
+            ViewModel = new CityConfigViewModel(storage);
+            ViewModel.SetItems();
         }
 
-        public ConfigEditorViewModel ViewModel { get; private set; }
-        public IConfigDisplay Display { get; }
+        public CityConfigViewModel ViewModel { get; set; }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var clicked = e.ClickedItem as ConfigLabel;
-            Navigate(clicked.ConfigType);
-
-        }
-
-        private void Navigate(DataFile dataType)
-        {
-            switch (dataType)
-            {
-                case DataFile.City:
-                    ConfigContentFrame.Navigate(typeof(CityConfigPage));
-                    break;
-                default:
-                    ConfigContentFrame.Navigate(typeof(GenericContentPage));
-                    break;
-            }
-            
+            var clicked = e.ClickedItem as string;
+            ViewModel.SelectItemCommand.Execute(clicked);
         }
     }
 }

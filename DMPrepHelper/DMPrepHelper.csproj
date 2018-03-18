@@ -108,7 +108,6 @@
     <Compile Include="ViewModels\CityConfigViewModel.cs" />
     <Compile Include="ViewModels\ConfigDataTemplateSelector.cs" />
     <Compile Include="ViewModels\ConfigEditorViewModel.cs" />
-    <Compile Include="ViewModels\ConfigTemplates.cs" />
     <Compile Include="ViewModels\DungeonConfigViewModel.cs" />
     <Compile Include="ViewModels\DungeonGeneratorViewModel.cs" />
     <Compile Include="ViewModels\DungeonViewModel.cs" />
@@ -118,11 +117,17 @@
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\SettlementGeneratorViewModel.cs" />
     <Compile Include="ViewModels\SettlementViewModel.cs" />
+    <Compile Include="Views\CityConfigPage.xaml.cs">
+      <DependentUpon>CityConfigPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConfigEditorPage.xaml.cs">
       <DependentUpon>ConfigEditorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DungeonPage.xaml.cs">
       <DependentUpon>DungeonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GenericContentPage.xaml.cs">
+      <DependentUpon>GenericContentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NpcPage.xaml.cs">
       <DependentUpon>NpcPage.xaml</DependentUpon>
@@ -207,7 +212,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\ConfigEditorDataTemplates.xaml">
+    <Page Include="Views\CityConfigPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -216,6 +221,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DungeonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GenericContentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

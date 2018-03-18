@@ -31,18 +31,25 @@ namespace DMPrepHelper.ViewModels
         private RelayCommand<string> selectCityCommand;
         private RelayCommand<string> removeCityCommand;
         private RelayCommand<object> addRaceCommand;
-        private RelayCommand<DictItem> removeRaceCommand;
+        private RelayCommand<object> removeRaceCommand;
         private RelayCommand<object> saveCommand;
-        private string selectedRaceItem;
+        private DictItem selectedRaceItem;
+        private string selectedCity;
 
         public CityConfigViewModel(StorageHelper s)
         {
             storage = s;
             storedData = GetStoredData();
-            items = new ObservableCollection<string>(storedData.Select(x => x.Name));
+            
         }
 
-        public string SelectedRaceItem { get => selectedRaceItem; set => SetProperty(ref selectedRaceItem, value); }
+        public void SetItems()
+        {
+            ItemNames = new ObservableCollection<string>(storedData.Select(x => x.Name));
+        }
+
+        public DictItem SelectedRaceItem { get => selectedRaceItem; set => SetProperty(ref selectedRaceItem, value); }
+        public string SelectedCity { get => selectedCity; set => SetProperty(ref selectedCity, value); }
 
         public string NewRaceName { get; set; }
         public double NewRaceWeight { get; set; }
@@ -128,7 +135,7 @@ namespace DMPrepHelper.ViewModels
             {
                 if (removeRaceCommand == null)
                 {
-                    removeRaceCommand = new RelayCommand<DictItem>(param => RemoveRaceItem(param));
+                    removeRaceCommand = new RelayCommand<object>(param => RemoveRaceItem());
                 }
                 return removeRaceCommand;
             }
@@ -156,25 +163,29 @@ namespace DMPrepHelper.ViewModels
 
         private List<CityData> GetStoredData()
         {
-            return storage.Deserialize<CityData>(DataFile.City);
+            var data = storage.Deserialize<CityData>(DataFile.City);
+            return data;
         }
 
         private void DidSelectItem(string item)
         {
             var data = storedData.First(x => x.Name == item);
-            name = item;
-            nation = data.Nation;
-            population = data.Population;
-            size = data.Size;
-            region = data.Region;
+            Name = item;
+            Nation = data.Nation;
+            Population = data.Population;
+            Size = data.Size;
+            Region = data.Region;
             races = data.Races;
-            tech = data.Tech;
-            terrain = data.Terrain;
+            Tech = data.Tech;
+            Terrain = data.Terrain;
             namePrefixes = data.Prefixes;
             nameInfixes = data.Infixes;
             nameSuffixes = data.Suffixes;
             Combiner = data.Combiner;
-            OnPropertyChanged(null);
+            OnPropertyChanged(nameof(Races));
+            OnPropertyChanged(nameof(NamePrefixes));
+            OnPropertyChanged(nameof(NameInfixes));
+            OnPropertyChanged(nameof(NameSuffixes));
         }
 
         private void AddRaceItem()
@@ -183,9 +194,10 @@ namespace DMPrepHelper.ViewModels
             OnPropertyChanged(nameof(Races));
         }
 
-        private void RemoveRaceItem(DictItem item)
+        private void RemoveRaceItem()
         {
-            races.Remove(item.Key);
+
+            races.Remove(selectedRaceItem.Key);
             OnPropertyChanged(nameof(Races));
         }
 

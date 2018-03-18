@@ -12,7 +12,12 @@
             <Style TargetType="Button">
                 <Setter Property="Margin" Value="4,4,4,8"/>
             </Style>
-            <local:ConfigDataTemplateSelector x:Key="ConfigSelector"/>
+            <DataTemplate x:Key="ConfigItemTemplate" x:DataType="local:ConfigLabel">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="{x:Bind Icon}"/>
+                    <TextBlock Text="{x:Bind Label}" Margin="12,0,0,0"/>
+                </StackPanel>
+            </DataTemplate>
         </ResourceDictionary>
     </Page.Resources>
     <Grid>
@@ -20,84 +25,12 @@
             <ColumnDefinition Width="Auto" MaxWidth="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" HorizontalAlignment="Stretch">
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Cities" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="People"/>
-                    <TextBlock Text="Cities" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Dungeons" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                    <SymbolIcon Symbol="Map"/>
-                    <TextBlock Text="Dungeons" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Items" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal"  >
-                    <SymbolIcon Symbol="Emoji"/>
-                    <TextBlock Text="Items" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Nations" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="World"/>
-                    <TextBlock Text="Nations" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Names" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal">
-                    <SymbolIcon Symbol="AddFriend"/>
-                    <TextBlock Text="Names" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Personalities" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="Emoji2"/>
-                    <TextBlock Text="Personalities" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Professions" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="Account"/>
-                    <TextBlock Text="Professions" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Cultures" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="Contact2"/>
-                    <TextBlock Text="Cultures" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Regions" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="World"/>
-                    <TextBlock Text="Regions" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Rumors" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="PostUpdate"/>
-                    <TextBlock Text="Rumors" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Settlement Types" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" >
-                    <SymbolIcon Symbol="Street"/>
-                    <TextBlock Text="Town Sizes" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-            <Button Command="{x:Bind SelectionCommand}" CommandParameter="Settlement Roles" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="Filter"/>
-                    <TextBlock Text="Town Roles" Margin="12,0,0,0"/>
-                </StackPanel>
-            </Button>
-        </StackPanel>
-        <ContentControl Grid.Column="1" ContentTemplateSelector="{StaticResource ConfigSelector}" Content="{x:Bind ViewModel.DisplayItem, Mode=OneWay}">
-            <ContentControl.Resources>
-                <ResourceDictionary Source="ConfigEditorDataTemplates.xaml"/>
-            </ContentControl.Resources>
-        </ContentControl>
+        <ListView Grid.Column="0" HorizontalAlignment="Stretch" 
+                  ItemsSource="{x:Bind ViewModel.Labels}" ItemTemplate="{StaticResource ConfigItemTemplate}" 
+                  VerticalAlignment="Stretch" IsItemClickEnabled="True" SelectionMode="None" ItemClick="ListView_ItemClick" >
+
+        </ListView>
+
+        <Frame Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="ConfigContentFrame"/>
     </Grid>
 </Page>

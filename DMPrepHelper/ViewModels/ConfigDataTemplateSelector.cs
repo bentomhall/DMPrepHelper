@@ -35,8 +35,7 @@ namespace DMPrepHelper.ViewModels
         /// <returns></returns>
         private DataTemplate FindResourceKeyUpTree(string resourceKey, DependencyObject container)
         {
-            var frameworkElement = container as FrameworkElement;
-            if (frameworkElement != null)
+            if (container is FrameworkElement frameworkElement)
             {
                 if (frameworkElement.Resources.ContainsKey(resourceKey))
                 {
