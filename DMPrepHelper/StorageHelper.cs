@@ -112,6 +112,13 @@ namespace DMPrepHelper
             return;
         }
 
+        public async Task SaveConfigText(DataFile type, object data)
+        {
+            var file = localFiles[type];
+            var text = JsonConvert.SerializeObject(data);
+            await FileIO.WriteTextAsync(file, text, Windows.Storage.Streams.UnicodeEncoding.Utf8);
+        }
+
         private SettlementGenerator sGenerator;
         private NPCGenerator nPCGenerator;
         private DungeonGenerator dGenerator;

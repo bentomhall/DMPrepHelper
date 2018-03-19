@@ -129,7 +129,6 @@ namespace DMPrepHelper.ViewModels
 
     public interface IConfigDisplay
     {
-        ObservableCollection<string> ItemNames { get; }
         ICommand AddItemCommand { get; }
         ICommand RemoveItemCommand { get; }
         ICommand SelectItemCommand { get; }
@@ -139,7 +138,6 @@ namespace DMPrepHelper.ViewModels
 
     public class GenericDisplay : NotifyChangedBase, IConfigDisplay
     {
-        public ObservableCollection<string> ItemNames { get; }
         public ICommand AddItemCommand { get; }
         public ICommand RemoveItemCommand { get; }
         public ICommand SelectItemCommand { get; }

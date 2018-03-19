@@ -84,7 +84,7 @@ namespace DMPrepHelper.ViewModels
         private void DidSaveConfig()
         {
             var text = JsonConvert.SerializeObject(storedData);
-            storage.SaveConfigText(DataFile.Dungeon, text);
+            var dummy = storage.SaveConfigText(DataFile.Dungeon, text);
         }
 
         private void DidAddListItem(string lst)

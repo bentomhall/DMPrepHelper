@@ -50,6 +50,12 @@ namespace DMPrepHelper.Views
                 case DataFile.City:
                     ConfigContentFrame.Navigate(typeof(CityConfigPage));
                     break;
+                case DataFile.Personality:
+                    ConfigContentFrame.Navigate(typeof(ListPage), "personality");
+                    break;
+                case DataFile.Profession:
+                    ConfigContentFrame.Navigate(typeof(ListPage), "profession");
+                    break;
                 default:
                     ConfigContentFrame.Navigate(typeof(GenericContentPage));
                     break;
