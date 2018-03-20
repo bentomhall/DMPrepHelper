@@ -199,6 +199,7 @@
     <None Include="DefaultAssets\rumors.json" />
     <None Include="DefaultAssets\settlementRoles.json" />
     <None Include="DefaultAssets\settlementTypes.json" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />

@@ -14,15 +14,6 @@
                     <Setter Property="TextAlignment" Value="Right"/>
                     <Setter Property="TextWrapping" Value="Wrap"/>
                 </Style>
-                <Style x:Key="NarrowListViewItemStyle" TargetType="ListViewItem">
-                    <Setter Property="MinHeight" Value="20"/>
-                </Style>
-                <Style x:Key="InfoFlyoutStyle" TargetType="FlyoutPresenter">
-                    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
-                    <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Disabled"/>
-                    <Setter Property="IsTabStop" Value="True"/>
-                    <Setter Property="TabNavigation" Value="Cycle"/>
-                </Style>
             </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -72,7 +63,7 @@
             <Button Content="?" Grid.Column="2" Grid.Row="2" Style="{ThemeResource ButtonRevealStyle}">
                 <Button.Flyout>
                     <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
-                        <TextBlock TextWrapping="Wrap" Text="{x:Bind ViewModel.ScaleHelpText}"/>
+                        <TextBlock TextWrapping="Wrap" x:Uid="DungeonScaleHelpText"/>
                     </Flyout>
                 </Button.Flyout>
             </Button>
@@ -82,7 +73,7 @@
             <Button Content="?" Grid.Column="2" Grid.Row="3" Style="{ThemeResource ButtonRevealStyle}">
                 <Button.Flyout>
                     <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
-                        <TextBlock TextWrapping="Wrap" Text="{x:Bind ViewModel.BossChanceHelpText}"/>
+                        <TextBlock TextWrapping="Wrap" x:Uid="DungeonBossChanceHelpText"/>
                     </Flyout>
                 </Button.Flyout>
             </Button>
@@ -112,7 +103,7 @@
             <Button Content="?" Grid.Column="2" Grid.Row="7" Style="{ThemeResource ButtonRevealStyle}">
                 <Button.Flyout>
                     <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
-                        <TextBlock TextWrapping="Wrap" Text="{x:Bind ViewModel.AgeHelpText}"/>
+                        <TextBlock TextWrapping="Wrap" x:Uid="DungeonAgeHelpText"/>
                     </Flyout>
                 </Button.Flyout>
             </Button>

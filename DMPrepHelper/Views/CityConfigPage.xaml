@@ -34,7 +34,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView Margin="4" Grid.Column="0" Grid.Row="0" ItemsSource="{x:Bind ViewModel.ItemNames, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedCity, Mode=TwoWay}" IsItemClickEnabled="True" ItemClick="ListView_ItemClick"/>
+        <ListView Margin="4" Grid.Column="0" Grid.Row="0" ItemsSource="{x:Bind ViewModel.ItemNames, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedCity, Mode=TwoWay}" 
+                  IsItemClickEnabled="True" ItemClick="ListView_ItemClick" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}"/>
         <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="1"/>
         <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2">
             <Button Command="{x:Bind ViewModel.SaveConfigCommand}" HorizontalContentAlignment="Left">
@@ -56,48 +57,88 @@
 
         <TextBlock Grid.Column="0" Grid.Row="2" Margin="24,0,0,0">Nation:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="2" Width="200" Text="{x:Bind ViewModel.Nation, Mode=TwoWay}"/>
-        <TextBlock Grid.Column="2" Grid.Row="2" Margin="24,0,0,0" TextAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap">Nation labels must match those found in the Nations config file.</TextBlock>
+        <Button Grid.Column="2" Grid.Row="2" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CityNationHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
 
         <TextBlock Grid.Column="0" Grid.Row="3" Margin="24,0,0,0">Population:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="3" Width="200" Text="{x:Bind ViewModel.Population, Mode=TwoWay}"/>
 
         <TextBlock Grid.Column="0" Grid.Row="4" Margin="24,0,0,0">Size:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="4" Width="200" Text="{x:Bind ViewModel.Size, Mode=TwoWay}"/>
-        <TextBlock Grid.Column="2" Grid.Row="4" TextWrapping="Wrap" TextAlignment="Left" Margin="24,0,0,0" VerticalAlignment="Center">Descriptive text (e.g. hamlet, village, town, city, or capital)</TextBlock>
-
+        <Button Grid.Column="2" Grid.Row="4" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CitySizeHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
         <TextBlock Grid.Column="0" Grid.Row="5" Margin="24,0,0,0">Region:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="5" Width="200" Text="{x:Bind ViewModel.Region, Mode=TwoWay}"/>
-        <TextBlock Grid.Column="2" Grid.Row="5" TextWrapping="Wrap" Margin="24,0,0,0" TextAlignment="Left" VerticalAlignment="Center">Region labels must match those defined in the Regions config file.</TextBlock>
-
+        <Button Grid.Column="2" Grid.Row="5" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CityRegionHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
         <TextBlock Grid.Column="0" Grid.Row="6" Margin="24,0,0,0">Terrain:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="6" Text="{x:Bind ViewModel.Terrain, Mode=TwoWay}" Width="200"/>
 
         <TextBlock Grid.Column="0" Grid.Row="7" Margin="24,0,0,0">Overall Tech Level:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="7" Width="200" Text="{x:Bind ViewModel.Tech, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-
-        <TextBlock Grid.Column="2" Grid.Row="7" Margin="24,0,0,0" VerticalAlignment="Center" TextAlignment="Left">0 is lowest tech (few things available), 4 is highest (everything available)</TextBlock>
-
+        <Button Grid.Column="2" Grid.Row="7" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CityTechHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
         <TextBlock Grid.Column="0" Grid.Row="8" Margin="24,0,0,0">Settlement Name Prefixes:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="8" Width="200" Text="{x:Bind ViewModel.NamePrefixes, Mode=TwoWay}" TextWrapping="Wrap"/>
-        <TextBlock Grid.Row="8" Grid.Column="2" Margin="24,0,0,0" VerticalAlignment="Center" TextAlignment="Left">Written as prefix 1, prefix 2, prefix 3, ... (note the comma and space between items)</TextBlock>
-
+        <Button Grid.Column="2" Grid.Row="8" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CommaSeparatedListHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
 
         <TextBlock Grid.Column="0" Grid.Row="9" Margin="24,0,0,0">Settlement Name Root:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="9" Width="200" Text="{x:Bind ViewModel.NameInfixes, Mode=TwoWay}" TextWrapping="Wrap"/>
-        <TextBlock Grid.Row="9" Grid.Column="2" Margin="24,0,0,0" VerticalAlignment="Center" TextAlignment="Left">Written as root 1, root 2, root 3, ... (note the comma and space between items)</TextBlock>
-
+        <Button Grid.Column="2" Grid.Row="9" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CommaSeparatedListHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
         <TextBlock Grid.Column="0" Grid.Row="10" Margin="24,0,0,0">Settlement Name Suffixes:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="10" Width="200" Text="{x:Bind ViewModel.NameSuffixes, Mode=TwoWay}" TextWrapping="Wrap"/>
-        <TextBlock Grid.Row="10" Grid.Column="2" Margin="24,0,0,0" VerticalAlignment="Center" TextAlignment="Left">Written as suffix 1, suffix 2, suffix 3, ... (note the comma and space between items)</TextBlock>
-
+        <Button Grid.Column="2" Grid.Row="10" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CommaSeparatedListHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
         <TextBlock Grid.Column="0" Grid.Row="11" Margin="24,0,0,0">Settlement Name Combiner:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="11" Width="200" Text="{x:Bind ViewModel.Combiner, Mode=TwoWay}" TextWrapping="Wrap"/>
-        <TextBlock Grid.Row="11" Grid.Column="2" Margin="24,0,0,0" TextAlignment="Left">Names are written as [prefix][combiner][root][combiner][suffix]. Can be empty (for no separator).</TextBlock>
-        
+        <Button Grid.Column="2" Grid.Row="11" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CityNameCombinerHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>        
         <StackPanel  Grid.Column="0" Grid.Row="12">
             <TextBlock TextAlignment="Center" Margin="0,0,0,8">Races</TextBlock>
             <Border BorderBrush="Black" BorderThickness="1"/>
-            <ListView x:Name="RacesPanel" MinHeight="150" ItemsSource="{x:Bind ViewModel.Races, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedRaceItem, Mode=TwoWay}">
+            <ListView x:Name="RacesPanel" MinHeight="150" ItemsSource="{x:Bind ViewModel.Races, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedRaceItem, Mode=TwoWay}" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="local:DictItem">
                         <TextBlock Text="{x:Bind Representation}"/>
