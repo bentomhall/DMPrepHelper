@@ -51,6 +51,10 @@ namespace DMPrepHelper.ViewModels
         public ObservableCollection<string> Subtypes { get => subtypes; set => SetProperty(ref subtypes, value); }
         public ObservableCollection<string> Ages { get => ages; set => SetProperty(ref ages, value); }
 
+        public string ScaleHelpText { get => "Large: areas scaled to miles per inch."+Environment.NewLine+"Medium: areas scaled in hundreds of feet per inch" + Environment.NewLine+ "Small: areas scaled in standard scale."; }
+        public string AgeHelpText { get => "Suggested values are ancient (hundreds of years old), old (1 month - 100 years old), or recent (less than 1 month old)."; }
+        public string BossChanceHelpText { get => "Values are decimals between 0.0 (no chance) and 1.0 (boss always present)."; }
+
         private List<LocationData> GetStoredData()
         {
             return storage.Deserialize<LocationData>(DataFile.Dungeon);
