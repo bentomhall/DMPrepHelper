@@ -124,6 +124,9 @@
     <Compile Include="Views\ConfigEditorPage.xaml.cs">
       <DependentUpon>ConfigEditorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DungeonConfigPage.xaml.cs">
+      <DependentUpon>DungeonConfigPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DungeonPage.xaml.cs">
       <DependentUpon>DungeonPage.xaml</DependentUpon>
     </Compile>
@@ -221,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConfigEditorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DungeonConfigPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

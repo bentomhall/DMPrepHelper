@@ -56,6 +56,9 @@ namespace DMPrepHelper.Views
                 case DataFile.Profession:
                     ConfigContentFrame.Navigate(typeof(ListPage), "profession");
                     break;
+                case DataFile.Dungeon:
+                    ConfigContentFrame.Navigate(typeof(DungeonConfigPage));
+                    break;
                 default:
                     ConfigContentFrame.Navigate(typeof(GenericContentPage));
                     break;

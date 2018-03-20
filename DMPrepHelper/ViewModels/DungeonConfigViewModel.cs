@@ -23,23 +23,25 @@ namespace DMPrepHelper.ViewModels
         private double bossProbability;
         private Dictionary<string, double> lairChance;
         private bool canHaveSublocations;
+        private string newSubtype;
+        private string newAge;
+        private int newSize;
 
         public DungeonConfigViewModel(StorageHelper s)
         {
             storage = s;
             storedData = GetStoredData();
-            
-
+            items = new ObservableCollection<string>(storedData.Select(x => x.Name));
         }
         public ObservableCollection<string> ItemNames { get => items; set => SetProperty(ref items, value); }
 
-
+        public string SelectedType { get; set; }
         public int SelectedSize { get; set; }
         public string SelectedSubType { get; set; }
         public string SelectedAge { get; set; }
-        public int NewSizeItem { get; set; }
-        public string NewSubtypeItem { get; set; }
-        public string NewAgeItem { get; set; }
+        public int NewSizeItem { get => newSize; set => SetProperty(ref newSize, value); }
+        public string NewSubtypeItem { get => newSubtype; set => SetProperty(ref newSubtype, value); }
+        public string NewAgeItem { get => newAge; set => SetProperty(ref newAge, value); }
 
         public string Name { get => name; set => SetProperty(ref name, value); }
         public string Scale { get => scale; set => SetProperty(ref scale, value); }
@@ -70,21 +72,19 @@ namespace DMPrepHelper.ViewModels
         private void DidSelectItem(string item)
         {
             var location = storedData.First(x => x.Name == item);
-            name = location.Name;
-            scale = location.Scale;
-            sizes = new ObservableCollection<int>(location.Sizes);
-            subtypes = new ObservableCollection<string>(location.Subtypes);
-            ages = new ObservableCollection<string>(location.Ages);
-            bossProbability = location.HasBoss;
-            canHaveSublocations = location.HasSublocations;
+            Name = location.Name;
+            Scale = location.Scale;
+            Sizes = new ObservableCollection<int>(location.Sizes);
+            Subtypes = new ObservableCollection<string>(location.Subtypes);
+            Ages = new ObservableCollection<string>(location.Ages);
+            BossProbability = location.HasBoss;
+            CanHaveSublocations = location.HasSublocations;
             lairChance = location.LairChance;
-            OnPropertyChanged(null);
         }
 
         private void DidSaveConfig()
         {
-            var text = JsonConvert.SerializeObject(storedData);
-            var dummy = storage.SaveConfigText(DataFile.Dungeon, text);
+            var dummy = storage.SaveConfigText(DataFile.Dungeon, storedData);
         }
 
         private void DidAddListItem(string lst)
