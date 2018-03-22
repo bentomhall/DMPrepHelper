@@ -111,10 +111,10 @@ namespace DMPrepHelper.ViewModels
             return;
         }
 
-        private async Task DidSaveItem()
+        private void DidSaveItem()
         {
             var dataType = fileTypes[selectedItem];
-            await storage.SaveConfigText(dataType, displayText);
+            var dummy = storage.SaveConfigText(dataType, displayText);
             
         }
     }

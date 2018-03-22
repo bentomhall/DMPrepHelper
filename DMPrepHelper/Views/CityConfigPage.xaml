@@ -153,13 +153,13 @@
             </ListView>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Grid.Column="1" Grid.Row="13" VerticalAlignment="Center">
-            <Button Command="{x:Bind ViewModel.RemoveItemCommand}" Content="Remove Selected"/>
+            <Button Command="{x:Bind ViewModel.RemoveListItemCommand}" Content="Remove Selected"/>
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="{x:Bind ViewModel.NewRaceName, Mode=TwoWay}"/>
                 <TextBlock Margin="8,0,8,0"> :</TextBlock>
                 <TextBox Text="{x:Bind ViewModel.NewRaceWeight, Mode=TwoWay}"/>
             </StackPanel>
-            <Button Command="{x:Bind ViewModel.AddRaceCommand}" Content="Add new race with weight"/>
+            <Button Command="{x:Bind ViewModel.AddListItemCommand}" Content="Add new race with weight"/>
         </StackPanel>
     </Grid>
 </Page>

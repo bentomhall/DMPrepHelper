@@ -25,12 +25,6 @@ namespace DMPrepHelper.ViewModels
         private List<string> nameInfixes = new List<string>();
         private List<string> nameSuffixes = new List<string>();
         private string combiner ="";
-        private RelayCommand<object> addItemCommand;
-        private RelayCommand<string> selectItemCommand;
-        private RelayCommand<string> removeCityCommand;
-        private RelayCommand<object> addListItemCommand;
-        private RelayCommand<object> removeListItemCommand;
-        private RelayCommand<object> saveConfigCommand;
         private DictItem selectedRaceItem;
         private string selectedCity;
 
@@ -41,7 +35,7 @@ namespace DMPrepHelper.ViewModels
             
         }
 
-        protected new void SetItems()
+        public new void SetItems()
         {
             ItemNames = new ObservableCollection<string>(storedData.Select(x => x.Name));
         }
