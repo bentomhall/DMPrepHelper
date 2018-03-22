@@ -10,11 +10,9 @@ using Newtonsoft.Json;
 
 namespace DMPrepHelper.ViewModels
 {
-    public class DungeonConfigViewModel : NotifyChangedBase, IConfigDisplay
+    public class DungeonConfigViewModel : ConfigBaseViewModel
     {
-        private StorageHelper storage;
         private List<LocationData> storedData;
-        private ObservableCollection<string> items;
         private string name;
         private string scale;
         private ObservableCollection<int> sizes;
@@ -27,9 +25,8 @@ namespace DMPrepHelper.ViewModels
         private string newAge;
         private int newSize;
 
-        public DungeonConfigViewModel(StorageHelper s)
+        public DungeonConfigViewModel(StorageHelper s) : base(s)
         {
-            storage = s;
             storedData = GetStoredData();
             items = new ObservableCollection<string>(storedData.Select(x => x.Name));
         }
@@ -56,20 +53,20 @@ namespace DMPrepHelper.ViewModels
             return storage.Deserialize<LocationData>(DataFile.Dungeon);
         }
 
-        private void DidAddItem()
+        protected override void DidAddItem()
         {
             var item = new LocationData { Name = name, Scale = scale, Sizes = sizes.ToList(), Subtypes = subtypes.ToList(), Ages = ages.ToList(), HasBoss = bossProbability, HasSublocations = canHaveSublocations, LairChance = lairChance };
             storedData.Add(item);
             OnPropertyChanged(nameof(ItemNames));
         }
 
-        private void DidRemoveItem(string item)
+        protected override void DidRemoveItem(string item)
         {
             storedData.Remove(storedData.First(x => x.Name == item));
             OnPropertyChanged(nameof(ItemNames));
         }
 
-        private void DidSelectItem(string item)
+        protected override void DidSelectItem(string item)
         {
             var location = storedData.First(x => x.Name == item);
             Name = location.Name;
@@ -82,12 +79,12 @@ namespace DMPrepHelper.ViewModels
             lairChance = location.LairChance;
         }
 
-        private void DidSaveConfig()
+        protected override void DidSaveConfig()
         {
             var dummy = storage.SaveConfigText(DataFile.Dungeon, storedData);
         }
 
-        private void DidAddListItem(string lst)
+        protected override void DidAddListItem(string lst)
         {
             switch (lst)
             {
@@ -105,7 +102,7 @@ namespace DMPrepHelper.ViewModels
             }
         }
 
-        private void DidRemoveListItem(string lst)
+        protected override void DidRemoveListItem(string lst)
         {
             switch (lst)
             {
@@ -123,86 +120,9 @@ namespace DMPrepHelper.ViewModels
             }
         }
 
-        public void SetItems()
+        private new void SetItems()
         {
             ItemNames = new ObservableCollection<string>(storedData.Select(x => x.Name));
         }
-
-        #region Commands
-
-
-        private RelayCommand<object> addItemCommand;
-        private RelayCommand<string> removeItemCommand;
-        private RelayCommand<string> selectItemCommand;
-        private RelayCommand<object> saveConfigCommand;
-        private RelayCommand<string> addListItemCommand;
-        private RelayCommand<string> removeListItemCommand;
-        public ICommand AddItemCommand
-        {
-            get
-            {
-                if (addItemCommand == null)
-                {
-                    addItemCommand = new RelayCommand<object>(p => DidAddItem());
-                }
-                return addItemCommand;
-            }
-        }
-        public ICommand RemoveItemCommand
-        {
-            get
-            {
-                if (removeItemCommand == null)
-                {
-                    removeItemCommand = new RelayCommand<string>(p => DidRemoveItem(p));
-                }
-                return removeItemCommand;
-            }
-        }
-        public ICommand SelectItemCommand
-        {
-            get
-            {
-                if (selectItemCommand == null)
-                {
-                    selectItemCommand = new RelayCommand<string>(p => DidSelectItem(p));
-                }
-                return selectItemCommand;
-            }
-        }
-        public ICommand SaveConfigCommand
-        {
-            get
-            {
-                if (saveConfigCommand == null)
-                {
-                    saveConfigCommand = new RelayCommand<object>(p => DidSaveConfig());
-                }
-                return saveConfigCommand;
-            }
-        }
-        public ICommand AddListItemCommand
-        {
-            get
-            {
-                if (addListItemCommand == null)
-                {
-                    addListItemCommand = new RelayCommand<string>(p => DidAddListItem(p));
-                }
-                return addListItemCommand;
-            }
-        }
-        public ICommand RemoveListItemCommand
-        {
-            get
-            {
-                if (removeListItemCommand == null)
-                {
-                    removeListItemCommand = new RelayCommand<string>(p => DidRemoveListItem(p));
-                }
-                return removeListItemCommand;
-            }
-        }
-        #endregion
     }
 }

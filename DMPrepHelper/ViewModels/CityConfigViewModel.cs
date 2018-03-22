@@ -10,11 +10,9 @@ using Newtonsoft.Json;
 
 namespace DMPrepHelper.ViewModels
 {
-    public class CityConfigViewModel : NotifyChangedBase, IConfigDisplay
+    public class CityConfigViewModel : ConfigBaseViewModel
     {
-        private StorageHelper storage;
         private List<CityData> storedData;
-        private ObservableCollection<string> items;
         private string name;
         private string nation;
         private int population;
@@ -27,23 +25,23 @@ namespace DMPrepHelper.ViewModels
         private List<string> nameInfixes = new List<string>();
         private List<string> nameSuffixes = new List<string>();
         private string combiner ="";
-        private RelayCommand<object> addCityCommand;
-        private RelayCommand<string> selectCityCommand;
+        private RelayCommand<object> addItemCommand;
+        private RelayCommand<string> selectItemCommand;
         private RelayCommand<string> removeCityCommand;
-        private RelayCommand<object> addRaceCommand;
-        private RelayCommand<object> removeRaceCommand;
-        private RelayCommand<object> saveCommand;
+        private RelayCommand<object> addListItemCommand;
+        private RelayCommand<object> removeListItemCommand;
+        private RelayCommand<object> saveConfigCommand;
         private DictItem selectedRaceItem;
         private string selectedCity;
 
-        public CityConfigViewModel(StorageHelper s)
+        public CityConfigViewModel(StorageHelper s) : base(s)
         {
             storage = s;
             storedData = GetStoredData();
             
         }
 
-        public void SetItems()
+        protected new void SetItems()
         {
             ItemNames = new ObservableCollection<string>(storedData.Select(x => x.Name));
         }
@@ -85,72 +83,6 @@ namespace DMPrepHelper.ViewModels
 
         public ObservableCollection<DictItem> Races { get => new ObservableCollection<DictItem>(races.Select(x => new DictItem(x))); }
         public ObservableCollection<string> ItemNames { get => items; set => SetProperty(ref items, value); }
-        public ICommand AddItemCommand
-        {
-            get
-            {
-                if (addCityCommand == null)
-                {
-                    addCityCommand = new RelayCommand<object>(param => AddCityItem(param));
-                }
-                return addCityCommand;
-            }
-        }
-        public ICommand RemoveItemCommand
-        {
-            get
-            {
-                if (removeCityCommand == null)
-                {
-                    removeCityCommand = new RelayCommand<string>(param => RemoveCityItem(param));
-                }
-                return removeCityCommand;
-            }
-        }
-        public ICommand SelectItemCommand
-        {
-            get
-            {
-                if (selectCityCommand == null)
-                {
-                    selectCityCommand = new RelayCommand<string>(param => DidSelectItem(param));
-                }
-                return selectCityCommand;
-            }
-        }
-        public ICommand AddRaceCommand
-        {
-            get
-            {
-                if (addRaceCommand == null)
-                {
-                    addRaceCommand = new RelayCommand<object>(param => AddRaceItem());
-                }
-                return addRaceCommand;
-            }
-        }
-        public ICommand RemoveRaceCommand
-        {
-            get
-            {
-                if (removeRaceCommand == null)
-                {
-                    removeRaceCommand = new RelayCommand<object>(param => RemoveRaceItem());
-                }
-                return removeRaceCommand;
-            }
-        }
-        public ICommand SaveConfigCommand
-        {
-            get
-            {
-                if (saveCommand == null)
-                {
-                    saveCommand = new RelayCommand<object>(param => SaveData());
-                }
-                return saveCommand;
-            }
-        }
 
         public string Name { get => name; set => SetProperty(ref name, value); }
         public string Nation { get => nation; set => SetProperty(ref nation, value); }
@@ -167,7 +99,7 @@ namespace DMPrepHelper.ViewModels
             return data;
         }
 
-        private void DidSelectItem(string item)
+        protected override void DidSelectItem(string item)
         {
             var data = storedData.First(x => x.Name == item);
             Name = item;
@@ -188,35 +120,35 @@ namespace DMPrepHelper.ViewModels
             OnPropertyChanged(nameof(NameSuffixes));
         }
 
-        private void AddRaceItem()
+        protected override void DidAddListItem(string p)
         {
             races[NewRaceName] = NewRaceWeight;
             OnPropertyChanged(nameof(Races));
         }
 
-        private void RemoveRaceItem()
+        protected override void DidRemoveListItem(string p)
         {
 
             races.Remove(selectedRaceItem.Key);
             OnPropertyChanged(nameof(Races));
         }
 
-        private void AddCityItem(object o)
+        protected override void DidAddItem()
         {
             storedData.Add(new CityData { Name = name, Combiner = combiner, Infixes = nameInfixes, Nation = nation, Population = population, Prefixes = namePrefixes, Races = races, Region = region, Size = size, Suffixes = nameSuffixes, Tech = tech, Terrain = terrain });
             OnPropertyChanged(nameof(ItemNames));
         }
 
-        private void RemoveCityItem(string item)
+        protected override void DidRemoveItem(string item)
         {
             storedData.Remove(storedData.First(x => x.Name == item));
             OnPropertyChanged(nameof(ItemNames));
         }
 
-        private void SaveData()
+        protected override void DidSaveConfig()
         {
             var text = JsonConvert.SerializeObject(storedData);
-            storage.SaveConfigText(DataFile.City, text);
+            var dummy = storage.SaveConfigText(DataFile.City, text);
         }
 
     }

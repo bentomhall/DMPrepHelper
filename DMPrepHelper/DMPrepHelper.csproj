@@ -96,6 +96,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\ConfigBaseViewModel.cs" />
     <Compile Include="Export\ExportWriter.cs" />
     <Compile Include="Export\Exporters.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -108,6 +109,7 @@
     <Compile Include="ViewModels\CityConfigViewModel.cs" />
     <Compile Include="ViewModels\ConfigDataTemplateSelector.cs" />
     <Compile Include="ViewModels\ConfigEditorViewModel.cs" />
+    <Compile Include="ViewModels\CultureConfigViewModel.cs" />
     <Compile Include="ViewModels\DungeonConfigViewModel.cs" />
     <Compile Include="ViewModels\DungeonGeneratorViewModel.cs" />
     <Compile Include="ViewModels\DungeonViewModel.cs" />
