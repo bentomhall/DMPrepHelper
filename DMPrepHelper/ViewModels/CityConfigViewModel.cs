@@ -147,14 +147,14 @@ namespace DMPrepHelper.ViewModels
             OnPropertyChanged(nameof(NameSuffixes));
         }
 
-        protected override void DidAddListItem(string p)
+        public override void DidAddListItem(string p)
         {
             Races.Add(new DictItem());
             //races[NewRaceName] = NewRaceWeight;
             //OnPropertyChanged(nameof(Races));
         }
 
-        protected override void DidRemoveListItem(string p)
+        public override void DidRemoveListItem(string p)
         {
 
             Races.Remove(selectedRaceItem);

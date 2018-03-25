@@ -58,7 +58,7 @@ namespace DMPrepHelper.ViewModels
             base.DidAddItem();
         }
 
-        protected override void DidAddListItem(string p)
+        public override void DidAddListItem(string p)
         {
             base.DidAddListItem(p);
         }
@@ -68,7 +68,7 @@ namespace DMPrepHelper.ViewModels
             base.DidRemoveItem(p);
         }
 
-        protected override void DidRemoveListItem(string p)
+        public override void DidRemoveListItem(string p)
         {
             base.DidRemoveListItem(p);
         }

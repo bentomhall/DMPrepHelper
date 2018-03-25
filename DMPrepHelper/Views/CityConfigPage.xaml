@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DMPrepHelper.ViewModels"
+    xmlns:views="using:DMPrepHelper.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -151,8 +152,11 @@
                     <TextBlock TextWrapping="Wrap" x:Uid="CityNameCombinerHelpText"/>
                 </Flyout>
             </Button.Flyout>
-        </Button>        
-        <StackPanel  Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="2">
+        </Button>
+        <views:ChoiceSetControl Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="2" 
+                                ItemSource="{x:Bind ViewModel.Races, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedRaceItem, Mode=TwoWay}" 
+                                Label="Races" AddItem="{x:Bind ViewModel.AddListItemCommand}" RemoveItem="{x:Bind ViewModel.RemoveItemCommand}"/>
+        <!--<StackPanel  Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="2">
             <TextBlock TextAlignment="Center" Margin="0,0,0,8">Races</TextBlock>
             <Border BorderBrush="Black" BorderThickness="1"/>
             <ListView x:Name="RacesPanel" MinHeight="150" ItemsSource="{x:Bind ViewModel.Races, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedRaceItem, Mode=TwoWay}" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}">
@@ -173,7 +177,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel><!--
+        </StackPanel>--><!--
         <StackPanel HorizontalAlignment="Center" Grid.Column="1" Grid.Row="13" VerticalAlignment="Center">
             <Button Command="{x:Bind ViewModel.RemoveListItemCommand}" Content="Remove Selected"/>
             <StackPanel Orientation="Horizontal">

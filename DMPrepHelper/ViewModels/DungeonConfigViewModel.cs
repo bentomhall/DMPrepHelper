@@ -84,7 +84,7 @@ namespace DMPrepHelper.ViewModels
             var dummy = storage.SaveConfigText(DataFile.Dungeon, storedData);
         }
 
-        protected override void DidAddListItem(string lst)
+        public override void DidAddListItem(string lst)
         {
             switch (lst)
             {
@@ -100,9 +100,10 @@ namespace DMPrepHelper.ViewModels
                 default:
                     break;
             }
+            return;
         }
 
-        protected override void DidRemoveListItem(string lst)
+        public override void DidRemoveListItem(string lst)
         {
             switch (lst)
             {
@@ -118,6 +119,7 @@ namespace DMPrepHelper.ViewModels
                 default:
                     break;
             }
+            return;
         }
 
         private new void SetItems()

@@ -43,12 +43,12 @@ namespace DMPrepHelper.ViewModels
             throw new NotImplementedException();
         }
 
-        protected virtual void DidAddListItem(string p)
+        public virtual void DidAddListItem(string p)
         {
             throw new NotImplementedException();
         }
 
-        protected virtual void DidRemoveListItem(string p)
+        public virtual void DidRemoveListItem(string p)
         {
             throw new NotImplementedException();
         }
