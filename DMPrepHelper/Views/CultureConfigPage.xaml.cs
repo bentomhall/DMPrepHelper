@@ -36,8 +36,12 @@ namespace DMPrepHelper.Views
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var clicked = e.ClickedItem as string;
-            ViewModel.SelectItemCommand.Execute(clicked);
+            ViewModel.SelectItemCommand.Execute("");
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ViewModel.SelectItemCommand.Execute("");
         }
     }
 }

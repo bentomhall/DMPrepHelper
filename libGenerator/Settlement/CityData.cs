@@ -2,11 +2,13 @@
 using System.Linq;
 using System.Globalization;
 using LibGenerator.Core;
+using System;
 
 namespace LibGenerator.Settlement
 {
     public class CityData
     {
+        public Guid Guid { get => guid; }
         public string Name { get; set; }
         public string Nation { get; set; }
         public int Population { get; set; }
@@ -21,6 +23,7 @@ namespace LibGenerator.Settlement
         public string Combiner { get; set; }
 
         private WeightedChoiceSet races;
+        private Guid guid = Guid.NewGuid();
 
         public string GetRace()
         {

@@ -135,6 +135,9 @@
   <data name="CommaSeparatedListHelpText.Text" xml:space="preserve">
     <value>Enter these as a comma-separated list: item 1, item 2, item 3.... Include a space after the comma.</value>
   </data>
+  <data name="CultureRaceHelpText.Text" xml:space="preserve">
+    <value>Race names are keys. Those used elsewhere must exactly match the ones defined here.</value>
+  </data>
   <data name="DungeonAgeHelpText.Text" xml:space="preserve">
     <value>Suggested values are ancient (hundreds of years old), old (1 month - 100 years old), or recent (less than 1 month old).</value>
   </data>

@@ -36,8 +36,30 @@ namespace DMPrepHelper.Views
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var clicked = e.ClickedItem as string;
-            ViewModel.SelectItemCommand.Execute(clicked);
+            if (ViewModel.SelectedCity != null)
+            {
+                ViewModel.DidEditItem();
+            }
+            ViewModel.SelectItemCommand.Execute((e.ClickedItem as CityViewModel).Data.Name);
+        }
+
+        private void Button_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var buttonName = (sender as Button).Name;
+            if (buttonName == "AddListItemButton")
+            {
+                ViewModel.AddListItemCommand.Execute(null);
+            }
+            else if (buttonName == "DeleteListItemButton")
+            {
+                ViewModel.RemoveListItemCommand.Execute("");
+            }
+
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {  
+            ViewModel.SelectItemCommand.Execute((e.AddedItems[0] as CityViewModel).Data.Name);
         }
     }
 }

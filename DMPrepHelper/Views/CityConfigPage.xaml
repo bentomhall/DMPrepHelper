@@ -7,12 +7,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <Binding x:Name="AddSubItemCommand" Path="ViewModel.AddListItemCommand"/>
+    </Page.Resources>
+    
     <Grid Background="{ThemeResource SystemControlBackgroundAltHighBrush}" RowSpacing="4">
         <Grid.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="TextAlignment" Value="Right"/>
             </Style>
+            
         </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition MaxWidth="220"/>
@@ -34,8 +39,14 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView Margin="4" Grid.Column="0" Grid.Row="0" ItemsSource="{x:Bind ViewModel.ItemNames, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedCity, Mode=TwoWay}" 
-                  IsItemClickEnabled="True" ItemClick="ListView_ItemClick" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}"/>
+        <ListView Margin="4" Grid.Column="0" Grid.Row="0" ItemsSource="{x:Bind ViewModel.Items, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedCity, Mode=TwoWay}" 
+                  ItemContainerStyle="{StaticResource NarrowListViewItemStyle}" IsItemClickEnabled="True" ItemClick="ListView_ItemClick">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:CityViewModel">
+                    <TextBox Text="{x:Bind Data.Name, Mode=TwoWay}" HorizontalAlignment="Stretch"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="1"/>
         <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2">
             <Button Command="{x:Bind ViewModel.SaveConfigCommand}" HorizontalContentAlignment="Left" Margin="12,0,0,0">
@@ -59,7 +70,7 @@
         </StackPanel>
         <Border Grid.ColumnSpan="3" Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2"/>
         <TextBlock Grid.Column="0" Grid.Row="1">City Name:</TextBlock>
-        <TextBox HorizontalAlignment="Stretch" Width="200" Grid.Row="1" Grid.Column="1" Text="{x:Bind ViewModel.Name, Mode=TwoWay}"/>
+        <TextBox IsEnabled="False" HorizontalAlignment="Stretch" Width="200" Grid.Row="1" Grid.Column="1" Text="{x:Bind ViewModel.Name, Mode=TwoWay}"/>
 
         <TextBlock Grid.Column="0" Grid.Row="2" Margin="24,0,0,0">Nation:</TextBlock>
         <TextBox Grid.Column="1" Grid.Row="2" Width="200" Text="{x:Bind ViewModel.Nation, Mode=TwoWay}"/>
@@ -141,17 +152,28 @@
                 </Flyout>
             </Button.Flyout>
         </Button>        
-        <StackPanel  Grid.Column="0" Grid.Row="12">
+        <StackPanel  Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="2">
             <TextBlock TextAlignment="Center" Margin="0,0,0,8">Races</TextBlock>
             <Border BorderBrush="Black" BorderThickness="1"/>
             <ListView x:Name="RacesPanel" MinHeight="150" ItemsSource="{x:Bind ViewModel.Races, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedRaceItem, Mode=TwoWay}" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="local:DictItem">
-                        <TextBlock Text="{x:Bind Representation}"/>
+                        <Grid ColumnSpacing="8" HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="128"/>
+                                <ColumnDefinition Width="64"/>
+                                <ColumnDefinition Width="48"/>
+                                <ColumnDefinition Width="48"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="{x:Bind Key, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="0" TextAlignment="Right" HorizontalAlignment="Stretch"/>
+                            <TextBox Text="{x:Bind Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Stretch"/>
+                            <Button x:Name="AddListItemButton" Content="+" Grid.Column="2" Tapped="Button_Tapped"/>
+                            <Button x:Name="DeleteListItemButton" Content="-" Grid.Column="3" Tapped="Button_Tapped"/>
+                        </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
+        </StackPanel><!--
         <StackPanel HorizontalAlignment="Center" Grid.Column="1" Grid.Row="13" VerticalAlignment="Center">
             <Button Command="{x:Bind ViewModel.RemoveListItemCommand}" Content="Remove Selected"/>
             <StackPanel Orientation="Horizontal">
@@ -160,6 +182,6 @@
                 <TextBox Text="{x:Bind ViewModel.NewRaceWeight, Mode=TwoWay}"/>
             </StackPanel>
             <Button Command="{x:Bind ViewModel.AddListItemCommand}" Content="Add new race with weight"/>
-        </StackPanel>
+        </StackPanel>-->
     </Grid>
 </Page>

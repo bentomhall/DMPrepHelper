@@ -8,6 +8,7 @@ namespace LibGenerator.NPC
 {
     public class CultureData
     {
+        public Guid Guid { get => guid; }
         public string Race { get; set; }
         public string Nation { get; set; }
         public List<string> Culture { get; set; }
@@ -15,6 +16,7 @@ namespace LibGenerator.NPC
         public List<string> Religiosity { get; set; }
         public Dictionary<string, double> Subrace { get; set; }
 
+        private Guid guid = Guid.NewGuid();
         private WeightedChoiceSet genders;
         private WeightedChoiceSet subraces;
 

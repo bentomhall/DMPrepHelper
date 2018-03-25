@@ -59,6 +59,9 @@ namespace DMPrepHelper.Views
                 case DataFile.Dungeon:
                     ConfigContentFrame.Navigate(typeof(DungeonConfigPage));
                     break;
+                case DataFile.Race:
+                    ConfigContentFrame.Navigate(typeof(CultureConfigPage));
+                    break;
                 default:
                     ConfigContentFrame.Navigate(typeof(GenericContentPage));
                     break;

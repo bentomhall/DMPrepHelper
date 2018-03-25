@@ -10,6 +10,7 @@ namespace DMPrepHelper.ViewModels
     public class NotifyChangedBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        protected bool IsDirty = false;
 
         protected bool SetProperty<T>(ref T field, T value, [CallerMemberName]string name = null)
         {
