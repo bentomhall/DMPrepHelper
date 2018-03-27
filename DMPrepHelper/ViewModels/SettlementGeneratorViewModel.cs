@@ -15,20 +15,12 @@ namespace DMPrepHelper.ViewModels
         private string selectedCity;
         private ObservableCollection<string> cities;
         private RelayCommand<object> generateCommand;
-        private RelayCommand<object> selectAllCommand;
         private RelayCommand<object> exportCommand;
         private ObservableCollection<SettlementViewModel> vms = new ObservableCollection<SettlementViewModel>();
         private bool CanGenerate => (!String.IsNullOrEmpty(selected) && ! String.IsNullOrEmpty(selectedCity));
         private int number = 1;
         private ObservableCollection<SettlementViewModel> selectedViewModels = new ObservableCollection<SettlementViewModel>();
         private StorageHelper storageHelper;
-
-        /*
-        public SettlementGeneratorViewModel()
-        {
-            Sizes = new ObservableCollection<string>(generator.GetPossibleSettlementTypes());
-            Cities = new ObservableCollection<string>(generator.GetPossibleCities());
-        }*/
 
         public SettlementGeneratorViewModel(StorageHelper storage)
         {
@@ -105,10 +97,10 @@ namespace DMPrepHelper.ViewModels
             }
         }
 
-        private async Task ExportSelected()
+        private void ExportSelected()
         {
             var data = selectedViewModels.Select(x => x.RawData);
-            await storageHelper.WriteFile(Export.ExportTypes.Settlement, data);
+            var dummy = storageHelper.WriteFile(Export.ExportTypes.Settlement, data);
         }
     }
 }

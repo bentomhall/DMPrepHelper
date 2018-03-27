@@ -6,14 +6,14 @@ namespace LibGenerator.Dungeon
 
     public class LocationData
     {
-        public string Name { get; set; }
-        public string Scale { get; set; }
-        public List<int> Sizes { get; set; }
-        public List<string> Subtypes { get; set; }
-        public List<string> Ages { get; set; }
-        public double HasBoss { get; set; }
-        public Dictionary<string, double> LairChance { get; set; }
-        public bool HasSublocations { get; set; }
+        public string Name { get; set; } = "";
+        public string Scale { get; set; } = "";
+        public List<int> Sizes { get; set; } = new List<int>();
+        public List<string> Subtypes { get; set; } = new List<string>();
+        public List<string> Ages { get; set; } = new List<string>();
+        public double HasBoss { get; set; } = 0.0;
+        public Dictionary<string, double> LairChance { get; set; } = new Dictionary<string, double>() { {"1", 0.0 }, { "2", 0.0 }, { "3", 0.0 }, { "4", 0.0 } };
+        public bool HasSublocations { get; set; } = false;
 
         public int GetSize()
         {

@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using DMPrepHelper.ViewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,22 +23,15 @@ namespace DMPrepHelper.Views
     /// </summary>
     public sealed partial class DungeonConfigPage : Page
     {
-        private ViewModels.DungeonConfigViewModel model;
-        private StorageHelper storage;
 
         public DungeonConfigPage()
         {
             this.InitializeComponent();
-            storage = ((App)Application.Current).Storage;
-            ViewModel = new ViewModels.DungeonConfigViewModel(storage);
+            var storage = ((App)Application.Current).Storage;
+            ViewModel = new ConfigItemViewModel(storage, DataFile.Dungeon);
         }
 
-        public ViewModels.DungeonConfigViewModel ViewModel { get => model; set => model = value; }
+        public ConfigItemViewModel ViewModel { get; set; }
 
-        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var clicked = e.ClickedItem as string;
-            ViewModel.SelectItemCommand.Execute(clicked);
-        }
     }
 }

@@ -7,12 +7,12 @@ namespace LibGenerator.NPC
 {
     public class NameData
     {
-        public string Culture { get; set; }
-        public List<string> Male { get; set; }
-        public List<string> Female { get; set; }
-        public string Combiner { get; set; }
-        public List<string> Family { get; set; }
-        public string Base { get; set; }
+        public string Culture { get; set; } = "";
+        public List<string> Male { get; set; } = new List<string>();
+        public List<string> Female { get; set; } = new List<string>();
+        public string Combiner { get; set; } = " ";
+        public List<string> Family { get; set; } = new List<string>();
+        public string Base { get; set; } = "";
 
         private Random r = new Random();
 

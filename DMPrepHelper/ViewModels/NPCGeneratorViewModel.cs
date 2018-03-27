@@ -92,10 +92,10 @@ namespace DMPrepHelper.ViewModels
             }
         }
 
-        private async Task ExportSelected()
+        private void ExportSelected()
         {
             var data = SelectedModels.Select(x => x.RawData);
-            await storageHelper.WriteFile(Export.ExportTypes.Person, data);
+            var dummy = storageHelper.WriteFile(Export.ExportTypes.Person, data);
         }
     }
 }

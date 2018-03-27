@@ -90,9 +90,9 @@ namespace DMPrepHelper.ViewModels
             }
         }
 
-        private async Task ExportSelected()
+        private void ExportSelected()
         {
-            await storage.WriteFile(Export.ExportTypes.Dungeon, selectedVMs.Select(x => x.RawData));
+            var dummy =  storage.WriteFile(Export.ExportTypes.Dungeon, selectedVMs.Select(x => x.RawData));
         }
 
     }

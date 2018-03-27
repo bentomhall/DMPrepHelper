@@ -6,115 +6,32 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <ScrollViewer>
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-            <ListView Margin="4" Grid.Column="0" Grid.Row="0" ItemsSource="{x:Bind ViewModel.ItemNames, Mode=OneWay}"
-                  SelectedItem="{x:Bind ViewModel.SelectedType, Mode=TwoWay}" IsItemClickEnabled="True" ItemClick="ListView_ItemClick" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}">
-            </ListView>
-            <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="1"/>
-            <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2">
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2" HorizontalAlignment="Center">
             <Button Command="{x:Bind ViewModel.SaveConfigCommand}" HorizontalContentAlignment="Left" Margin="4,0,0,0">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                     <SymbolIcon Symbol="Save"/>
                     <TextBlock Text="Save" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
-                <Button Command="{x:Bind ViewModel.AddItemCommand}" Margin="12,0,0,0">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                        <SymbolIcon Symbol="Add"/>
-                        <TextBlock Text="New Dungeon Type" Margin="12,0,0,0"/>
-                    </StackPanel>
-                </Button>
-                <Button Command="{x:Bind ViewModel.RemoveItemCommand}" CommandParameter="{x:Bind ViewModel.SelectedType, Mode=OneWay}" Margin="12,0,0,0">
+            <Button Command="{x:Bind ViewModel.AddItemCommand}" Margin="12,0,0,0">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="Delete"/>
-                    <TextBlock Text="Delete Selected" Margin="12,0,0,0"/>
+                    <SymbolIcon Symbol="Add"/>
+                    <TextBlock Text="New Dungeon Type" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
         </StackPanel>
-            <Border Grid.ColumnSpan="4" Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2"/>
+        <Border Grid.ColumnSpan="2" Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2"/>
+        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Text="{x:Bind ViewModel.ConfigText, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        <TextBlock TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Text="{x:Bind ViewModel.HelpText}"/>
 
-            <TextBlock Style="{StaticResource LabelTextBlock}" Text="Site Type:" Grid.Row="1" Margin="4"/>
-        <TextBox Text="{x:Bind ViewModel.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Margin="16,16,16,8" Grid.Row="1" Grid.Column="1"/>
-
-            <TextBlock Style="{StaticResource LabelTextBlock}" Text="Scale (Large, Medium, or Small):" Grid.Row="2" Margin="4"/>
-        <TextBox Text="{x:Bind ViewModel.Scale, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="2" Margin="16,8,16,8" Grid.Column="1" />
-            <Button Content="?" Grid.Column="2" Grid.Row="2" Style="{ThemeResource ButtonRevealStyle}">
-                <Button.Flyout>
-                    <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
-                        <TextBlock TextWrapping="Wrap" x:Uid="DungeonScaleHelpText"/>
-                    </Flyout>
-                </Button.Flyout>
-            </Button>
-
-            <TextBlock Style="{StaticResource LabelTextBlock}" Grid.Column="0" Grid.Row="3" Text="Chance of a powerful boss monster?"/>
-        <TextBox Text="{x:Bind ViewModel.BossProbability, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Margin="16,8"/>
-            <Button Content="?" Grid.Column="2" Grid.Row="3" Style="{ThemeResource ButtonRevealStyle}">
-                <Button.Flyout>
-                    <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
-                        <TextBlock TextWrapping="Wrap" x:Uid="DungeonBossChanceHelpText"/>
-                    </Flyout>
-                </Button.Flyout>
-            </Button>
-
-            <TextBlock  Style="{StaticResource LabelTextBlock}" Grid.Column="0" Grid.Row="4" Text="Can this location have sub-locations?"/>
-        <ToggleSwitch IsOn="{x:Bind ViewModel.CanHaveSublocations, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" Margin="16,8" HorizontalAlignment="Center"/>
-
-            <TextBlock Style="{StaticResource LabelTextBlock}" Grid.Column="0" Grid.Row="5" Text="How many discrete areas can this site have?" />
-        <StackPanel Grid.Column="1" Grid.Row="5" Grid.RowSpan="2" Margin="16,8">
-                <ListView ItemsSource="{x:Bind ViewModel.Sizes, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedSize}" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}"/>
-            <StackPanel Orientation="Horizontal">
-                <Button Content="+" Command="{x:Bind ViewModel.AddListItemCommand}" CommandParameter="size" Margin="4"/>
-                <Button Content="-" Command="{x:Bind ViewModel.RemoveListItemCommand}" CommandParameter="size" Margin="12,4,4,4"/>
-                <TextBox Text="{x:Bind ViewModel.NewSizeItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinWidth="50" Margin="12,4,4,4"/>
-            </StackPanel>
-        </StackPanel>
-
-            <TextBlock Style="{StaticResource LabelTextBlock}" Grid.Column="0" Grid.Row="7" Text="How old can this site be?"/>
-        <StackPanel Grid.Column="1" Grid.Row="7" Grid.RowSpan="2" Margin="16,8">
-                <ListView ItemsSource="{x:Bind ViewModel.Ages, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedAge}" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}"/>
-            <StackPanel Orientation="Horizontal">
-                <Button Content="+" Command="{x:Bind ViewModel.AddListItemCommand}" CommandParameter="age" Margin="4"/>
-                <Button Content="-" Command="{x:Bind ViewModel.RemoveListItemCommand}" CommandParameter="age" Margin="12,4,4,4"/>
-                <TextBox Text="{x:Bind ViewModel.NewAgeItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinWidth="100" Margin="12,4,4,4"/>
-            </StackPanel>
-        </StackPanel>
-            <Button Content="?" Grid.Column="2" Grid.Row="7" Style="{ThemeResource ButtonRevealStyle}">
-                <Button.Flyout>
-                    <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
-                        <TextBlock TextWrapping="Wrap" x:Uid="DungeonAgeHelpText"/>
-                    </Flyout>
-                </Button.Flyout>
-            </Button>
-            <TextBlock Style="{StaticResource LabelTextBlock}" Grid.Column="0" Grid.Row="9" Text="What are the possible sub-categories for this site type?"/>
-        <StackPanel Grid.Column="1" Grid.Row="9" Grid.RowSpan="3" Margin="16,8">
-                <ListView ItemsSource="{x:Bind ViewModel.Subtypes, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedSubType}" ItemContainerStyle="{StaticResource NarrowListViewItemStyle}"/>
-            <StackPanel Orientation="Horizontal">
-                <Button Content="+" Command="{x:Bind ViewModel.AddListItemCommand}" CommandParameter="subtype" Margin="4"/>
-                <Button Content="-" Command="{x:Bind ViewModel.RemoveListItemCommand}" CommandParameter="subtype" Margin="12,4,4,4"/>
-                <TextBox Text="{x:Bind ViewModel.NewSubtypeItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinWidth="100" Margin="12,4,4,4"/>
-            </StackPanel>
-        </StackPanel>
     </Grid>
-    </ScrollViewer>
 </Page>

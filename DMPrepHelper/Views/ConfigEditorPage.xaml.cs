@@ -62,6 +62,9 @@ namespace DMPrepHelper.Views
                 case DataFile.Race:
                     ConfigContentFrame.Navigate(typeof(CultureConfigPage));
                     break;
+                case DataFile.ItemRank:
+                    ConfigContentFrame.Navigate(typeof(ItemRankConfigPage));
+                    break;
                 default:
                     ConfigContentFrame.Navigate(typeof(GenericContentPage));
                     break;

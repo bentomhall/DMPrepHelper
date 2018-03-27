@@ -1,36 +1,35 @@
 ﻿<Page
-    x:Class="DMPrepHelper.Views.CityConfigPage"
+    x:Class="DMPrepHelper.Views.ItemRankConfigPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DMPrepHelper.ViewModels"
-    xmlns:views="using:DMPrepHelper.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid Background="{ThemeResource SystemControlBackgroundAltHighBrush}" RowSpacing="4">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
-            <RowDefinition />
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Command="{x:Bind ViewModel.SaveConfigCommand}" HorizontalContentAlignment="Left" Margin="12,0,0,0">
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <Button Command="{x:Bind ViewModel.SaveConfigCommand}" HorizontalContentAlignment="Left" Margin="4,0,0,0">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                     <SymbolIcon Symbol="Save"/>
                     <TextBlock Text="Save" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
-            <Button Command="{x:Bind ViewModel.AddItemCommand}" HorizontalContentAlignment="Left" Margin="12,0,0,0">
+            <Button Command="{x:Bind ViewModel.AddItemCommand}" Margin="12,0,0,0">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                     <SymbolIcon Symbol="Add"/>
-                    <TextBlock Text="New City" Margin="12,0,0,0"/>
+                    <TextBlock Text="New Culture" Margin="12,0,0,0"/>
                 </StackPanel>
             </Button>
         </StackPanel>
+        <Border Grid.ColumnSpan="4" Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2"/>
         <TextBox AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Text="{x:Bind ViewModel.ConfigText, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
         <TextBlock TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Text="{x:Bind ViewModel.HelpText}"/>
     </Grid>

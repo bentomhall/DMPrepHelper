@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using DMPrepHelper.ViewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,26 +23,14 @@ namespace DMPrepHelper.Views
     /// </summary>
     public sealed partial class CultureConfigPage : Page
     {
-        private ViewModels.CultureConfigViewModel model;
-        private StorageHelper storage;
-
         public CultureConfigPage()
         {
             this.InitializeComponent();
-            storage = ((App)Application.Current).Storage;
-            ViewModel = new ViewModels.CultureConfigViewModel(storage);
+            var storage = ((App)Application.Current).Storage;
+            ViewModel = new ConfigItemViewModel(storage, DataFile.Race);
         }
 
-        public ViewModels.CultureConfigViewModel ViewModel { get => model; set => model = value; }
+        public ConfigItemViewModel ViewModel { get; set; }
 
-        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ViewModel.SelectItemCommand.Execute("");
-        }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ViewModel.SelectItemCommand.Execute("");
-        }
     }
 }

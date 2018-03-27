@@ -11,7 +11,6 @@ namespace DMPrepHelper.ViewModels
     public class ConfigEditorViewModel : NotifyChangedBase
     {
         private StorageHelper storage;
-        private string selectedItem;
         private Dictionary<string, DataFile> fileTypes = new Dictionary<string, DataFile>()
         {
             {"Cities", DataFile.City },
@@ -91,31 +90,10 @@ namespace DMPrepHelper.ViewModels
 
         private void DidSelectItem(string label)
         {
-            selectedItem = label;
-            var dataType = fileTypes[label];
-            IConfigDisplay item = null;
-            switch (dataType)
-            {
-                case DataFile.City:
-                    item = new CityConfigViewModel(storage);
-                    DisplayItem = item;
-                    break;
-                default:
-                    break;
-            }
-            if (item == null)
-            {
-                DisplayItem = new GenericDisplay() { DisplayText = storage.GetConfigText(dataType) };
-            }
-            DisplayItem.SetItems();
-            return;
         }
 
         private void DidSaveItem()
-        {
-            var dataType = fileTypes[selectedItem];
-            var dummy = storage.SaveConfigText(dataType, displayText);
-            
+        {   
         }
     }
 

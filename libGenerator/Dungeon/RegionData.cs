@@ -6,8 +6,8 @@ namespace LibGenerator.Dungeon
 {
     public class RegionData
     {
-        public string Name { get; set; }
-        public List<string> Tier { get; set; }
+        public string Name { get; set; } = "";
+        public List<string> Tier { get; set; } = new List<string>();
         public Dictionary<string, double> Monsters
         {
             get => monsterTable;
@@ -20,7 +20,7 @@ namespace LibGenerator.Dungeon
         public float AdventuresPerHex { get; set; }
         public List<string> AdventureTypes { get; set; }
 
-        private Dictionary<string, double> monsterTable;
+        private Dictionary<string, double> monsterTable = new Dictionary<string, double>() { { "Monster", 1.0 } };
         private WeightedChoiceSet monsters;
 
         public string GetTier()

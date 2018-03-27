@@ -105,6 +105,12 @@ namespace DMPrepHelper
             return dataText[type].Result;
         }
 
+        public string GetBlankEntry<T>() where T : new()
+        {
+            var entry = new T();
+            return "," + Environment.NewLine + JsonConvert.SerializeObject(entry, Formatting.Indented);
+        }
+
         public async Task SaveConfigText(DataFile type, string text)
         {
             var file = localFiles[type];
@@ -115,7 +121,7 @@ namespace DMPrepHelper
         public async Task SaveConfigText(DataFile type, object data)
         {
             var file = localFiles[type];
-            var text = JsonConvert.SerializeObject(data);
+            var text = JsonConvert.SerializeObject(data, Formatting.Indented);
             await FileIO.WriteTextAsync(file, text, Windows.Storage.Streams.UnicodeEncoding.Utf8);
         }
 

@@ -8,22 +8,20 @@ namespace LibGenerator.Settlement
 {
     public class CityData
     {
-        public Guid Guid { get => guid; }
-        public string Name { get; set; }
-        public string Nation { get; set; }
-        public int Population { get; set; }
-        public string Size { get; set; }
-        public string Region { get; set; }
-        public string Terrain { get; set; }
-        public Dictionary<string, double> Races { get; set; }
-        public int Tech { get; set; }
-        public List<string> Prefixes { get; set; }
-        public List<string> Infixes { get; set; }
-        public List<string> Suffixes { get; set; }
-        public string Combiner { get; set; }
+        public string Name { get; set; } = "";
+        public string Nation { get; set; } = "";
+        public int Population { get; set; } = 0;
+        public string Size { get; set; } = "";
+        public string Region { get; set; } = "";
+        public string Terrain { get; set; } = "";
+        public Dictionary<string, double> Races { get; set; } = new Dictionary<string, double> { { "race 1", 0.5 }, { "race 2", 0.5 } };
+        public int Tech { get; set; } = 0;
+        public List<string> Prefixes { get; set; } = new List<string>();
+        public List<string> Infixes { get; set; } = new List<string>();
+        public List<string> Suffixes { get; set; } = new List<string>();
+        public string Combiner { get; set; } = "";
 
         private WeightedChoiceSet races;
-        private Guid guid = Guid.NewGuid();
 
         public string GetRace()
         {
@@ -35,7 +33,7 @@ namespace LibGenerator.Settlement
             return races.Match(r);
         }
 
-        private System.Random random = new System.Random();
+        private Random random = new Random();
         public string GetName()
         {
             var textInfo = new CultureInfo("en-US", false).TextInfo;

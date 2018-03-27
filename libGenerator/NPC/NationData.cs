@@ -6,8 +6,8 @@ namespace LibGenerator.NPC
 {
     public class NationData
     {
-        public string Name { get; set; }
-        public Dictionary<string, double> Races { get; set; }
+        public string Name { get; set; } = "";
+        public Dictionary<string, double> Races { get; set; } = new Dictionary<string, double> { { "human", 1.0 } };
         private WeightedChoiceSet races;
 
         public string GetRace()

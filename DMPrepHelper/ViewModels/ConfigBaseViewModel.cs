@@ -17,6 +17,7 @@ namespace DMPrepHelper.ViewModels
         {
             storage = s;
         }
+        public ConfigBaseViewModel() { }
 
         public void SetItems()
         {
