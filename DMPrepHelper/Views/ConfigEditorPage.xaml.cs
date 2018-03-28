@@ -45,30 +45,32 @@ namespace DMPrepHelper.Views
 
         private void Navigate(DataFile dataType)
         {
-            switch (dataType)
-            {
-                case DataFile.City:
-                    ConfigContentFrame.Navigate(typeof(CityConfigPage));
-                    break;
-                case DataFile.Personality:
-                    ConfigContentFrame.Navigate(typeof(ListPage), "personality");
-                    break;
-                case DataFile.Profession:
-                    ConfigContentFrame.Navigate(typeof(ListPage), "profession");
-                    break;
-                case DataFile.Dungeon:
-                    ConfigContentFrame.Navigate(typeof(DungeonConfigPage));
-                    break;
-                case DataFile.Race:
-                    ConfigContentFrame.Navigate(typeof(CultureConfigPage));
-                    break;
-                case DataFile.ItemRank:
-                    ConfigContentFrame.Navigate(typeof(ItemRankConfigPage));
-                    break;
-                default:
-                    ConfigContentFrame.Navigate(typeof(GenericContentPage));
-                    break;
-            }
+            ConfigContentFrame.Navigate(typeof(ConfigItemPage), dataType.ToString());
+
+            //switch (dataType)
+            //{
+            //    case DataFile.City:
+                    
+            //        break;
+            //    case DataFile.Personality:
+            //        ConfigContentFrame.Navigate(typeof(ListPage), "personality");
+            //        break;
+            //    case DataFile.Profession:
+            //        ConfigContentFrame.Navigate(typeof(ListPage), "profession");
+            //        break;
+            //    case DataFile.Dungeon:
+            //        ConfigContentFrame.Navigate(typeof(ConfigItemPage), );
+            //        break;
+            //    case DataFile.Race:
+            //        ConfigContentFrame.Navigate(typeof(CultureConfigPage));
+            //        break;
+            //    case DataFile.ItemRank:
+            //        ConfigContentFrame.Navigate(typeof(ItemRankConfigPage));
+            //        break;
+            //    default:
+            //        ConfigContentFrame.Navigate(typeof(GenericContentPage));
+            //        break;
+            //}
             
         }
     }

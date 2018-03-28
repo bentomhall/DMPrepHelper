@@ -117,36 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CityNameCombinerHelpText.Text" xml:space="preserve">
-    <value>Cities are named in the form [prefix][combiner][root][combiner][suffix]. The combiner can be empty (for no separator).</value>
-  </data>
-  <data name="CityNationHelpText.Text" xml:space="preserve">
-    <value>Nation labels must match those declared in the Nations file.</value>
-  </data>
-  <data name="CityRegionHelpText.Text" xml:space="preserve">
-    <value>Region labels must match those declared in the Regions file.</value>
-  </data>
-  <data name="CitySizeHelpText.Text" xml:space="preserve">
-    <value>e.g. hamlet, village, town, city, capital, fortress, etc.</value>
-  </data>
-  <data name="CityTechHelpText.Text" xml:space="preserve">
-    <value>0 is lowest tech level (only primitive items available). 4 is highest (everything available). Availability is customizeable in the Items file.</value>
-  </data>
-  <data name="CommaSeparatedListHelpText.Text" xml:space="preserve">
-    <value>Enter these as a comma-separated list: item 1, item 2, item 3.... Include a space after the comma.</value>
-  </data>
-  <data name="CultureRaceHelpText.Text" xml:space="preserve">
-    <value>Race names are keys. Those used elsewhere must exactly match the ones defined here.</value>
-  </data>
-  <data name="DungeonAgeHelpText.Text" xml:space="preserve">
-    <value>Suggested values are ancient (hundreds of years old), old (1 month - 100 years old), or recent (less than 1 month old).</value>
-  </data>
-  <data name="DungeonBossChanceHelpText.Text" xml:space="preserve">
-    <value>Values are decimals between 0.0 (no chance) and 1.0 (boss always present).</value>
-  </data>
-  <data name="DungeonScaleHelpText.Text" xml:space="preserve">
-    <value>Large: areas scaled to miles per inch.
-Medium: areas scaled in hundreds of feet per inch
-Small: areas scaled in standard scale.</value>
-  </data>
 </root>

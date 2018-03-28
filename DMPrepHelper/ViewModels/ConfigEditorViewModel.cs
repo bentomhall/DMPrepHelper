@@ -26,9 +26,6 @@ namespace DMPrepHelper.ViewModels
             {"Settlement Types", DataFile.SettlementType },
             {"Settlement Roles", DataFile.SettlementRole }
         };
-        private RelayCommand<string> selectItem;
-        private RelayCommand<object> saveSelected;
-        private bool canExecute = true;
         private string displayText;
         private IConfigDisplay displayItem;
 
@@ -59,30 +56,6 @@ namespace DMPrepHelper.ViewModels
         }
 
         public string DisplayText { get => displayText; set => SetProperty(ref displayText, value); }
-
-        public ICommand SelectItemCommand
-        {
-            get
-            {
-                if (selectItem == null)
-                {
-                    selectItem = new RelayCommand<string>(DidSelectItem);
-                }
-                return selectItem;
-            }
-        }
-
-        public ICommand SaveItemCommand
-        {
-            get
-            {
-                if (saveSelected == null)
-                {
-                    saveSelected = new RelayCommand<object>(param => DidSaveItem(), param => canExecute);
-                }
-                return saveSelected;
-            }
-        }
 
         public ObservableCollection<ConfigLabel> Labels { get; private set; }
         public bool RichContentViewVisible => DisplayItem != null;

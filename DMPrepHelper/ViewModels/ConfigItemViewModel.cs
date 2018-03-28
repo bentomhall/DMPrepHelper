@@ -74,6 +74,23 @@ namespace DMPrepHelper.ViewModels
             ConfigText = configText.Insert(configText.Length - 1, json);
             return;
         }
+
+        private Dictionary<DataFile, string> helpResources = new Dictionary<DataFile, string>
+        {
+            {DataFile.City, "CityDataHelpText"},
+            {DataFile.Dungeon, "DungeonDataHelpText" },
+            {DataFile.ItemRank, "ItemDataHelpText" },
+            {DataFile.Nation, "NationDataHelpText" },
+            {DataFile.NpcName, "NameDataHelpText" },
+            {DataFile.Personality, "PersonalityDataHelpText" },
+            {DataFile.Profession, "ProfessionDataHelpText"},
+            {DataFile.Race, "RaceDataHelpText" },
+            {DataFile.Region, "RegionDataHelpText" },
+            {DataFile.Rumor, "RumorDataHelpText"},
+            {DataFile.SettlementRole, "RoleDataHelpText" },
+            {DataFile.SettlementType, "SettlementDataHelpText" }
+        };
+
     }
 
 
