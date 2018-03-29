@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid Background="DarkGray">
+    <Grid Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -15,16 +15,17 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" Padding="12">
-            <ComboBox Header="Nation:" ItemsSource="{x:Bind ViewModel.Nations, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedNation, Mode=TwoWay}"/>
-            <TextBox Header="How many?" Text="{x:Bind ViewModel.Number, Mode=TwoWay}" Margin="12,0,0,0"/>
-            <Button Name="CreateButton" Command="{x:Bind ViewModel.GenerateCommand}" Content="Go!" IsEnabled="{x:Bind ViewModel.CanGenerate, Mode=OneWay}" Margin="12,0,0,0" VerticalAlignment="Stretch"/>
+        <StackPanel Orientation="Horizontal" Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}" Padding="12">
+            <ComboBox Header="Nation:" ItemsSource="{x:Bind ViewModel.Nations, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedNation, Mode=TwoWay}" MinWidth="150"/>
+            <TextBox Header="How many?" Text="{x:Bind ViewModel.Number, Mode=TwoWay}" Margin="12,0,0,0" MinWidth="100"/>
+            <Button Name="CreateButton" Command="{x:Bind ViewModel.GenerateCommand}" Content="Go!" IsEnabled="{x:Bind ViewModel.CanGenerate, Mode=OneWay}" Margin="12,0,0,0" VerticalAlignment="Bottom"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
             <AppBarButton Label="Export Selected" Icon="Share" Command="{x:Bind ViewModel.ExportCommand}"/>
             <AppBarButton Label="Select All" Icon="SelectAll" Click="AppBarButton_Click" />
         </StackPanel>
-        <GridView x:Name="DataGrid" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{x:Bind ViewModel.ViewModels, Mode=OneWay}"  SelectionMode="Multiple" SelectionChanged="GridView_SelectionChanged">
+        <GridView x:Name="DataGrid" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{x:Bind ViewModel.ViewModels, Mode=OneWay}"  SelectionMode="Multiple" SelectionChanged="GridView_SelectionChanged"
+                  Background="{ThemeResource SystemControlBaseMediumLowAcrylicWindowMediumBrush}">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="vm:PersonViewModel">
                     <Grid Background="White" Margin="12,20,20,12" MinWidth="440">
