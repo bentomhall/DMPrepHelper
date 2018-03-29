@@ -11,9 +11,9 @@ namespace LibGenerator.NPC
         public string Race { get; set; } = "";
         public string Nation { get; set; } = "";
         public List<string> Culture { get; set; } = new List<string>();
-        public Dictionary<string, double> Gender { get; set; } = new Dictionary<string, double>() { { "male", 0.5 }, { "female", 0.5 } };
+        public Dictionary<string, double> Gender { get; set; } = new Dictionary<string, double>();
         public List<string> Religiosity { get; set; } = new List<string>();
-        public Dictionary<string, double> Subrace { get; set; } = new Dictionary<string, double>() { { "N/A", 1.0} };
+        public Dictionary<string, double> Subrace { get; set; } = new Dictionary<string, double>();
 
         private WeightedChoiceSet genders;
         private WeightedChoiceSet subraces;

@@ -12,7 +12,7 @@ namespace LibGenerator.Dungeon
         public List<string> Subtypes { get; set; } = new List<string>();
         public List<string> Ages { get; set; } = new List<string>();
         public double HasBoss { get; set; } = 0.0;
-        public Dictionary<string, double> LairChance { get; set; } = new Dictionary<string, double>() { {"1", 0.0 }, { "2", 0.0 }, { "3", 0.0 }, { "4", 0.0 } };
+        public Dictionary<string, double> LairChance { get; set; } = new Dictionary<string, double>();
         public bool HasSublocations { get; set; } = false;
 
         public int GetSize()

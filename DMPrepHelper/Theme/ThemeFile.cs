@@ -83,7 +83,7 @@ namespace DMPrepHelper.Theme
             {DataFile.Profession, "professions.json" },
             {DataFile.Race, "races.json" },
             {DataFile.Region, "regionData.json" },
-            {DataFile.Rumor, "rumors.json" },
+            //{DataFile.Rumor, "rumors.json" },
             {DataFile.SettlementRole, "settlementRoles.json" },
             {DataFile.SettlementType, "settlementTypes.json" }
         };

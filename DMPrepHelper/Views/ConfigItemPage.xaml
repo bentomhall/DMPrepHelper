@@ -31,6 +31,6 @@
         </StackPanel>
         <Border Grid.ColumnSpan="4" Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2"/>
         <TextBox AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Text="{x:Bind ViewModel.ConfigText, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-        <TextBlock TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Text="{x:Bind ViewModel.HelpText}"/>
+        <WebView Grid.Column="1" Grid.Row="1" Source="{x:Bind ViewModel.HelpText, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>

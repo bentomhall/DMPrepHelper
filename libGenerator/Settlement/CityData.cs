@@ -14,7 +14,7 @@ namespace LibGenerator.Settlement
         public string Size { get; set; } = "";
         public string Region { get; set; } = "";
         public string Terrain { get; set; } = "";
-        public Dictionary<string, double> Races { get; set; } = new Dictionary<string, double> { { "race 1", 0.5 }, { "race 2", 0.5 } };
+        public Dictionary<string, double> Races { get; set; } = new Dictionary<string, double>();
         public int Tech { get; set; } = 0;
         public List<string> Prefixes { get; set; } = new List<string>();
         public List<string> Infixes { get; set; } = new List<string>();

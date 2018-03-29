@@ -5,66 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="data\cityData.json" />
-    <None Remove="data\dungeonData.json" />
-    <None Remove="data\itemRanks.json" />
-    <None Remove="data\nations.json" />
-    <None Remove="data\npcNames.json" />
-    <None Remove="data\personality.json" />
-    <None Remove="data\professions.json" />
-    <None Remove="data\races.json" />
-    <None Remove="data\regionData.json" />
-    <None Remove="data\rumors.json" />
-    <None Remove="data\settlementRoles.json" />
-    <None Remove="data\settlementTypes.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="data\npcNames.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="data\cityData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\dungeonData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\itemRanks.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\nations.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\personality.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\professions.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\races.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="data\regionData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\rumors.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\settlementRoles.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\settlementTypes.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.CodeDom" Version="4.4.0" />
   </ItemGroup>
 

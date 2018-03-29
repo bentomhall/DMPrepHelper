@@ -22,7 +22,7 @@ namespace DMPrepHelper.ViewModels
             {"Professions", DataFile.Profession },
             {"Cultures", DataFile.Race },
             {"Regions", DataFile.Region },
-            {"Rumors", DataFile.Rumor },
+            //{"Rumors", DataFile.Rumor },
             {"Settlement Types", DataFile.SettlementType },
             {"Settlement Roles", DataFile.SettlementRole }
         };
@@ -43,7 +43,7 @@ namespace DMPrepHelper.ViewModels
                 new ConfigLabel(){ ConfigType=DataFile.Personality, Icon="Emoji2", Label="Personalities"},
                 new ConfigLabel(){ ConfigType=DataFile.Profession, Icon="Account", Label="Professions"},
                 new ConfigLabel(){ ConfigType=DataFile.Region, Icon="World", Label="Regions"},
-                new ConfigLabel(){ ConfigType=DataFile.Rumor, Icon="PostUpdate", Label="Rumors"},
+                //new ConfigLabel(){ ConfigType=DataFile.Rumor, Icon="PostUpdate", Label="Rumors"},
                 new ConfigLabel(){ ConfigType=DataFile.SettlementType, Icon="Street", Label="Town Types"},
                 new ConfigLabel(){ ConfigType=DataFile.SettlementRole, Icon="Filter", Label="Town Roles"}
             };

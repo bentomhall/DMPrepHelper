@@ -20,7 +20,7 @@ namespace LibGenerator.Dungeon
         public float AdventuresPerHex { get; set; }
         public List<string> AdventureTypes { get; set; }
 
-        private Dictionary<string, double> monsterTable = new Dictionary<string, double>() { { "Monster", 1.0 } };
+        private Dictionary<string, double> monsterTable = new Dictionary<string, double>();
         private WeightedChoiceSet monsters;
 
         public string GetTier()

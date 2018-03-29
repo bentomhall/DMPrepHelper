@@ -20,6 +20,7 @@ namespace DMPrepHelper.ViewModels
         {
             configType = type;
             configText = GetData();
+            HelpText = @"ms-appx-web:///Assets/" + helpResources[configType];
         }
 
         public string ConfigText { get => configText; set => SetProperty(ref configText, value); }
@@ -77,18 +78,18 @@ namespace DMPrepHelper.ViewModels
 
         private Dictionary<DataFile, string> helpResources = new Dictionary<DataFile, string>
         {
-            {DataFile.City, "CityDataHelpText"},
-            {DataFile.Dungeon, "DungeonDataHelpText" },
-            {DataFile.ItemRank, "ItemDataHelpText" },
-            {DataFile.Nation, "NationDataHelpText" },
-            {DataFile.NpcName, "NameDataHelpText" },
-            {DataFile.Personality, "PersonalityDataHelpText" },
-            {DataFile.Profession, "ProfessionDataHelpText"},
-            {DataFile.Race, "RaceDataHelpText" },
-            {DataFile.Region, "RegionDataHelpText" },
-            {DataFile.Rumor, "RumorDataHelpText"},
-            {DataFile.SettlementRole, "RoleDataHelpText" },
-            {DataFile.SettlementType, "SettlementDataHelpText" }
+            {DataFile.City, "CityDataHelpText.html"},
+            {DataFile.Dungeon, "DungeonDataHelpText.html" },
+            {DataFile.ItemRank, "ItemRanksHelpText.html" },
+            {DataFile.Nation, "NationDataHelpText.html" },
+            {DataFile.NpcName, "NameDataHelpText.html" },
+            {DataFile.Personality, "PersonalityAndProfession.html" },
+            {DataFile.Profession, "PersonalityAndProfession.html"},
+            {DataFile.Race, "CultureDataHelpText.html" },
+            {DataFile.Region, "RegionDataHelpText.html" },
+            //{DataFile.Rumor, "RumorDataHelpText"},
+            {DataFile.SettlementRole, "SettlementRoleDataHelpText.html" },
+            {DataFile.SettlementType, "SettlementTypesHelpText.html" }
         };
 
     }

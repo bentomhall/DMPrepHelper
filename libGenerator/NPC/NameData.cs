@@ -25,7 +25,9 @@ namespace LibGenerator.NPC
                 case "female":
                     return r.Choice(Female);
                 default:
-                    return r.Choice(Male);
+                    var lst = new List<string>(Male);
+                    lst.AddRange(Female);
+                    return r.Choice(lst);
             }
         }
 

@@ -306,7 +306,7 @@
   {
     "Race": "orc",
     "Nation": "Independent",
-    "Culture": [ "Dynasty" ],
+    "Culture": [ "Remnant Dynasty" ],
     "Gender": {
       "male": 0.5,
       "female": 0.5
@@ -315,5 +315,24 @@
       "animist"
     ],
     "Subrace": {}
+  },
+  {
+    "Race": "goblin",
+    "Nation": "Windwalker Collective",
+    "Culture": [ "goblin" ],
+    "Gender": {
+      "male": 0.4,
+      "female": 0.4,
+      "hob": 0.15,
+      "bugbear": 0.05
+    },
+    "Religiosity": [
+      "agnostic",
+      "animist"
+    ],
+    "Subrace": {
+
+    }
   }
+
 ]

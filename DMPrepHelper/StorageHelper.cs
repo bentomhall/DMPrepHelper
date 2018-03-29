@@ -226,7 +226,7 @@ namespace DMPrepHelper
             {DataFile.Profession, "professions.json" },
             {DataFile.Race, "races.json" },
             {DataFile.Region, "regionData.json" },
-            {DataFile.Rumor, "rumors.json" },
+            //{DataFile.Rumor, "rumors.json" },
             {DataFile.SettlementRole, "settlementRoles.json" },
             {DataFile.SettlementType, "settlementTypes.json" }
         };
@@ -243,9 +243,9 @@ namespace DMPrepHelper
         Profession,
         Race,
         Region,
-        Rumor,
         SettlementRole,
-        SettlementType
+        SettlementType,
+        //Rumor
 
     }
 }

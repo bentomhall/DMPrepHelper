@@ -6,7 +6,7 @@ namespace LibGenerator.Settlement
     {
         public string Category { get; set; } = "";
         public string Subcategory { get; set; } = "";
-        public List<Item> Items { get; set; } = new List<Item>() { new Item {Name="Item", Rank=0 } };
+        public List<Item> Items { get; set; } = new List<Item>();
   
 
         public IEnumerable<Item> AvailableItems(int rank)

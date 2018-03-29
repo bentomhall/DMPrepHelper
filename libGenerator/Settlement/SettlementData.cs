@@ -9,11 +9,8 @@ namespace LibGenerator.Settlement
         public string Name { get; set; } = "";
         public int Population { get; set; } = 0;
         public List<string> NPCs { get; set; } = new List<string>();
-        public Dictionary<string, int> TechCaps { get; set; } = new Dictionary<string, int>
-        {
-            {"Category", 0 }
-        };
-        public Dictionary<string, double> Roles { get; set; } = new Dictionary<string, double> { { "role", 1.0 } };
+        public Dictionary<string, int> TechCaps { get; set; } = new Dictionary<string, int>();
+        public Dictionary<string, double> Roles { get; set; } = new Dictionary<string, double>();
 
         private WeightedChoiceSet roles;
 

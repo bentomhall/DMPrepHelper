@@ -27,12 +27,18 @@
           "goblin": 0.4
         }
     },
-    {
-        "Name": "Byssia",
-        "Races": {
-          "human": 0.4,
-          "half elf": 0.35,
-          "wood elf": 0.25
-        }
+  {
+    "Name": "Byssia",
+    "Races": {
+      "human": 0.4,
+      "half elf": 0.35,
+      "wood elf": 0.25
     }
+  },
+  {
+    "Name": "Windwalker Collective",
+    "Races": {
+      "goblin": 1.0
+    }
+  }
 ]
