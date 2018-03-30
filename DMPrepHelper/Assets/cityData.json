@@ -1,10 +1,10 @@
 [
   {
-    "Name": "Waterdeep",
+    "Name": "Watertown",
     "Nation": "Independent",
     "Population": 100000,
     "Size": "City",
-    "Region": "Sword Coast",
+    "Region": "Forgotten Coast",
     "Terrain": "Sea Coast",
     "Races": {
       "human": 0.65,
@@ -22,10 +22,10 @@
     "Combiner": ""
   },
   {
-    "Name": "Baldur's Gate",
+    "Name": "River Gate",
     "Nation": "Independent",
     "Size": "City",
-    "Region": "Sword Coast",
+    "Region": "Forgotten Coast",
     "Terrain": "Sea Coast",
     "Population": 140000,
     "Races": {
@@ -44,11 +44,11 @@
     "Combiner": ""
   },
   {
-    "Name": "Neverwinter",
+    "Name": "Snowharbor",
     "Nation": "Independent",
     "Population": 23192,
     "Size": "City",
-    "Region": "Sword Coast North",
+    "Region": "Forgotten Coast North",
     "Terrain": "Sea Coast",
     "Races": {
       "human": 0.58,

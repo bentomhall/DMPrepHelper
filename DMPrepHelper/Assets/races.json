@@ -3,9 +3,9 @@
     "Race": "human",
     "Nation": "Independent",
     "Culture": [
-      "Calishite",
-      "Chondathan",
-      "Damaran"
+      "Southerner",
+      "Middle-lander",
+      "Northerner"
     ],
       "Gender"
       :
@@ -55,9 +55,9 @@
     "Race": "half elf",
     "Nation": "Independent",
     "Culture": [
-      "Calishite",
-      "Chondathan",
-      "Damaran",
+      "Southerner",
+      "Middle-lander",
+      "Northerner",
       "elf"
     ],
     "Gender": {
