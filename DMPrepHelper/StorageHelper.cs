@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Windows.Storage;
-using Newtonsoft.Json;
-using LibGenerator.NPC;
 using LibGenerator.Dungeon;
+using LibGenerator.NPC;
 using LibGenerator.Settlement;
-using DMPrepHelper.Theme;
-using System.Diagnostics;
+using Newtonsoft.Json;
+using Windows.Storage;
 
 namespace DMPrepHelper
 {
@@ -214,7 +210,6 @@ namespace DMPrepHelper
 
         Dictionary<DataFile, StorageFile> localFiles = new Dictionary<DataFile, StorageFile>();
         Dictionary<DataFile, Task<string>> dataText = new Dictionary<DataFile, Task<string>>();
-        ThemeReader themeReader = new ThemeReader();
         Dictionary<DataFile, string> dataFiles = new Dictionary<DataFile, string>
         {
             {DataFile.City, "cityData.json" },

@@ -117,32 +117,14 @@
     <Compile Include="ViewModels\SettlementGeneratorViewModel.cs" />
     <Compile Include="ViewModels\SettlementViewModel.cs" />
     <Compile Include="ViewModels\SimpleListDataModel.cs" />
-    <Compile Include="Views\CityConfigPage.xaml.cs">
-      <DependentUpon>CityConfigPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ConfigEditorPage.xaml.cs">
       <DependentUpon>ConfigEditorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConfigItemPage.xaml.cs">
       <DependentUpon>ConfigItemPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CultureConfigPage.xaml.cs">
-      <DependentUpon>CultureConfigPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DungeonConfigPage.xaml.cs">
-      <DependentUpon>DungeonConfigPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\DungeonPage.xaml.cs">
       <DependentUpon>DungeonPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\GenericContentPage.xaml.cs">
-      <DependentUpon>GenericContentPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ItemRankConfigPage.xaml.cs">
-      <DependentUpon>ItemRankConfigPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListPage.xaml.cs">
-      <DependentUpon>ListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NpcPage.xaml.cs">
       <DependentUpon>NpcPage.xaml</DependentUpon>
@@ -258,10 +240,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\CityConfigPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\ConfigEditorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -270,27 +248,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CultureConfigPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DungeonConfigPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\DungeonPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\GenericContentPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ItemRankConfigPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

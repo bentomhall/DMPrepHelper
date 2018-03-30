@@ -82,7 +82,7 @@ namespace DMPrepHelper.ViewModels
             {DataFile.Dungeon, "DungeonDataHelpText.html" },
             {DataFile.ItemRank, "ItemRanksHelpText.html" },
             {DataFile.Nation, "NationDataHelpText.html" },
-            {DataFile.NpcName, "NameDataHelpText.html" },
+            {DataFile.NpcName, "NameHelpText.html" },
             {DataFile.Personality, "PersonalityAndProfession.html" },
             {DataFile.Profession, "PersonalityAndProfession.html"},
             {DataFile.Race, "CultureDataHelpText.html" },
