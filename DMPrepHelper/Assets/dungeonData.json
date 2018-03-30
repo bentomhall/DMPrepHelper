@@ -53,27 +53,6 @@
         "HasSublocations":false
     },
     {
-        "Name": "magitech ruin",
-        "Scale": "medium",
-        "Sizes": [1, 2, 3, 4, 5],
-        "Subtypes": [
-            "tower",
-            "fortress",
-            "factory",
-            "time-lost",
-            "estate",
-            "vault"
-        ],
-        "Ages": ["ancient"],
-        "HasBoss": 0.5,
-        "LairChance": {
-            "1": 0,
-            "2": 0.1,
-            "3": 0.3
-        },
-        "HasSublocations":false
-    },
-    {
         "Name": "urban ruin",
         "Scale": "large",
         "Sizes": [1, 2],
@@ -180,26 +159,5 @@
             "3": 0
         },
         "HasSublocations":false
-    },
-    {
-        "Name": "cult",
-        "Scale": "small",
-        "Sizes": [1, 2, 3, 4, 5],
-        "Subtypes": [
-            "twisted",
-            "pain",
-            "chaos",
-            "red fang",
-            "white skull",
-            "other"
-        ],
-        "Ages": ["old", "recent"],
-        "HasBoss": 0.8,
-        "LairChance": {
-            "1": 0,
-            "2": 0,
-            "3": 0
-        },
-        "HasSublocations": false
     }
 ]
