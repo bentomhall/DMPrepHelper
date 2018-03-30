@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using DMPrepHelper.ViewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -23,11 +24,23 @@ namespace DMPrepHelper
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private List<ConfigLabel> items = new List<ConfigLabel>
+        {
+            new ConfigLabel { Icon="Home", Label="Home", Tag="home"},
+            new ConfigLabel { Icon="People", Label="NPC Generator", Tag="npcs"},
+            new ConfigLabel { Icon="Street", Label="Settlement Generator", Tag="towns"},
+            new ConfigLabel { Icon="Map", Label="Dungeon Generator", Tag="dungeon"},
+            new ConfigLabel { Icon="Globe", Label="Config Editor", Tag="configs"}
+        };
+
         public MainPage()
         {
             this.InitializeComponent();
             storage = new StorageHelper();
+
         }
+
+        public List<ConfigLabel> Items { get => items; }
 
         private StorageHelper storage;
 

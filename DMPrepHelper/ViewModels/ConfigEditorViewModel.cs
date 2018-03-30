@@ -76,6 +76,7 @@ namespace DMPrepHelper.ViewModels
         public string Icon { get; set; }
         public DataFile ConfigType { get; set; }
         public ICommand Command { get; set; }
+        public string Tag { get; set; }
     }
 
     public interface IConfigDisplay

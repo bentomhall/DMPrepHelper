@@ -19,5 +19,8 @@
             <Setter Property="TextAlignment" Value="Right"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
         </Style>
+        <SolidColorBrush x:Key="ForegroundBrush" Color="#FF000000"/>
+        <SolidColorBrush x:Key="ItemPanelBackgroundBrush" Color="#FF333333"/>
+        <SolidColorBrush x:Key="ItemBackgroundBrush" Color="#FFFFFFFF"/>
     </Application.Resources>
 </Application>

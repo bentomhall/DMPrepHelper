@@ -9,7 +9,7 @@
 
     <Page.Resources>
         <DataTemplate x:Name="PersonTemplate" x:DataType="vm:PersonViewModel">
-            <Grid Background="White" Margin="12,20,20,12" Width="Auto">
+            <Grid Margin="12,20,20,12" Width="Auto">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition Width="Auto"/>
@@ -39,7 +39,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -54,15 +54,16 @@
             <TextBox Header="How Many?" Text="{x:Bind ViewModel.Number, Mode=TwoWay}" Margin="12,0,0,0"/>
             <Button Content="Go!" Command="{x:Bind ViewModel.GenerateCommand}" Width="128" Margin="24,0,0,0" VerticalAlignment="Stretch"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Canvas.ZIndex="1" Background="#99FFFFFF" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top">
             <AppBarButton Label="Export Selected" Icon="Share" Command="{x:Bind ViewModel.ExportCommand}" />
             <AppBarButton Label="Select All" Icon="SelectAll" Click="AppBarButton_Click" />
         </StackPanel>
-        <ListView x:Name="DataList" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{x:Bind ViewModel.SettlementModels, Mode=OneWay}" SelectionChanged="ListView_SelectionChanged" SelectionMode="Multiple"
-                  Background="{ThemeResource SystemControlBaseMediumLowAcrylicWindowMediumBrush}">
+        <ListView x:Name="DataList" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{x:Bind ViewModel.SettlementModels, Mode=OneWay}" 
+                  SelectionChanged="ListView_SelectionChanged" SelectionMode="Multiple"
+                  Background="{StaticResource ItemPanelBackgroundBrush}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="vm:SettlementViewModel">
-                    <Grid Margin="4,12,16,12" MaxHeight="800" Background="{ThemeResource SystemControlBackgroundAltMediumBrush}">
+                    <Grid Margin="4,12,16,12" MaxHeight="800" Background="{StaticResource ItemBackgroundBrush}">
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition/>
@@ -95,7 +96,7 @@
                                 <TextBlock Text="Items Not Available" FontWeight="Bold" Margin="4,0,0,0"/>
                             </ListView.Header>
                         </ListView>
-                        <ListView Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="3" ItemsSource="{x:Bind Demographics}" SelectionMode="None" IsItemClickEnabled="False">
+                        <ListView Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="3" ItemsSource="{x:Bind Demographics}" SelectionMode="None" IsItemClickEnabled="False" Margin="0,0,4,0">
                             <ListView.Header>
                                 <TextBlock Text="Population Demographics" FontWeight="Bold" Margin="4,0,0,0"/>
                             </ListView.Header>
@@ -115,11 +116,11 @@
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            <ListView.ItemContainerStyle>
+            <!--<ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                 </Style>
-            </ListView.ItemContainerStyle>
+            </ListView.ItemContainerStyle>-->
         </ListView>
     </Grid>
 </Page>
