@@ -57,7 +57,8 @@ namespace LibGenerator.Dungeon
             {"2.5", new List<int>() {8, 13}},
             {"3", new List<int>() {12, 16}},
             {"3.5", new List<int>() {14, 18}},
-            {"4", new List<int>() {17,20}}
+            {"4", new List<int>() {17,20}},
+            {"Epic", new List<int>() {21, 30 } }
         };
         private Random r = new Random();
     }
