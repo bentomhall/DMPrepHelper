@@ -1,5 +1,5 @@
 [
-{   "Culture": "Calishite",
+{   "Culture": "Southerner",
     "Male": ["Aseir", "Bardeid", "Haseid", "Khemed", "Mehmen", "Sudeiman", "Zasheir"],
     "Female": ["Atala", "Ceidil", "Hama", "Jasmal", "Meilil", "Seipora", "Yasheira", "Zasheida"],
     "Combiner": " ",
@@ -7,7 +7,7 @@
     "Base": ""
 },
     {
-        "Culture": "Chondathan",
+        "Culture": "Middle-lander",
         "Male": ["Darvin", "Dorn", "Evendur", "Gorstag", "Grim", "Helm", "Malark", "Morn", "Randal", "Stedd"],
         "Female": ["Arveene", "Esvele", "Jhessail", "Kerri", "Lureene", "Miri", "Rowan", "Shandri", "Tessele"],
         "Combiner": " ",
@@ -15,7 +15,7 @@
         "Base": ""
     },
     {
-        "Culture": "Damaran",
+        "Culture": "Northerner",
         "Male": ["Bor", "Fodel", "Glar", "Grigor", "Igan", "Ivor", "Kosef", "Mival", "Orel", "Pavel", "Sergor"],
         "Female": ["Alethra", "Kara", "Katernin", "Mara", "Natali", "Olma", "Tana", "Zora"],
         "Combiner": " ",
