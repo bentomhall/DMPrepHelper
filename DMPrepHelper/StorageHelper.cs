@@ -110,6 +110,7 @@ namespace DMPrepHelper
         public async Task SaveConfigText(DataFile type, string text)
         {
             var file = localFiles[type];
+            dataText[type] = Task.FromResult(text);
             await FileIO.WriteTextAsync(file, text, Windows.Storage.Streams.UnicodeEncoding.Utf8);
             return;
         }
@@ -118,6 +119,7 @@ namespace DMPrepHelper
         {
             var file = localFiles[type];
             var text = JsonConvert.SerializeObject(data, Formatting.Indented);
+            dataText[type] = Task.FromResult(text);
             await FileIO.WriteTextAsync(file, text, Windows.Storage.Streams.UnicodeEncoding.Utf8);
         }
 
