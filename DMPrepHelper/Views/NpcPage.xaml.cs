@@ -28,10 +28,19 @@ namespace DMPrepHelper.Views
         public NpcPage()
         {
             this.InitializeComponent();
-            var storage = ((App)Application.Current).Storage;
-            ViewModel = new NPCGeneratorViewModel(storage);
-            ViewModel.GenerateCommand.CanExecuteChanged += GenerateCommand_CanExecuteChanged;
             
+            
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var storage = ((App)Application.Current).Storage;
+            if (ViewModel == null || storage.ShouldReload("npc"))
+            {
+                ViewModel = new NPCGeneratorViewModel(storage);
+                ViewModel.GenerateCommand.CanExecuteChanged += GenerateCommand_CanExecuteChanged;
+            }
+            base.OnNavigatedTo(e);
         }
 
         private void GenerateCommand_CanExecuteChanged(object sender, EventArgs e)

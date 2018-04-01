@@ -19,6 +19,11 @@ namespace DMPrepHelper
             }
         }
 
+        public bool ShouldReload(string page)
+        {
+            return isDataDirty[page];
+        }
+
         async Task<string> GetConfigData(DataFile fileType)
         {
             var file = await GetModifiedFile(fileType);
@@ -59,20 +64,21 @@ namespace DMPrepHelper
 
         public NPCGenerator GetNPCGenerator()
         {
-            if (nPCGenerator == null) {
+            if (nPCGenerator == null || isDataDirty["npc"]) {
                 var culture = DeserializeAsync<CultureData>(DataFile.Race);
                 var names = DeserializeAsync<NameData>(DataFile.NpcName);
                 var personalities = DeserializeAsync<string>(DataFile.Personality);
                 var professions = Deserialize<string>(DataFile.Profession);
                 var nations = Deserialize<NationData>(DataFile.Nation);
                 nPCGenerator = new NPCGenerator(culture, names, personalities, professions, nations);
+                isDataDirty["npc"] = false;
             }
             return nPCGenerator;
         }
 
         public SettlementGenerator GetSettlementGenerator()
         {
-            if (sGenerator == null)
+            if (sGenerator == null || isDataDirty["settlement"])
             {
                 var npc = GetNPCGenerator();
                 var cities = Deserialize<CityData>(DataFile.City);
@@ -80,6 +86,7 @@ namespace DMPrepHelper
                 var settlements = Deserialize<SettlementData>(DataFile.SettlementType);
                 var roles = Deserialize<SettlementRole>(DataFile.SettlementRole);
                 sGenerator = new SettlementGenerator(cities, items, settlements, roles, npc);
+                isDataDirty["settlement"] = false;
             }
 
             return sGenerator;
@@ -87,11 +94,12 @@ namespace DMPrepHelper
 
         public DungeonGenerator GetDungeonGenerator()
         {
-            if (dGenerator == null)
+            if (dGenerator == null || isDataDirty["dungeon"])
             {
                 var regions = Deserialize<RegionData>(DataFile.Region);
                 var locations = Deserialize<LocationData>(DataFile.Dungeon);
                 dGenerator = new DungeonGenerator(regions, locations);
+                isDataDirty["dungeon"] = false;
             }
             return dGenerator;
         }
@@ -111,6 +119,7 @@ namespace DMPrepHelper
         {
             var file = localFiles[type];
             dataText[type] = Task.FromResult(text);
+            MarkDirty(type);
             await FileIO.WriteTextAsync(file, text, Windows.Storage.Streams.UnicodeEncoding.Utf8);
             return;
         }
@@ -120,12 +129,40 @@ namespace DMPrepHelper
             var file = localFiles[type];
             var text = JsonConvert.SerializeObject(data, Formatting.Indented);
             dataText[type] = Task.FromResult(text);
+            MarkDirty(type);
             await FileIO.WriteTextAsync(file, text, Windows.Storage.Streams.UnicodeEncoding.Utf8);
+        }
+
+        private void MarkDirty(DataFile type)
+        {
+            switch (type)
+            {
+                case DataFile.Dungeon:
+                case DataFile.Region:
+                    isDataDirty["dungeon"] = true;
+                    break;
+                case DataFile.City:
+                case DataFile.ItemRank:
+                case DataFile.SettlementRole:
+                case DataFile.SettlementType:
+                    isDataDirty["settlement"] = true;
+                    break;
+                case DataFile.Nation:
+                case DataFile.NpcName:
+                case DataFile.Race:
+                case DataFile.Personality:
+                case DataFile.Profession:
+                    isDataDirty["settlement"] = true;
+                    isDataDirty["npc"] = true;
+                    break;
+            }
+            return;
         }
 
         private SettlementGenerator sGenerator;
         private NPCGenerator nPCGenerator;
         private DungeonGenerator dGenerator;
+        private Dictionary<string, bool> isDataDirty = new Dictionary<string, bool> { {"npc", false }, {"dungeon", false }, {"settlement", false } };
 
         public async Task<List<T>> DeserializeAsync<T>(DataFile type)
         {

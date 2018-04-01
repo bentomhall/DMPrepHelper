@@ -28,8 +28,17 @@ namespace DMPrepHelper.Views
         public SettlementPage()
         {
             this.InitializeComponent();
+
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
             var storage = ((App)Application.Current).Storage;
-            vm = new SettlementGeneratorViewModel(storage);
+            if (vm == null || storage.ShouldReload("settlement"))
+            {
+                vm = new SettlementGeneratorViewModel(storage);
+            }   
+            base.OnNavigatedTo(e);
         }
 
         public SettlementGeneratorViewModel ViewModel { get => vm; }
