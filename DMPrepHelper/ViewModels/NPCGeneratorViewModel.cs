@@ -71,8 +71,18 @@ namespace DMPrepHelper.ViewModels
             var viewModels = new ObservableCollection<PersonViewModel>(); 
             for (int i = 0; i < number; i++)
             {
-                var npc = generator.GenerateNPC(selected);
-                viewModels.Add(new PersonViewModel(npc));
+                try
+                {
+                    var npc = generator.GenerateNPC(selected);
+                    viewModels.Add(new PersonViewModel(npc));
+                    DisplayError = false;
+                } catch (Exception)
+                {
+                    ErrorText = "An error occurred. Check the following files for mismatched keys: Names, Cultures, and Nations.";
+                    DisplayError = true;
+                    return;
+                }
+                
             }
             ViewModels = viewModels;
             OnPropertyChanged(nameof(ViewModels));

@@ -58,6 +58,11 @@
             <AppBarButton Label="Export Selected" Icon="Share" Command="{x:Bind ViewModel.ExportCommand}" />
             <AppBarButton Label="Select All" Icon="SelectAll" Click="AppBarButton_Click" />
         </StackPanel>
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1" 
+                VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="{x:Bind ViewModel.DisplayError, Mode=OneWay}"
+                Canvas.ZIndex="2" Background="White" MinHeight="200" MinWidth="200">
+            <TextBlock Text="{x:Bind ViewModel.ErrorText, Mode=OneWay}" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        </Border>
         <ListView x:Name="DataList" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{x:Bind ViewModel.SettlementModels, Mode=OneWay}" 
                   SelectionChanged="ListView_SelectionChanged" SelectionMode="Multiple"
                   Background="{StaticResource ItemPanelBackgroundBrush}">

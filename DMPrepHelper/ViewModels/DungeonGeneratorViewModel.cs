@@ -75,8 +75,20 @@ namespace DMPrepHelper.ViewModels
         {
             for (int i=0; i < number; i++)
             {
-                var vm = new DungeonViewModel(generator.GenerateAdventure(SelectedRegion));
-                vms.Add(vm);
+                DungeonViewModel vm;
+                try
+                {
+                    vm = new DungeonViewModel(generator.GenerateAdventure(SelectedRegion));
+                    vms.Add(vm);
+                    DisplayError = false;
+                } catch (Exception)
+                {
+                    ErrorText = "An error occured. Check the following files for mismatching keys: Region, Dungeon.";
+                    DisplayError = true;
+                    break;
+                }
+                
+                
             }
             OnPropertyChanged(nameof(ViewModels));
         }

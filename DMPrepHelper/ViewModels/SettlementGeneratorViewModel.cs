@@ -82,8 +82,18 @@ namespace DMPrepHelper.ViewModels
             SettlementModels.Clear();
             for (int i=0; i < Number; i++)
             {
-                var settlement = generator.GenerateSettlement(selected, selectedCity);
-                SettlementModels.Add(new SettlementViewModel(settlement));
+                try
+                {
+                    var settlement = generator.GenerateSettlement(selected, selectedCity);
+                    SettlementModels.Add(new SettlementViewModel(settlement));
+                    DisplayError = false;
+                } catch (Exception)
+                {
+                    ErrorText = "An error occurred. Please check the following for mismatched keys: Culture, Name, Nation, City, Items, Town Type, and Town Role.";
+                    DisplayError = true;
+                    return;
+                }
+                
             }
             
         }
