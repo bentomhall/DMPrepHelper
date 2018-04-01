@@ -198,5 +198,16 @@
                  Text="{x:Bind ViewModel.ConfigText, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
                  UseSystemFocusVisuals="False" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
         <WebView Grid.Column="1" Grid.Row="1" Source="{x:Bind ViewModel.HelpText, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Border MinHeight="350" Grid.Column="1" Grid.RowSpan="2" 
+                Canvas.ZIndex="2" BorderBrush="Black" BorderThickness="1" 
+                Background="Gray" VerticalAlignment="Top"
+                Margin="24,24,24,24"
+                Padding="24"
+                Visibility="{x:Bind ViewModel.ShowError, Mode=OneWay}">
+            <TextBlock 
+                   Text="{x:Bind ViewModel.ErrorText, Mode=OneWay}" 
+                   Foreground="Red" TextWrapping="Wrap" FontWeight="Bold"/>    
+        </Border>
+        
     </Grid>
 </Page>

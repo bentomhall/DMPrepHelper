@@ -15,6 +15,8 @@ namespace DMPrepHelper.ViewModels
         private string configText;
         private string helpText;
         private DataFile configType;
+        private string error;
+        private bool showError = false;
 
         public ConfigItemViewModel(StorageHelper s, DataFile type) : base(s)
         {
@@ -25,6 +27,8 @@ namespace DMPrepHelper.ViewModels
 
         public string ConfigText { get => configText; set => SetProperty(ref configText, value); }
         public string HelpText { get => helpText; set => SetProperty(ref helpText, value); }
+        public string ErrorText { get => error; set => SetProperty(ref error, value); }
+        public bool ShowError { get => showError; set => SetProperty(ref showError, value); }
 
         private string GetData()
         {
@@ -33,7 +37,19 @@ namespace DMPrepHelper.ViewModels
 
         protected override void DidSaveConfig()
         {
-            var dummy = storage.SaveConfigText(configType, configText);
+            var errors = storage.IsValidJson(configText);
+            if (errors.Count == 0)
+            {
+                var dummy = storage.SaveConfigText(configType, configText);
+                ShowError = false;
+                ErrorText = "";
+            }
+            else
+            {
+                errors.Prepend("Invalid JSON:");
+                ErrorText = string.Join(Environment.NewLine, errors);
+                ShowError = true;
+            }
         }
 
         protected override void DidAddItem()

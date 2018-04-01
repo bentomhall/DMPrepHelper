@@ -107,6 +107,17 @@ namespace DMPrepHelper
             return "," + Environment.NewLine + JsonConvert.SerializeObject(entry, Formatting.Indented);
         }
 
+        public List<string> IsValidJson(string text)
+        {
+            var error = new List<string>();
+            JsonConvert.DeserializeObject(text, new JsonSerializerSettings { Error = delegate(object sender, Newtonsoft.Json.Serialization.ErrorEventArgs args) {
+                error.Add(args.ErrorContext.Error.Message);
+                args.ErrorContext.Handled = true;
+            } });
+
+            return error;
+        }
+
         public async Task SaveConfigText(DataFile type, string text)
         {
             var file = localFiles[type];
