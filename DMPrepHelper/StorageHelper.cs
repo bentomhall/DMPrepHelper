@@ -6,12 +6,19 @@ using LibGenerator.NPC;
 using LibGenerator.Settlement;
 using Newtonsoft.Json;
 using Windows.Storage;
+using System.IO.Compression;
+using System.IO;
 
 namespace DMPrepHelper
 {
     public class StorageHelper
     {
         public StorageHelper()
+        {
+            LoadText();
+        }
+
+        private void LoadText()
         {
             foreach (DataFile value in Enum.GetValues(typeof(DataFile)))
             {
@@ -191,6 +198,31 @@ namespace DMPrepHelper
             return JsonConvert.DeserializeObject<List<T>>(data.Result);
         }
 
+        public async Task<int> LoadDataPackage()
+        {
+            var fileNames = new List<string> { "cityData.json", "dungeonData.json", "itemRanks.json", "nations.json", "npcNames.json", "personality.json", "professions.json", "races.json", "regionData.json", "rumors.json", "settlementRoles.json", "settlementTypes.json" };
+            var package = await ChooseThemePackage().ContinueWith(x => x.Result.OpenStreamForReadAsync());
+            var tempLocation = ApplicationData.Current.TemporaryFolder;
+            var archive = new ZipArchive(package.Result);
+            var permanentLocation = await ApplicationData.Current.LocalFolder.GetFolderAsync("Assets");
+            var counter = 0;
+            foreach (var file in archive.Entries)
+            {
+                if (fileNames.Contains(file.Name))
+                {
+                    file.ExtractToFile(permanentLocation.Path + file.Name, true);
+                    counter += 1;
+                }
+            }
+            if (counter > 0)
+            {
+                LoadText();
+            }
+            archive.Dispose();
+            package.Result.Close();
+            return counter;
+        }
+
         private async Task<StorageFile> ChooseThemePackage()
         {
             var picker = new Windows.Storage.Pickers.FileOpenPicker
@@ -200,7 +232,8 @@ namespace DMPrepHelper
             picker.FileTypeFilter.Add(".zip");
             picker.FileTypeFilter.Add(".rpgsetting");
 
-            return await picker.PickSingleFileAsync();
+            var file = await picker.PickSingleFileAsync();
+            return file;
             
         }
 

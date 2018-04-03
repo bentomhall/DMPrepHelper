@@ -26,5 +26,20 @@ namespace DMPrepHelper.Views
         {
             this.InitializeComponent();
         }
+
+        public string FeedbackText { get; set; }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var storage = ((App)Application.Current).Storage;
+            var filesLoaded = await storage.LoadDataPackage();
+            if (filesLoaded == 0)
+            {
+                FeedbackText = "No suitable files found";
+            } else
+            {
+                FeedbackText = $"Loaded {filesLoaded} files";
+            }
+        }
     }
 }

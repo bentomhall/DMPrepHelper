@@ -203,7 +203,7 @@
                 Background="Gray" VerticalAlignment="Top"
                 Margin="24,24,24,24"
                 Padding="24"
-                Visibility="{x:Bind ViewModel.ShowError, Mode=OneWay}">
+                Visibility="{x:Bind ViewModel.DisplayError, Mode=OneWay}">
             <TextBlock 
                    Text="{x:Bind ViewModel.ErrorText, Mode=OneWay}" 
                    Foreground="Red" TextWrapping="Wrap" FontWeight="Bold"/>    
