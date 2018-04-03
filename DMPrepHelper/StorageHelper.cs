@@ -201,16 +201,22 @@ namespace DMPrepHelper
         public async Task<int> LoadDataPackage()
         {
             var fileNames = new List<string> { "cityData.json", "dungeonData.json", "itemRanks.json", "nations.json", "npcNames.json", "personality.json", "professions.json", "races.json", "regionData.json", "rumors.json", "settlementRoles.json", "settlementTypes.json" };
-            var package = await ChooseThemePackage().ContinueWith(x => x.Result.OpenStreamForReadAsync());
+            var package = await ChooseThemePackage();
+            if (package == null)
+            {
+                return 0;
+            }
+            var s = await package.OpenStreamForReadAsync();
             var tempLocation = ApplicationData.Current.TemporaryFolder;
-            var archive = new ZipArchive(package.Result);
-            var permanentLocation = await ApplicationData.Current.LocalFolder.GetFolderAsync("Assets");
+            var archive = new ZipArchive(s);
+            var local = ApplicationData.Current.LocalFolder;
             var counter = 0;
             foreach (var file in archive.Entries)
             {
                 if (fileNames.Contains(file.Name))
                 {
-                    file.ExtractToFile(permanentLocation.Path + file.Name, true);
+                    var path = local.Path + "\\" + file.Name;
+                    file.ExtractToFile(path, true);
                     counter += 1;
                 }
             }
@@ -219,7 +225,7 @@ namespace DMPrepHelper
                 LoadText();
             }
             archive.Dispose();
-            package.Result.Close();
+            s.Close();
             return counter;
         }
 

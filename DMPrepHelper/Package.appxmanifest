@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="44356AdmiralBenbo.GameMasterPrepHelper" Publisher="CN=910C6409-78C0-4A37-A56E-FC103BDF8157" Version="1.1.2.0" />
+  <Identity Name="44356AdmiralBenbo.GameMasterPrepHelper" Publisher="CN=910C6409-78C0-4A37-A56E-FC103BDF8157" Version="1.1.3.0" />
   <mp:PhoneIdentity PhoneProductId="8f3f3ef8-33a8-4360-9ef3-390b6654149c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Game Master Prep Helper</DisplayName>
