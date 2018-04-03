@@ -180,6 +180,19 @@ namespace DMPrepHelper
             return JsonConvert.DeserializeObject<List<T>>(data.Result);
         }
 
+        private async Task<StorageFile> ChooseThemePackage()
+        {
+            var picker = new Windows.Storage.Pickers.FileOpenPicker
+            {
+                SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary,
+            };
+            picker.FileTypeFilter.Add(".zip");
+            picker.FileTypeFilter.Add(".rpgsetting");
+
+            return await picker.PickSingleFileAsync();
+            
+        }
+
         private async Task<StorageFile> ChooseFileLocation(Export.ExportTypes type)
         {
             string filename;
