@@ -27,8 +27,17 @@ namespace DMPrepHelper.Views
         public DungeonPage()
         {
             this.InitializeComponent();
+
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
             var storage = ((App)Application.Current).Storage;
-            vm = new DungeonGeneratorViewModel(storage);
+            if (vm == null || storage.ShouldReload("dungeon"))
+            {
+                vm = new DungeonGeneratorViewModel(storage);
+            }
+            base.OnNavigatedTo(e);
         }
 
         private DungeonGeneratorViewModel vm;

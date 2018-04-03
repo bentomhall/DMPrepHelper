@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LibGenerator.Core;
+using libGenerator.Core;
 
 namespace LibGenerator.Dungeon
 {
@@ -18,23 +18,33 @@ namespace LibGenerator.Dungeon
         {
             var randomType = selectedRegion.GetRandomLocationType();
             LocationData type = locations.First(x => x.Name == randomType);
-            var adventure = new AdventureData
+            var adventure = new AdventureData() { Region = selectedRegion.Name, AdventureType = type.Name, Scale = type.Scale };
+            try
             {
-                Region = selectedRegion.Name,
-                AdventureType = type.Name,
-                Level = GetRandomLevel(selectedRegion.GetTier()),
-                PrimaryMonster = selectedRegion.GetRandomMonster(r.NextDouble()),
-                Scale = type.Scale,
-                Size = type.GetSize(),
-                HasBoss = type.GetBoss(),
-                SubType = type.GetSubtype()
-            };
+
+                adventure.Level = GetRandomLevel(selectedRegion.GetTier());
+                adventure.PrimaryMonster = selectedRegion.GetRandomMonster(r.NextDouble());
+                adventure.Size = type.GetSize();
+                adventure.HasBoss = type.GetBoss();
+                adventure.SubType = type.GetSubtype();
+            } catch (Exception e)
+            {
+                var exc = new ConfigException("Creating adventure failed due to configuration issues. Check the format of region and adventure types", e);
+                throw exc;
+            }
             return adventure;
         }
 
         public AdventureData GenerateAdventure(string regionName)
         {
-            var region = regions.First(x => x.Name == regionName);
+            RegionData region;
+            try
+            {
+                region = regions.First(x => x.Name == regionName);
+            } catch (Exception e)
+            {
+                throw new ConfigException("Error retrieving region. Check that region names are properly specified.", e);
+            }
             return GenerateAdventure(region);
         }
 

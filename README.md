@@ -41,3 +41,6 @@ This module generates adventure site ideas based on the regions of your setting.
 * A number of separately-mapped areas
 * A main monster type
 * The presence or absence of a boss monster
+
+## Known Issues
+* A config change made to genericize missed a piece and so creating NPCs fails. Open the Names config file and change the top three entries to "Northerner", "Middle-lander", and "Southerner" instead of the current values for the Culture key.

@@ -11,6 +11,11 @@ namespace DMPrepHelper.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected bool IsDirty = false;
+        protected string errorText;
+
+        public string ErrorText { get => errorText; set => SetProperty(ref errorText, value); }
+        public bool DisplayError { get => IsDirty; set => SetProperty(ref IsDirty, value); }
+
 
         protected bool SetProperty<T>(ref T field, T value, [CallerMemberName]string name = null)
         {

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="44356AdmiralBenbo.GameMasterPrepHelper" Publisher="CN=910C6409-78C0-4A37-A56E-FC103BDF8157" Version="0.1.0.0" />
-  <mp:PhoneIdentity PhoneProductId="4c1dd1fd-42b7-4b72-90ac-4bd7d1be6de1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="44356AdmiralBenbo.GameMasterPrepHelper" Publisher="CN=910C6409-78C0-4A37-A56E-FC103BDF8157" Version="1.1.2.0" />
+  <mp:PhoneIdentity PhoneProductId="8f3f3ef8-33a8-4360-9ef3-390b6654149c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Game Master Prep Helper</DisplayName>
     <PublisherDisplayName>Admiral Benbo</PublisherDisplayName>
@@ -15,13 +15,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="DMPrepHelper.App">
-      <uap:VisualElements DisplayName="Game Master Prep Helper" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="GM Prep Helper" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="Game Master Prep Helper" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="DMPrepHelper" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
-        <uap:InitialRotationPreference>
-          <uap:Rotation Preference="landscape" />
-        </uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
