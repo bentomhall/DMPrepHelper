@@ -1,0 +1,107 @@
+[
+  {
+    "Culture": "Scale-folk",
+    "Male": [ "An", "Bao", "Cam", "Cong", "Dinh", "Dux", "Giang", "Liem", "Minh", "Ngai", "Trai", "Tuan", "Vien" ],
+    "Female": [ "Chi", "Diep", "Chau", "Kim", "Lan", "Lein", "Ngok", "Mai", "Thi", "Tien", "Tuyen", "Xuan" ],
+    "Combiner": "",
+    "Family": [],
+    "Base": "Laotian, other SE asian"
+  },
+  {
+    "Culture": "Night's Children",
+    "Male": [ "Menares", "Labotas", "Polyperchon", "Lichas", "Asius", "Alcandros", "Aesop", "Gylippos", "Peleus", "Kyrillos", "Iobates", "Demoleon", "Doreios", "Anthemion", "Peiros", "Eussorus", "Midylos", "Bianor", "Meton", "Polyas" ],
+    "Female": [ "Polyxena", "Rhode", "Demetria", "Laodameia", "Nikaia", "Isadora", "Clio", "Ampinomene", "Philomela", "Pherusa", "Antigone", "Eris", "Aglaia", "Thetis", "Corythia", "Eriphyle", "Antiochis", "Alemene", "Astera" ],
+    "Combiner": "",
+    "Family": [],
+    "Base": "Greek"
+  },
+  {
+    "Culture": "Wall-builder",
+    "Male": [ "John", "William", "James", "George", "Charles", "Henry", "Robert", "Thomas" ],
+    "Female": [ "Anna", "Emma", "Elza", "Margaret", "Ida", "Clara", "Alice" ],
+    "Combiner": "",
+    "Family": [],
+    "Base": "English"
+  },
+  {
+    "Culture": "Dwarf",
+    "Male": [ "Adrik", "Alberich", "Baern", "Barendd", "Brottor", "Bruenor", "Dain", "Darrak", "Delg", "Eberk", "Einkil", "Fargrim", "Flint", "Gardain", "Harbek", "Kildrak", "Morgran", "Orsik", "Oskar", "Rangrim", "Rurik", "Taklinn", "Thoradin", "Thorin", "Tordek", "Traubon", "Travok", "Ulfgar", "Veit", "Vondal", "Amber", "Artin", "Audhild", "Bardryn", "Dagnal", "Diesa", "Eldeth", "Falkrunn", "Finellen", "Gunnloda", "Gurdis", "Helja", "Hlin", "Kathra", "Kristryd", "Ilde", "Liftrasa", "Mardred", "Riswynn", "Sannl", "Torbera", "Torgga", "Vistra" ],
+    "Female": [ "Adrik", "Alberich", "Baern", "Barendd", "Brottor", "Bruenor", "Dain", "Darrak", "Delg", "Eberk", "Einkil", "Fargrim", "Flint", "Gardain", "Harbek", "Kildrak", "Morgran", "Orsik", "Oskar", "Rangrim", "Rurik", "Taklinn", "Thoradin", "Thorin", "Tordek", "Traubon", "Travok", "Ulfgar", "Veit", "Vondal", "Amber", "Artin", "Audhild", "Bardryn", "Dagnal", "Diesa", "Eldeth", "Falkrunn", "Finellen", "Gunnloda", "Gurdis", "Helja", "Hlin", "Kathra", "Kristryd", "Ilde", "Liftrasa", "Mardred", "Riswynn", "Sannl", "Torbera", "Torgga", "Vistra" ],
+    "Combiner": " ",
+    "Family": [ "Batbayar", "Khulan", "Gerel", "Naranbaatar", "Narangerel", "Sarnai", "Tsetseg", "Fuar", "Zek", "Gan", "Tomor", "Alt", "Mehng", "Tugalga", "Laav", "Uul", "Alkh", "Shoryu", "Chuuluu", "Borzhin", "Badmergh", "Margadh", "Almaz" ],
+    "Base": ""
+  },
+  {
+    "Culture": "Puun Ihmisia",
+    "Male": [ "Adran", "Aelar", "Aramil", "Arannis", "Aust", "Beiro", "Berrian", "Carric", "Enialis", "Erdan", "Erevan", "Galinndan", "Hadarai", "Heian", "Himo", "Immeral", "Ivellios", "Laucian", "Mindartis", "Paelias", "Peren", "Quarion", "Riardon", "Rolen", "Soveliss", "Thamior", "Tharivol", "Theren", "Varis" ],
+    "Female": [ "Adrie", "Althaea", "Anastrianna", "Drusilia", "Enna", "Felosial", "Ielenia", "Jelenneth", "Keyleth", "Leshanna", "Lia", "Meriele", "Mialee", "Naivara", "Quelanna", "Quillathe", "Sariel", "Shanairra", "Shava", "Silaqui", "Theirastra", "Thia", "Vadania", "Valanthe", "Xanaphia" ],
+    "Combiner": " il ",
+    "Family": [ "Amakiir", "Amastacia", "Galanodel", "Holimion", "Ilphelkiir", "Liandon", "Meliamne", "Nailo", "Siannodel", "Xiloscient" ],
+    "Base": ""
+  },
+  {
+    "Culture": "halfling",
+    "Male": [ "Alton", "Ander", "Cade", "Corrin", "Eldon", "Errich", "Finnan", "Garret", "Lindal", "Lyle", "Merric", "Milo", "Osborn", "Perrin", "Reed", "Roscoe", "Wellby" ],
+    "Female": [ "Andry", "Bree", "Callie", "Cora", "Euphemia", "Jilian", "Kithri", "Lavinia", "Lidda", "Merla", "Nedda", "Paela", "Portia", "Seraphina", "Shaena", "Trym", "Vani", "Verna" ],
+    "Combiner": " ",
+    "Family": [ "Brushgather", "Goodbarrel", "Greenbottle", "High-hill", "Hilltopple", "Leagallow", "Tealeaf", "Thorngage", "Tosscobble", "Underbough" ],
+    "Base": ""
+  },
+  {
+    "Culture": "Gwerin",
+    "Male": [ "Alwyn", "Afon", "Arthfael", "Berwyn", "Brynmor", "Cadfael", "Derwyn", "Emris", "Gerallt", "Glyndwr", "Idris", "Mabyn" ],
+    "Female": [ "Aelwyd", "Adara", "Arwydd", "Blodwen", "Bronwyn", "Caethes", "Cerwen", "Enid", "Gwen", "Olwyn", "Rhedyn", "Rhian", "Saeth" ],
+    "Combiner": " sur ",
+    "Family": [ "Seren", "Golau", "Hawal", "Iledrith", "Arlwyd", "Tywyll", "Riain", "Tuathail" ],
+    "Base": ""
+  },
+  {
+    "Culture": "Orc",
+    "Male": [ "Aban", "Dalaigh", "Devlin", "Dochas", "Beirgin", "Flynn", "Gearalt", "Girvan", "Cian", "Conlan", "Cormac", "Paidin", "Raghnall", "Raighne", "Rigr", "Kellach", "Ruairc", "Ughaire", "Ualtar", "Ulick", "Ungus" ],
+    "Female": [ "Abaigh", "Aedamnair", "Agata", "Daighin", "Dela", "Ailis", "Andraste", "Ebhlin", "Gerricm Gitta", "Gleneen", "Goibne", "Hayley", "Ilane", "Ide", "Ita", "Irna", "Radha", "Keena", "Keira", "Una", "and Uathach" ],
+    "Combiner": "",
+    "Family": [],
+    "Base": ""
+  },
+  {
+    "Culture": "Goblin",
+    "Male": [ "Argh", "Ahem", "Bam", "Blab", "Blurt", "Boink", "Bump", "Clang", "Crack", "Crash", "Oopsie" ],
+    "Female": [ "Argh", "Ahem", "Bam", "Blab", "Blurt", "Boink", "Bump", "Clang", "Crack", "Crash", "Oopsie" ],
+    "Combiner": "",
+    "Family": [],
+    "Base": "Onomotopoea"
+  },
+  {
+    "Culture": "Dragonborn",
+    "Male": [ "Aodh", "Arthfael", "Caderyn", "Caomh", "Cynbel", "Cynwrig", "Drustan", "Judoc", "Maedoc", "Nechtan", "Seisyll" ],
+    "Female": [ "Abi", "Ailsa", "Beathag", "Catrina", "Beitris", "Elspeth", "Fiona", "Iona", "Isobel", "Jean", "Kenna", "Lilias", "Mhairi", "Morven", "Seona", "Sheona", "Una" ],
+    "Combiner": " vo ",
+    "Family": ["Gal", "Byarsh", "Syra", "Khor", "Anu", "Shakti", "Wyrmhold"],
+    "Base": ""
+  },
+  {
+    "Culture": "Ithemban",
+    "Male": [ "Chiko", "Kiwa", "Tshika", "Mumba", "Matu", "Moba", "Binga", "Chamba", "Chawe", "Mudo", "Mungo", "Baka", "Maatha", "Bako", "Kata", "Musi", "Boka", "Bale", "Ondom", "Kyeswa", "Adayeng", "Mgbeggo", "Arin", "Udoux", "Ukeh", "Ketia", "Sala", "Mbabe", "Obiah", "Biani" ],
+    "Female": [ "Boba", "Boko", "Chite", "Gite", "Kando", "Mufo", "Chansa", "Kanda", "Kumba", "Muola", "Ketaty", "Netnofre", "Tataisy", "Nesentnay", "Namaky", "Monthuty", "Senebty", "Nefere", "Ipubkhaet", "Sisentny", "Nyonka", "Kembe", "Bino", "Akan", "Ogor", "Musaye", "Kyano", "Begnya", "Nyatta", "Badi" ],
+    "Combiner": "",
+    "Family": [],
+    "Base": "Congolose, Ethiopian, Malian"
+  },
+  {
+    "Culture": "Jazuu",
+    "Male": [ "Alashgar", "Megishlu", "Aradal", "Megalu", "Biartasu", "Bulara", "Unnalar", "Eduzis", "Uanedug", "Enmeskial", "Nanna", "Ninhub", "Ayabal", "Saga", "Etun", "Ninsid", "Ninki", "Eshkit", "Nisab", "Antun", "Ningala", "Suuheana", "Sisama", "Susinu", "Saamsuni", "Aceshar", "Ashmabus", "Amum", "Suma", "Samsadu", "Sabi", "Annal", "Nisid", "Lith", "Nidab", "Eshkis", "Myli", "Ningal", "Litte", "Myla" ],
+    "Female": [ "Alashgar", "Megishlu", "Aradal", "Megalu", "Biartasu", "Bulara", "Unnalar", "Eduzis", "Uanedug", "Enmeskial", "Nanna", "Ninhub", "Ayabal", "Saga", "Etun", "Ninsid", "Ninki", "Eshkit", "Nisab", "Antun", "Ningala", "Suuheana", "Sisama", "Susinu", "Saamsuni", "Aceshar", "Ashmabus", "Amum", "Suma", "Samsadu", "Sabi", "Annal", "Nisid", "Lith", "Nidab", "Eshkis", "Myli", "Ningal", "Litte", "Myla" ],
+    "Combiner": "",
+    "Family": [],
+    "Base": ""
+  },
+
+  {
+    "Culture": "Eastern Dustlands",
+    "Male": [ "Alashgar", "Megishlu", "Aradal", "Megalu", "Biartasu", "Bulara", "Unnalar", "Eduzis", "Uanedug", "Enmeskial", "Nanna", "Ninhub", "Ayabal", "Saga", "Etun", "Ninsid", "Ninki", "Eshkit", "Nisab", "Antun", "Ningala", "Suuheana", "Sisama", "Susinu", "Saamsuni", "Aceshar", "Ashmabus", "Amum", "Suma", "Samsadu", "Sabi", "Annal", "Nisid", "Lith", "Nidab", "Eshkis", "Myli", "Ningal", "Litte", "Myla", "Adran", "Aelar", "Aramil", "Arannis", "Aust", "Beiro", "Berrian", "Carric", "Enialis", "Erdan", "Erevan", "Galinndan", "Hadarai", "Heian", "Himo", "Immeral", "Ivellios", "Laucian", "Mindartis", "Paelias", "Peren", "Quarion", "Riardon", "Rolen", "Soveliss", "Thamior", "Tharivol", "Theren", "Varis" ],
+    "Female": [ "Alashgar", "Megishlu", "Aradal", "Megalu", "Biartasu", "Bulara", "Unnalar", "Eduzis", "Uanedug", "Enmeskial", "Nanna", "Ninhub", "Ayabal", "Saga", "Etun", "Ninsid", "Ninki", "Eshkit", "Nisab", "Antun", "Ningala", "Suuheana", "Sisama", "Susinu", "Saamsuni", "Aceshar", "Ashmabus", "Amum", "Suma", "Samsadu", "Sabi", "Annal", "Nisid", "Lith", "Nidab", "Eshkis", "Myli", "Ningal", "Litte", "Myla", "Adran", "Aelar", "Aramil", "Arannis", "Aust", "Beiro", "Berrian", "Carric", "Enialis", "Erdan", "Erevan", "Galinndan", "Hadarai", "Heian", "Himo", "Immeral", "Ivellios", "Laucian", "Mindartis", "Paelias", "Peren", "Quarion", "Riardon", "Rolen", "Soveliss", "Thamior", "Tharivol", "Theren", "Varis" ],
+    "Combiner": " ",
+    "Family": ["Zhuun","Bolota", "Suu", "sus'Zhu", "sus'Bol", "sus'Suu"],
+    "Base": " "
+  }
+]

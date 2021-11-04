@@ -1,0 +1,851 @@
+[
+  {
+    "Race": "human",
+    "Nation": "Serpent Dominion",
+    "Culture": [
+      "Scale-folk"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "animist" ],
+    "Subrace": {
+      "N/A": 0.985,
+      "tiefling": 0.01,
+      "aasimar": 0.005
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Asai'ka",
+    "Culture": [
+      "Scale-folk"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {
+      "N/A": 0.99,
+      "tiefling": 0.01
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Sha'slar Autonomous Zone",
+    "Culture": [
+      "Scale-folk"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual", "animist" ],
+    "Subrace": {
+      "N/A": 1
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Byssia",
+    "Culture": [
+      "Night's Children"
+    ],
+    "Gender": {
+      "male": 0.45,
+      "female": 0.55
+    },
+    "Religiosity": [ "devout", "casual", "animist" ],
+    "Subrace": {
+      "N/A": 0.8,
+      "water genasi": 0.1,
+      "air genasi": 0.1,
+      "earth genasi": 0.05,
+      "fire genasi": 0.05
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Aberhold",
+    "Culture": [
+      "Wall-builder"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual" ],
+    "Subrace": {
+      "N/A": 1
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Duarchy",
+    "Culture": [
+      "Wall-builder"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual", "animist" ],
+    "Subrace": {
+      "N/A": 1
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Rauviz Free State",
+    "Culture": [
+      "Wall-builder"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual", "devout" ],
+    "Subrace": {
+      "N/A": 0.98,
+      "tiefling": 0.01,
+      "aasimar": 0.01
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Uulan Confederacy",
+    "Culture": [
+      "dwarf"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {
+      "N/A": 1
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Crisial Kingdom",
+    "Culture": [
+      "Gwerin",
+      "Wall-builder",
+      "Night's Children"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual", "animist" ],
+    "Subrace": {
+      "N/A": 0.98,
+      "tiefling": 0.01,
+      "aasimar": 0.01
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "Holy Kaelthian Republic",
+    "Culture": [
+      "Wall-builder"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout" ],
+    "Subrace": {
+      "N/A": 0.9,
+      "aasimar": 0.05,
+      "tiefling": 0.05
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "North Ithemba",
+    "Culture": [
+      "Ithemban"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual", "animist" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "human",
+    "Nation": "South Ithemba",
+    "Culture": [
+      "Ithemban"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual", "devout" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "halfling",
+    "Nation": "Sha'slar Autonomous Zone",
+    "Culture": [ "Scale-folk" ],
+    "Gender": {
+      "male": 0.2,
+      "female": 0.2,
+      "Kliba": 0.6
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+      "Stout": 0.8,
+      "Lightfoot": 0.2
+    }
+  },
+  {
+    "Race": "halfling",
+    "Nation": "Duarchy",
+    "Culture": [ "Wall-builder" ],
+    "Gender": {
+      "male": 0.2,
+      "female": 0.2,
+      "Kliba": 0.6
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {
+      "Stout": 0.6,
+      "Lightfoot": 0.4
+    }
+  },
+  {
+    "Race": "halfling",
+    "Nation": "Rauviz Free State",
+    "Culture": [ "Wall-builder" ],
+    "Gender": {
+      "male": 0.2,
+      "female": 0.2,
+      "Kliba": 0.6
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {
+      "Stout": 0.6,
+      "Lightfoot": 0.4
+    }
+  },
+  {
+    "Race": "halfling",
+    "Nation": "Uulan Confederacy",
+    "Culture": [
+      "Wall-builder"
+    ],
+    "Gender": {
+      "male": 0.2,
+      "female": 0.2,
+      "Kliba": 0.6
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {
+      "Stout": 0.6,
+      "Lightfoot": 0.4
+    }
+  },
+  {
+    "Race": "halfling",
+    "Nation": "Crisial Kingdom",
+    "Culture": [ "Wall-builder" ],
+    "Gender": {
+      "male": 0.2,
+      "female": 0.2,
+      "Kliba": 0.6
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {
+      "Stout": 0.6,
+      "Lightfoot": 0.4
+    }
+  },
+  {
+    "Race": "halfling",
+    "Nation": "Holy Kaelthian Republic",
+    "Culture": [ "Wall-builder" ],
+    "Gender": {
+      "male": 0.2,
+      "female": 0.2,
+      "Kliba": 0.6
+    },
+    "Religiosity": [ "devout" ],
+    "Subrace": {
+      "Stout": 0.6,
+      "Lightfoot": 0.4
+    }
+  },
+  {
+    "Race": "gwerin",
+    "Nation": "Duarchy",
+    "Culture": [ "Gwerin" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "gwerin",
+    "Nation": "Rauviz Free State",
+    "Culture": [ "Gwerin" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "gwerin",
+    "Nation": "Crisial Kingdom",
+    "Culture": [ "Gwerin" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "gwerin",
+    "Nation": "Holy Kaelthian Republic",
+    "Culture": [ "Gwerin" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "half elf",
+    "Nation": "Serpent Dominion",
+    "Culture": [
+      "Scale-folk"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "half elf",
+    "Nation": "Asai'ka",
+    "Culture": [
+      "Scale-folk"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "half elf",
+    "Nation": "Sha'slar Autonomous Zone",
+    "Culture": [
+      "Scale-folk"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual", "animist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "half elf",
+    "Nation": "Byssia",
+    "Culture": [
+      "Night's Children"
+    ],
+    "Gender": {
+      "male": 0.49,
+      "female": 0.51
+    },
+    "Religiosity": [ "devout", "casual", "animist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "half elf",
+    "Nation": "Rauviz Free State",
+    "Culture": [
+      "Wall-builder",
+      "Gwerin",
+      "Puun Ihmisia"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "half elf",
+    "Nation": "Crisial Kingdom",
+    "Culture": [
+      "Wall-builder",
+      "Gwerin",
+      "Puun Ihmisia"
+    ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "serpent kin",
+    "Nation": "Serpent Dominion",
+    "Culture": [ "Scale-kin" ],
+    "Gender": {
+      "male": 0.51,
+      "female": 0.49
+    },
+    "Religiosity": [ "animist", "devout" ],
+    "Subrace": {
+      "pureblood": 0.8,
+      "altered": 0.2
+    }
+  },
+  {
+    "Race": "serpent kin",
+    "Nation": "Asai'ka",
+    "Culture": [ "Scale-kin" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist", "devout" ],
+    "Subrace": {
+      "pureblood": 0.95,
+      "altered": 0.05
+    }
+  },
+  {
+    "Race": "serpent kin",
+    "Nation": "Sha'slar Autonomous Zone",
+    "Culture": [ "Scale-kin" ],
+    "Gender": {
+      "male": 0.49,
+      "female": 0.51
+    },
+    "Religiosity": [ "animist", "devout", "casual" ],
+    "Subrace": {
+      "pureblood": 0.9,
+      "altered": 0.1
+    }
+  },
+  {
+    "Race": "sena'ka",
+    "Nation": "Serpent Dominion",
+    "Culture": [ "Scale-kin" ],
+    "Gender": {
+      "male": 0.50,
+      "female": 0.5
+    },
+    "Religiosity": [ "atheist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "goroesi",
+    "Nation": "Asai'ka",
+    "Culture": [ "Scale-kin" ],
+    "Gender": {
+      "male": 0.10,
+      "female": 0.9
+    },
+    "Religiosity": [ "devout" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "kobold",
+    "Nation": "Sha'slar Autonomous ZOne",
+    "Culture": [ "Scale-kin" ],
+    "Gender": {
+      "male": 0.50,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "puun ihmisia",
+    "Nation": "Byssia",
+    "Culture": [ "Night's Children" ],
+    "Gender": {
+      "male": 0.50,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "puun ihmisia",
+    "Nation": "Aberhold",
+    "Culture": [
+      "Puun Ihmisia"
+    ],
+    "Gender": {
+      "male": 0.50,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "puun ihmisia",
+    "Nation": "Byssia",
+    "Culture": [ "Night's Children" ],
+    "Gender": {
+      "male": 0.50,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "puun ihmisia",
+    "Nation": "Rauviz Free State",
+    "Culture": [ "Puun Ihmisia" ],
+    "Gender": {
+      "male": 0.50,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "puun ihmisia",
+    "Nation": "Crisial Kingdom",
+    "Culture": [ "Puun Ihmisia", "Night's Children", "Scale-folk" ],
+    "Gender": {
+      "male": 0.50,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual", "animist" ],
+    "Subrace": {}
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Serpent Dominion",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout" ],
+    "Subrace": {
+      "hill": 0.8,
+      "mountain": 0.2
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Asai'ka",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout" ],
+    "Subrace": {
+      "hill": 0.8,
+      "mountain": 0.2
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Sha'slar Autonomous Zone",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout" ],
+    "Subrace": {
+      "hill": 1
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Aberhold",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual", "atheist" ],
+    "Subrace": {
+      "hill": 0.3,
+      "mountain": 0.7
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Shinevog",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual", "atheist" ],
+    "Subrace": {
+      "hill": 0.6,
+      "mountain": 0.4
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Duarchy",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual" ],
+    "Subrace": {
+      "hill": 0.9,
+      "mountain": 0.1
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Rauviz Free State",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {
+      "hill": 0.9,
+      "mountain": 0.1
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Uulan Confederacy",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {
+      "hill": 0.2,
+      "mountain": 0.8
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Crisial Kingdom",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "casual" ],
+    "Subrace": {
+      "hill": 0.8,
+      "mountain": 0.2
+    }
+  },
+  {
+    "Race": "dwarf",
+    "Nation": "Holy Kaelthian Republic",
+    "Culture": [ "Dwarf" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout" ],
+    "Subrace": {
+      "hill": 0.5,
+      "mountain": 0.5
+    }
+  },
+  {
+    "Race": "orc",
+    "Nation": "Wyrmhold",
+    "Culture": [ "Orc" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+      "Tabar": 0.4,
+      "Kard": 0.3,
+      "Skem": 0.1,
+      "Ko": 0.2
+    }
+  },
+  {
+    "Race": "orc",
+    "Nation": "Duarchy",
+    "Culture": [ "Orc" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+      "Watching Eye": 0.1,
+      "Abyss-touched": 0.2,
+      "Tribal": 0.7
+    }
+  },
+  {
+    "Race": "dragonborn",
+    "Nation": "Wyrmhold",
+    "Culture": [ "Dragonborn" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "devout", "casual" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "goblin",
+    "Nation": "Wyrmhold",
+    "Culture": [ "Goblin" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist", "atheist" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "goblin",
+    "Nation": "Crisial Kingdom",
+    "Culture": [ "Goblin" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "jazuu",
+    "Nation": "Wyrmhold",
+    "Culture": [ "Jazuu" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "jazuu",
+    "Nation": "Aberhold",
+    "Culture": [ "Jazuu" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "shifter",
+    "Nation": "Aberhold",
+    "Culture": [ "Puun Ihmisia" ],
+    "Gender": {
+      "male": 0.4,
+      "female": 0.6
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+      "Longtooth": 0.4,
+      "Swiftpaw": 0.4,
+      "Ursine": 0.2
+    }
+  },
+  {
+    "Race": "cysgoroesi",
+    "Nation": "Aberhold",
+    "Culture": ["Puun Ihmisia"
+],
+    "Gender": {
+      "male": 0.4,
+      "female": 0.6
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "sher'ka",
+    "Nation": "North Ithemba",
+    "Culture": [ "Ithemban" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "sher'ka",
+    "Nation": "South Ithemba",
+    "Culture": [ "Ithemban" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "Lizardfolk",
+    "Nation": "North Ithemba",
+    "Culture": [ "Ithemban" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist" ],
+    "Subrace": {
+    }
+  },
+  {
+    "Race": "aarocockra",
+    "Nation": "South Ithemba",
+    "Culture": [ "Ithemban" ],
+    "Gender": {
+      "male": 0.5,
+      "female": 0.5
+    },
+    "Religiosity": [ "animist", "casual" ],
+    "Subrace": {
+    }
+  }
+]

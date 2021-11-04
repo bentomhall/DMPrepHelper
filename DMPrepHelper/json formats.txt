@@ -1,0 +1,138 @@
+NPC: races.json, npcNames.json, personality.json, professions.json, nations.json
+Settlement: cityData.json, itemRanks.json, rumors.json, settlementRoles.json, settlementTypes.json, [NPC]
+Dungeon: dungeonData.json, regionData.json
+
+--NPC--
+
+nations.json
+List of {
+* Name: string key
+* Races: WeightedChoiceSet (def races.json)
+}
+
+races.json
+list of {
+* Race: string composite key
+* Nation: string composite key (def nations.json)
+* Culture: list<string> (def npcNames.json)
+* Gender: WeightedChoiceSet
+* Religiosity: list<string>
+* Subrace: WeightedChoiceSet
+}
+
+npcNames.json
+list of {
+* Culture: string key
+* Male: list<string>
+* Female: list<string>
+* Combiner: string
+* Family: list<string>
+* Base: string
+}
+
+personality.json, professions.json
+list<string> [no key]
+
+--Settlement--
+
+cityData.json
+list of {
+* Name: string key
+* Nation: string (def races.json)
+* Population: int
+* Size: string
+* Region: string (def regionData.json, link not used)
+* Terrain: string
+* Races: WeightedChoiceSet (def races.json)
+* Tech: 0 <= int <= 4
+* Prefixes: list<string>
+* Infixes: list<string>
+* Suffixes: list<string>
+* Combiner: string
+}
+
+itemRanks.json
+list of {
+* Category: string composite key
+* Subcategory: string composite key
+* Items: list of {Name: string key, Rank: 0 <= int <= 4}
+}
+
+rumors.json (unused)
+{
+* Categories: list of { string key }
+* Rumors: list of {
+** Category: string (def above)
+** What: string
+** Random: list<string>
+** Reward: string
+** Generated: list<string>
+}
+}
+
+settlementRoles.json
+list of {
+* Name: string key
+* Specialties: list of {Name: string key, Modifier: int}
+}
+
+settlementTypes.json
+list of {
+* Name: string key
+* Population: int
+* NPCs: list<string>
+* TechCaps: {string (def itemRanks.json Category): 0<=int<=4}
+* Roles: WeightedChoiceSet (def settlementRoles.json)
+}
+
+--Dungeon--
+
+dungeonData.json
+list of {
+* Name: string key
+* Scale: string
+* Sizes: list<int>
+* Subtypes: list<string>
+* Ages: list<string>
+* HasBoss: 0.0 <= double <= 1.0
+* LairChance: {string (tier) : 0.0 <= double <= 1.0}
+* HasSublocations: bool
+}
+
+regionData.json
+list of {
+* Name: string key
+* Tier: list<double>
+* Monsters: WeightedChoiceSet
+* AdventuresPerHex: 0.0 <= double <= 1.0 (unused)
+* AdventureTypes: list<string>
+
+
+        <Button Grid.Column="2" Grid.Row="2" Margin="24,0,0,0" VerticalAlignment="Center" Content="?">
+            <Button.Flyout>
+                <Flyout FlyoutPresenterStyle="{StaticResource InfoFlyoutStyle}">
+                    <TextBlock TextWrapping="Wrap" x:Uid="CityNationHelpText"/>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+
+<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2">
+            <Button Command="{x:Bind ViewModel.SaveConfigCommand}" HorizontalContentAlignment="Left" Margin="12,0,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="Save"/>
+                    <TextBlock Text="Save" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button Command="{x:Bind ViewModel.AddItemCommand}" HorizontalContentAlignment="Left" Margin="12,0,0,0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <SymbolIcon Symbol="Add"/>
+                        <TextBlock Text="New City" Margin="12,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Button Command="{x:Bind ViewModel.RemoveItemCommand}" CommandParameter="{x:Bind ViewModel.SelectedCity, Mode=OneWay}" Margin="12,0,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="Delete"/>
+                    <TextBlock Text="Delete Selected" Margin="12,0,0,0"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
