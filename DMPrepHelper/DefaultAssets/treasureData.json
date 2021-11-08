@@ -1,0 +1,3397 @@
+﻿[
+  {
+    "TableLabel": "A",
+    "Entries": [
+      {
+        "Name": "Potion Of Healing",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 50.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (Cantrip)",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": [ ]
+      },
+      {
+        "Name": "Potion Of Climbing",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (1st)",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 20.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (2nd)",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 4.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Healing (Greater)",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 4.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bag Of Holding",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Driftglobe",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bead Of Nourishment",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bead Of Refreshment",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Perfume Of Bewitching",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Candle Of The Deep",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Unbreakable Arrow",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Hat Of Wizardry",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Handy Spice Pouch",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Horn Of Silent Alarm",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Instrument Of Illusions",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Instrument Of Scribing",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Lock Of Trickery",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Mystery Key",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Orb Of Direction",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Orb Of Time",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Pipe Of Smoke Monsters",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Pole Of Angling",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Pole Of Collapsing",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Pot Of Awakening",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ruby Of The War Mage",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Shield Of Expressions",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Smoldering Armor",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ "padded", "leather", "studded leather", "Hide", "Chain Shirt", "scale mail", "breastplate", "half plate", "ring mail", "chain mail", "splint", "plate" ]
+      },
+      {
+        "Name": "Staff Of Adornment",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Birdcalls",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Flowers",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Talking Doll",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Tankard Of Sobriety",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Veteran'S Cane",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Whalloping Ammunition",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": ["arrow", "bolt", "stone"]
+      },
+      {
+        "Name": "Wand Of Conducting",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Pyrotechnics",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Scowls",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Smiles",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Boots Of False Tracks",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cast-Off Armor",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ "padded", "leather", "studded leather", "Hide", "Chain Shirt", "scale mail", "breastplate", "half plate", "ring mail", "chain mail", "splint", "plate" ]
+      },
+      {
+        "Name": "Charlatan'S Die",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cloak Of Billowing",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cloak Of Many Fashions",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Clockwork Amulet",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Clothes Of Mending",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dark Shard Amulet",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dread Helm",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ear Horn Of Hearing",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Enduring Spellbook",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ersatz Eye",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Hat Of Vermin",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Armor Of Gleaming",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ "Hide", "Chain Shirt", "scale mail", "breastplate", "half plate", "ring mail", "chain mail", "splint", "plate" ]
+      },
+      {
+        "Name": "Illuminator'S Tattoo",
+        "Rarity": "",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Masquerade Tattoo",
+        "Rarity": "",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Prosthetic Limb",
+        "Rarity": "",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Least Spellwrought Tattoo",
+        "Rarity": "",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": [ "Cantrip", "1st level" ]
+      }
+    ]
+  },
+  {
+    "TableLabel": "B",
+    "Entries": [
+      {
+        "Name": "Potion Of Healing (Greater)",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 15.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Fire Breath",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 7.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Resistance",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 7.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Ammunition, +1",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ "arrow", "bolt", "stone" ]
+      },
+      {
+        "Name": "Potion Of Animal Friendship",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Hill Giant Strength",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Growth",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Water Breathing",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (2nd)",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ ]
+      },
+      {
+        "Name": "Spell Scroll (3rd)",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [  ]
+      },
+      {
+        "Name": "Bag Of Holding",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Keoghtom's Ointment",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Oil Of Slipperiness",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dust Of Disappearance",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dust Of Dryness",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dust Of Sneezing And Choking",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Elemental Gem",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": [ "fire", "earth", "air", "water" ]
+      },
+      {
+        "Name": "Philter Of Love",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Moon-Touched Sword",
+        "Rarity": "C",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Alchemy Jug",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cap Of Water Breathing",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cloak Of The Manta Ray",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Driftglobe",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Goggles Of Night",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Helm Of Comprehending Languages",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Immovable Rod",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Lantern Of Revealing",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Mariner'S Armor",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": [  "padded", "leather", "studded leather", "Hide", "Chain Shirt", "scale mail", "breastplate", "half plate", "ring mail", "chain mail", "splint", "plate"  ]
+      },
+      {
+        "Name": "Mithral Armor",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": [ "Chain Shirt", "scale mail", "breastplate", "half plate", "ring mail", "chain mail", "splint", "plate" ]
+      },
+      {
+        "Name": "Potion Of Poison",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Swimming",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Robe Of Useful Items",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rope Of Climbing",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Saddle Of The Cavalier",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Magic Detection",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Secrets",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "All-Purpose Tool",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Amulet Of The Devout",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Arcane Grimoire",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bloodwell Vial",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Barrier Tattoo (12 + Dex)",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Coiling Grasp Tattoo",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Eldritch Claw Tattoo",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Feywild Shard",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Guardian Emblem",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Moon Sickle",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Nature'S Mantle",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rhythm-Maker'S Drum",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Minor Spellwrought Tattoo)",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": [ "2nd", "3rd" ]
+      },
+      {
+        "Name": "Emerald Pen",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      }
+    ]
+  },
+  {
+    "TableLabel": "C",
+    "Entries": [
+      {
+        "Name": "Potion Of Healing (Superior)",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 15.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (4Th Level)",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 7.0,
+        "Subtypes": [ ]
+      },
+      {
+        "Name": "Ammunition, +2",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ "arrow", "bolt", "stone" ]
+      },
+      {
+        "Name": "Potion Of Clairvoyance",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Diminution",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Gaseous Form",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Frost/Stone Giant Strength",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Heroism",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Invulnerability",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Mind Reading",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (5Th Level)",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ "5th level" ]
+      },
+      {
+        "Name": "Elixir Of Health",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Oil Of Etherialness",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Fire Giant Strength",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Feather Token",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Scroll Of Protection",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": [ "creature types" ]
+      },
+      {
+        "Name": "Bag Of Beans (3d4)",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": [ ]
+      },
+      {
+        "Name": "Bead Of Force",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": [ "1", "2", "3", "4", "5" ]
+      },
+      {
+        "Name": "Chime Of Opening",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Decanter Of Endless Water",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Eyes Of Minute Seeing",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Folding Boat",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Handy Haversack",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Horseshoes Of Speed",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Necklace Of Fireballs",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Periapt Of Health",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Sending Stones",
+        "Rarity": "U",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Greater Spellwrought Tattoo",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": [ "4th", "5th" ]
+      }
+    ]
+  },
+  {
+    "TableLabel": "D",
+    "Entries": [
+      {
+        "Name": "Potion Of Healing (Supreme)",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 20.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Invisibility",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Speed",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (6Th)",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 10.0,
+        "Subtypes": [ "6th" ]
+      },
+      {
+        "Name": "Spell Scroll (7Th)",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 7.0,
+        "Subtypes": [ "7th" ]
+      },
+      {
+        "Name": "Ammunition, +3",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ "arrow", "bolt", "stone" ]
+      },
+      {
+        "Name": "Oil Of Sharpness",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Flying",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Cloud Giant Strength",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Longevity",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Vitality",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (8Th)",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Horseshoes Of A Zephyr",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Marvelous Pigments",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bag Of Devouring",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Portable Hole",
+        "Rarity": "R",
+        "IsMajor": false,
+        "Weight": 1.0,
+        "Subtypes": []
+      }
+    ]
+  },
+  {
+    "TableLabel": "E",
+    "Entries": [
+      {
+        "Name": "Spell Scroll (8Th)",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 30.0,
+        "Subtypes": ["8th"]
+      },
+      {
+        "Name": "Potion Of Storm Giant Strength",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 25.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Healing (Supreme)",
+        "Rarity": "Vr",
+        "IsMajor": false,
+        "Weight": 15.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spell Scroll (9Th)",
+        "Rarity": "L",
+        "IsMajor": false,
+        "Weight": 15.0,
+        "Subtypes": ["9th"]
+      },
+      {
+        "Name": "Universal Solvent",
+        "Rarity": "L",
+        "IsMajor": false,
+        "Weight": 8.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Arrow Of Slaying",
+        "Rarity": "L",
+        "IsMajor": false,
+        "Weight": 5.0,
+        "Subtypes": [ "creature types" ]
+      },
+      {
+        "Name": "Sovereign Glue",
+        "Rarity": "L",
+        "IsMajor": false,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Potion Of Dragon's Majesty",
+        "Rarity": "L",
+        "IsMajor": false,
+        "Weight": 15.0,
+        "Subtypes": []
+      }
+    ]
+  },
+  {
+    "TableLabel": "F",
+    "Entries": [
+      {
+        "Name": "Weapon, +1",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 15.0,
+        "Subtypes": [ "club", "dagger", "greatclub", "handaxe", "javelin", "light hammer", "mace", "quarterstaff", "sickle", "spear", "light crossbow", "dart", "shortbow", "sling", "battleaxe", "flail", "glaive", "greataxe", "greatsword", "halberd", "lance", "longsword", "maul", "morningstar", "pike", "rapier", "scimitar", "shortsword", "trident", "war pick", "warhammer", "whip", "blowgun", "hand crossbow", "heavy crossbow", "longbow", "net" ]
+      },
+      {
+        "Name": "Shield, +1",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Sentinel Shield",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Amulet Of Proof Against Detection And Location",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Boots Of Elvenkind",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Boots Of Striding And Springing",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bracers Of Archery",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Brooch Of Shielding",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Broom Of Flying",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cloak Of Elvenkind",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cloak Of Protection",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Gauntlets Of Ogre Power",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Hat Of Disguise",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Javelin Of Lightning",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Pearl Of Power",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of The Pact Keeper, +1",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Slippers Of Spider Climbing",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of The Adder",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of The Python",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Sword Of Vengeance",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Trident Of Fish Command",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Magic Missiles",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of The War Mage, +1",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Web",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Weapon Of Warning",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": [ "club", "dagger", "greatclub", "handaxe", "javelin", "light hammer", "mace", "quarterstaff", "sickle", "spear", "light crossbow", "dart", "shortbow", "sling", "battleaxe", "flail", "glaive", "greataxe", "greatsword", "halberd", "lance", "longsword", "maul", "morningstar", "pike", "rapier", "scimitar", "shortsword", "trident", "war pick", "warhammer", "whip", "blowgun", "hand crossbow", "heavy crossbow", "longbow", "net" ]
+      },
+      {
+        "Name": "Adamantine Chain Mail",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Adamantine Chain Shirt",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Adamantine Scale Mail",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bag Of Tricks, Grey",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bag Of Tricks, Rust",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bag Of Tricks, Tan",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Boots Of The Winterlands",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Circlet Of Blasting",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Deck Of Illusions",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Eversmoking Bottle",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Eyes Of Charming",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Eyes Of The Eagle",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine Of Wondrous Power (Silver Raven)",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Gem Of Brightness",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Gloves Of Missile Snaring",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Gloves Of Swimming And Climbing",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Gloves Of Thievery",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Headband Of Intellect",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Helm Of Telepathy",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Doss Lute",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Fochlucan Bandore",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Mac-Fuimidh Cittern",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Medallion Of Thoughts",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Necklace Of Adaptation",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Periapt Of Wound Closure",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Pipes Of Haunting",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Pipes Of The Sewers",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Jumping",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Mind Shielding",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Warmth",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Water Walking",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Quiver Of Ehlonna",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Luckstone",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wind Fan",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Winged Boots",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dragonhide Belt, +1",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      }
+    ]
+  },
+  {
+    "TableLabel": "G",
+    "Entries": [
+      {
+        "Name": "Weapon, +2",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 11.0,
+        "Subtypes": [ "club", "dagger", "greatclub", "handaxe", "javelin", "light hammer", "mace", "quarterstaff", "sickle", "spear", "light crossbow", "dart", "shortbow", "sling", "battleaxe", "flail", "glaive", "greataxe", "greatsword", "halberd", "lance", "longsword", "maul", "morningstar", "pike", "rapier", "scimitar", "shortsword", "trident", "war pick", "warhammer", "whip", "blowgun", "hand crossbow", "heavy crossbow", "longbow", "net" ]
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Bronze Griffon)",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 0.325,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Ebony Fly)",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 0.325,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Golden Lions)",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 0.325,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Ivory Goats)",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 0.325,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Marble Elephant)",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 0.325,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Onyx Dog)",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 0.65,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Serpentine Owl)",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 0.325,
+        "Subtypes": []
+      },
+      {
+        "Name": "Adamantine Breastplate",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Adamantine Splint",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Amulet Of Health",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Alchemical Compendium",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Astral Shard",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Astromancy Archive",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Atlas Of Endless Horizons",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bell Branch",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Devotee'S Censer",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Duplicitous Manuscript",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Elemental Essence Shard",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Far Realm Shard",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Fulminating Treatise",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Heart Weaver'S Primer",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Libram Of Souls And Flesh",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Lyre Of Building",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Outer Essence Shard",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Planecaller'S Codex",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Protective Verses",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Reveler'S Concertina",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Shadowfell Brand Tattoo",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Shadowfell Shard",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Armor Of Vulnerability",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "bludgeoning", "piercing", "slashing" ]
+      },
+      {
+        "Name": "Arrow-Catching Shield",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Belt Of Dwarvenkind",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Belt Of Hill Giant Strength",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Berserker Axe",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "axe" ]
+      },
+      {
+        "Name": "Boots Of Levitation",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Boots Of Speed",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bowl Of Commanding Water Elementals",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Bracers Of Defense",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Brazier Of Commanding Fire Elementals",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cape Of The Mountebank",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Censer Of Controlling Air Elementals",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Chain Mail, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Chain Mail Of Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Chain Shirt, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Chain Shirt Of Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Cloak Of Displacement",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cloak Of The Bat",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cube Of Force",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Instant Fortress",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dagger Of Venom",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dimensional Shackles",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dragon Slayer",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Elven Chain",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Flame Tongue",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Gem Of Seeing",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Giant Slayer",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier", "handaxe", "battleaxe", "greataxe" ]
+      },
+      {
+        "Name": "Glamoured Studded Leather",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Helm Of Teleportation",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Horn Of Blasting",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Horn Of Valhalla",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "silver", "brass" ]
+      },
+      {
+        "Name": "Canaith Mandolin",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cli Lyre",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ioun Stone",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 4.0,
+        "Subtypes": [ "awareness", "protection", "reserve", "sustenance" ]
+      },
+      {
+        "Name": "Iron Bands",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Leather Armor +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Leather Armor Of Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Mace Of Disruption",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Mace Of Smiting",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Mace Of Terror",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Mantle Of Spell Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Necklace Of Prayer Beads",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Periapt Of Proof Against Poison",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Animal Influence",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Evasion",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Feather Falling",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Free Action",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Protection",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Ring Of Spell Storing",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of The Ram",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of X-Ray Vision",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Robe Of Eyes",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of Rulership",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of The Pact Keeper, +2",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rope Of Entanglement",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Scale Mail, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Scale Mail Of Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Shield, +2",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Shield Of Missile Attraction",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Charming",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Healing",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Swarming Insects",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of The Woodlands",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Withering",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Stone Of Controlling Earth Elementals",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Sun Blade",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Sword Of Life Stealing",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Sword Of Wounding",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Tentacle Rod",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Vicious Weapon",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "club", "dagger", "greatclub", "handaxe", "javelin", "light hammer", "mace", "quarterstaff", "sickle", "spear", "light crossbow", "dart", "shortbow", "sling", "battleaxe", "flail", "glaive", "greataxe", "greatsword", "halberd", "lance", "longsword", "maul", "morningstar", "pike", "rapier", "scimitar", "shortsword", "trident", "war pick", "warhammer", "whip", "blowgun", "hand crossbow", "heavy crossbow", "longbow", "net" ]
+      },
+      {
+        "Name": "Wand Of Binding",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Enemy Detection",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Fear",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Fireballs",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Lightning Bolts",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Paralysis",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of The War Mage, +2",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of Wonder",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wings Of Flying",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Crystal Blade",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Dragonhide Belt, +2",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dragonwing Bow",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "longbow", "shortbow" ]
+      }
+    ]
+  },
+  {
+    "TableLabel": "H",
+    "Entries": [
+      {
+        "Name": "Weapon, +3",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 10.0,
+        "Subtypes": [ "club", "dagger", "greatclub", "handaxe", "javelin", "light hammer", "mace", "quarterstaff", "sickle", "spear", "light crossbow", "dart", "shortbow", "sling", "battleaxe", "flail", "glaive", "greataxe", "greatsword", "halberd", "lance", "longsword", "maul", "morningstar", "pike", "rapier", "scimitar", "shortsword", "trident", "war pick", "warhammer", "whip", "blowgun", "hand crossbow", "heavy crossbow", "longbow", "net" ]
+      },
+      {
+        "Name": "Amulet Of The Planes",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Carpet Of Flying",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": [ "3x5", "4x6", "5x7", "6x9" ]
+      },
+      {
+        "Name": "Crystal Ball (Regular)",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Regeneration",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Shooting Stars",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Telekinesis",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Robe Of Scintillating Colors",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Robe Of Stars",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of Absorption",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of Alertness",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of Security",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of The Pact Keeper, +3",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Scimitar Of Speed",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Shield, +3",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Fire",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Frost",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Power",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Power",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Striking",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of Thunder And Lightning",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Sword Of Sharpness",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Wand Of Polymorph",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Wand Of The War Mage, +3",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Adamantine Half Plate",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Adamantine Plate",
+        "Rarity": "U",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Animated Shield",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Belt Of Fire Giant Strength",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Belt Of Frost/Stone Giant Strength",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Breastplate, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Breastplate Of Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Chain Mail +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Chain Shirt +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cloak Of Arachnida",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dancing Sword",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Demon Armor",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dragon Scale Mail",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": ["black", "blue", "brass", "bronze", "copper", "gold", "green", "red", "silver", "white]
+      },
+      {
+        "Name": "Dwarven Plate",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dwarven Thrower",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Efreeti Bottle",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Obsidian Steed)",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Frost Brand",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Helm Of Brilliance",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Horn Of Valhalla (Bronze)",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Anstruth Harp",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ioun Stone",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 7.0,
+        "Subtypes": [ "Absorption", "Agility", "Fortitude", "Insight", "Intellect", "Leadership", "Strength" ]
+      },
+      {
+        "Name": "Leather Armor, +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Manual Of Bodily Health",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Manual Of Gainful Exercise",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Manual Of Golems",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Manual Of Quickness Of Action",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Absorbing Tattoo",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Cauldron Of Rebirth",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Crystalline Chronicle",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ghost Step Tattoo",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Lifewell Tattoo",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Mirror Of Life Trapping",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Nine Lives Stealer",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Oathbow",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Scale Mail, +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Spellguard Shield",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Splint Armor, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Splint Armor Of Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Studded Leather, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Studded Leather Of Resistance",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Tome Of Clear Thought",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Tone Of Leadership And Influence",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Tome Of Understanding",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Amethyst Lodestone",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Dragonhide Belt, +3",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Sapphire Buckler",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      }
+    ]
+  },
+  {
+    "TableLabel": "I",
+    "Entries": [
+      {
+        "Name": "Defender",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Hammer Of Thunderbolts",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Luck Blade",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 5.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Sword Of Answering",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 5.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Holy Avenger",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Ring Of Djinni Summoning",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Invisibility",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ring Of Spell Turning",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of Lordly Might",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Staff Of The Magi",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Vorpal Sword",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": [ "shortsword", "longsword", "greatsword", "scimitar", "rapier" ]
+      },
+      {
+        "Name": "Belt Of Cloud Giant Strength",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Breastplate, +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Chain Mail, +3",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Chain Shirt, +3",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cloak Of Invisibility",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Crystal Ball (Legendary)",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": [ "Mind Reading", "Telepathy", "True Seeing" ]
+      },
+      {
+        "Name": "Half-Plate, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Iron Flask",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Leather Armor, +3",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Plate Armor, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Robe Of The Archmagi",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Rod Of Resurrection",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Scale Armor, +1",
+        "Rarity": "R",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Scarab Of Protection",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Splint Armor, +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Studded Leather, +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Well Of Many Worlds",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 2.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Half-Plate, +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 0.166666667,
+        "Subtypes": []
+      },
+      {
+        "Name": "Plate Armor, +2",
+        "Rarity": "Vr",
+        "IsMajor": true,
+        "Weight": 0.166666667,
+        "Subtypes": []
+      },
+      {
+        "Name": "Studded Leather, +3",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 0.166666667,
+        "Subtypes": []
+      },
+      {
+        "Name": "Breastplate, +3",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 0.166666667,
+        "Subtypes": []
+      },
+      {
+        "Name": "Splint, +3",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 0.166666667,
+        "Subtypes": []
+      },
+      {
+        "Name": "Half-Plate, +3",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 0.083333333,
+        "Subtypes": []
+      },
+      {
+        "Name": "Plate, +3",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 0.083333333,
+        "Subtypes": []
+      },
+      {
+        "Name": "Apparatus Of Kwalish",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Armor Of Invulnerability",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Belt Of Storm Giant Strength",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Cubic Gate",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Efreeti Chain",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Half-Plate Of Resistance ",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder"
+        ]
+      },
+      {
+        "Name": "Horn Of Valhalla (Iron)",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ollamh Harp",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ioun Stone",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 3.0,
+        "Subtypes": [ "Greater Absorption", "Mastery", "Regeneration" ]
+      },
+      {
+        "Name": "Plate Armor Of Etherealness",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Plate Of Resistance",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": [
+          "Acid",
+          "Cold",
+          "Fire",
+          "Force",
+          "Lightning",
+          "Necrotic",
+          "Poison",
+          "Psychic",
+          "Radiant",
+          "Thunder"
+        ]
+      },
+      {
+        "Name": "Ring Of Elemental Command",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 4.0,
+        "Subtypes": [ "Fire", "Earth", "Air", "Water" ]
+      },
+      {
+        "Name": "Ring Of Three Wishes",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Sphere Of Annihilation",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Talisman Of The Sphere",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Blood Fury Tattoo",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Flail Of Tiamat",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Figurine of Wondrous Power (Gold Canary)",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Platinum Scarf",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Ruby Weave Gm",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      },
+      {
+        "Name": "Topaz Annihilator",
+        "Rarity": "L",
+        "IsMajor": true,
+        "Weight": 1.0,
+        "Subtypes": []
+      }
+    ]
+  }
+]

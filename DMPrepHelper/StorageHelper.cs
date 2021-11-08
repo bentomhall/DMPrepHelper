@@ -5,6 +5,7 @@ using libGenerator.DMGDungeonBuilder;
 using libGenerator.Dungeon;
 using libGenerator.NPC;
 using libGenerator.Settlement;
+using libGenerator.Treasure;
 using Newtonsoft.Json;
 using Windows.Storage;
 
@@ -115,6 +116,26 @@ namespace DMPrepHelper
             return dGenerator;
         }
 
+        public TreasureGenerator GetTreasureGenerator()
+        {
+            if (tGenerator == null || isDataDirty["treasure"])
+            {
+                try
+                {
+                    var hoards = Deserialize<TreasureTable>(DataFile.DMGTreasureTable);
+                    var items = Deserialize<ItemTableData>(DataFile.DMGTreasure);
+                    tGenerator = new TreasureGenerator(new List<TreasureTable>(), hoards, items);
+                }
+                catch (Exception e)
+                {
+                    var message = e.Message;
+                }
+                
+                isDataDirty["treasure"] = false;
+            }
+            return tGenerator;
+        }
+
         public string GetConfigText(DataFile type)
         {
             return dataText[type].Result;
@@ -183,7 +204,8 @@ namespace DMPrepHelper
         private SettlementGenerator sGenerator;
         private NPCGenerator nPCGenerator;
         private DungeonGenerator dGenerator;
-        private Dictionary<string, bool> isDataDirty = new Dictionary<string, bool> { {"npc", false }, {"dungeon", false }, {"settlement", false } };
+        private TreasureGenerator tGenerator;
+        private Dictionary<string, bool> isDataDirty = new Dictionary<string, bool> { { "npc", false }, { "dungeon", false }, { "settlement", false }, { "treasure", false } };
 
         public async Task<List<T>> DeserializeAsync<T>(DataFile type)
         {
@@ -308,7 +330,9 @@ namespace DMPrepHelper
             {DataFile.Region, "regionData.json" },
             //{DataFile.Rumor, "rumors.json" },
             {DataFile.SettlementRole, "settlementRoles.json" },
-            {DataFile.SettlementType, "settlementTypes.json" }
+            {DataFile.SettlementType, "settlementTypes.json" },
+            {DataFile.DMGTreasure, "treasureData.json" },
+            {DataFile.DMGTreasureTable, "dmgTreasureTableData.json" }
         };
     }
 
@@ -325,6 +349,8 @@ namespace DMPrepHelper
         Region,
         SettlementRole,
         SettlementType,
+        DMGTreasureTable,
+        DMGTreasure
         //Rumor
 
     }

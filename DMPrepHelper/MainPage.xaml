@@ -23,6 +23,7 @@
                 <NavigationViewItem Icon="Street" Content="Settlement Generator" Tag="towns"/>
                 <NavigationViewItem Icon="Map" Content="Dungeon Generator" Tag="dungeon"/>
                 <NavigationViewItem Icon="Directions" Content="DMG Dungeon Generator" Tag="dmgDungeon"/>
+                <NavigationViewItem Icon="Calculator" Content="DMG Treasure Generator" Tag="dmgTreasure"/>
                 <NavigationViewItem Icon="Globe" Content="Config Editor" Tag="configs"/>
             </NavigationView.MenuItems>
 

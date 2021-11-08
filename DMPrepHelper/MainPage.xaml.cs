@@ -100,6 +100,10 @@ namespace DMPrepHelper
                     ContentFrame.Navigate(typeof(Views.DMGDungeonPage));
                     break;
 
+                case "dmgTreasure":
+                    ContentFrame.Navigate(typeof(Views.DMGTreasurePage));
+                    break;
+
                 case "configs":
                     ContentFrame.Navigate(typeof(Views.ConfigEditorPage));
                     break;

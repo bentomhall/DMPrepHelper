@@ -1,0 +1,402 @@
+﻿[
+  {
+    "Tier": 1,
+    "CopperDice": 6,
+    "SilverDice": 3,
+    "GoldDice": 2,
+    "PlatinumDice": 0,
+    "Items": [
+      {
+        "Weight": 6
+      },
+      {
+        "Weight": 10,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 10
+      },
+      {
+        "Weight": 10,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25
+      },
+      {
+        "Weight": 10,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 50
+      },
+      {
+        "Weight": 8,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 10,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 6,
+        "ItemTableIndex": 0
+      },
+      {
+        "Weight": 8,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 6,
+        "ItemTableIndex": 0
+      },
+      {
+        "Weight": 8,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 6,
+        "ItemTableIndex": 0
+      },
+      {
+        "Weight": 5,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 10,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 1
+      },
+      {
+        "Weight": 5,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 1
+      },
+      {
+        "Weight": 5,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 1
+      },
+      {
+        "Weight": 3,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 10,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 2
+      },
+      {
+        "Weight": 2,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 2
+      },
+      {
+        "Weight": 5,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 2
+      },
+      {
+        "Weight": 7,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 5
+      },
+      {
+        "Weight": 5,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 5
+      },
+      {
+        "Weight": 2,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 1,
+        "ItemTableIndex": 6
+      },
+      {
+        "Weight": 1,
+        "GemDice": 2,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 1,
+        "ItemTableIndex": 6
+      }
+    ]
+  },
+  {
+    "Tier": 2,
+    "CopperDice": 2,
+    "SilverDice": 2,
+    "SilverMultiplier": 1000,
+    "GoldDice": 6,
+    "PlatinumDice": 3,
+    "Items": [
+      {
+        "Weight": 4
+      },
+      {
+        "Weight": 6,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25
+      },
+      {
+        "Weight": 6,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 50
+      },
+      {
+        "Weight": 6,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 100
+      },
+      {
+        "Weight": 6,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 250
+      },
+      {
+        "Weight": 3,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 6,
+        "ItemTableIndex": 0
+      },
+      {
+        "Weight": 4,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 6,
+        "ItemTableIndex": 0
+      },
+      {
+        "Weight": 4,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 100,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 6,
+        "ItemTableIndex": 0
+      },
+      {
+        "Weight": 4,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 250,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 6,
+        "ItemTableIndex": 0
+      },
+      {
+        "Weight": 5,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 1
+      },
+      {
+        "Weight": 5,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 1
+      },
+      {
+        "Weight": 5,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 100,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 1
+      },
+      {
+        "Weight": 4,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 250,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 1
+      },
+      {
+        "Weight": 3,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 2
+      },
+      {
+        "Weight": 3,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 2
+      },
+      {
+        "Weight": 3,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 100,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 2
+      },
+      {
+        "Weight": 2,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 250,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 2
+      },
+      {
+        "Weight": 2,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 1,
+        "ItemTableIndex": 3
+      },
+      {
+        "Weight": 2,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 1,
+        "ItemTableIndex": 3
+      },
+      {
+        "Weight": 1,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 100,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 1,
+        "ItemTableIndex": 3
+      },
+      {
+        "Weight": 1,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 250,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 1,
+        "ItemTableIndex": 3
+      },
+      {
+        "Weight": 4,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 25,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 5
+      },
+      {
+        "Weight": 4,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 50,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 5
+      },
+      {
+        "Weight": 3,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 100,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 5
+      },
+      {
+        "Weight": 3,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 250,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 5
+      },
+      {
+        "Weight": 2,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 100,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 6
+      },
+      {
+        "Weight": 2,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 250,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 4,
+        "ItemTableIndex": 6
+      },
+      {
+        "Weight": 1,
+        "GemDice": 3,
+        "GemDiceSize": 6,
+        "GemValue": 100,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 1,
+        "ItemTableIndex": 7
+      },
+      {
+        "Weight": 1,
+        "GemDice": 2,
+        "GemDiceSize": 4,
+        "GemValue": 250,
+        "ItemDiceCount": 1,
+        "ItemDiceSize": 1,
+        "ItemTableIndex": 7
+      }
+    ]
+  }
+]

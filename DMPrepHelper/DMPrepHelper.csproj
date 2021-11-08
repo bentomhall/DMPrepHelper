@@ -114,6 +114,7 @@
     <Compile Include="ViewModels\ConfigItemViewModel.cs" />
     <Compile Include="ViewModels\DMGDungeonGenerator.cs" />
     <Compile Include="ViewModels\DMGDungeonViewModel.cs" />
+    <Compile Include="ViewModels\DMGTreasureGenerator.cs" />
     <Compile Include="ViewModels\DungeonGeneratorViewModel.cs" />
     <Compile Include="ViewModels\DungeonViewModel.cs" />
     <Compile Include="ViewModels\NotifyChangedBase.cs" />
@@ -131,6 +132,9 @@
     </Compile>
     <Compile Include="Views\DMGDungeonPage.xaml.cs">
       <DependentUpon>DMGDungeonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DMGTreasurePage.xaml.cs">
+      <DependentUpon>DMGTreasurePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DungeonPage.xaml.cs">
       <DependentUpon>DungeonPage.xaml</DependentUpon>
@@ -217,7 +221,15 @@
     <Content Include="Assets\races.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\dmgTreasureTableData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\treasureData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="DefaultAssets\cityData.json" />
+    <None Include="DefaultAssets\dmgTreasureTableData.json" />
+    <None Include="DefaultAssets\treasureData.json" />
     <None Include="DMPrepHelper_StoreKey.pfx" />
     <None Include="DMPrepHelper_TemporaryKey.pfx" />
     <None Include="DefaultAssets\dungeonData.json" />
@@ -304,6 +316,10 @@
     <Page Include="Views\DMGDungeonPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DMGTreasurePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DungeonPage.xaml">
       <SubType>Designer</SubType>
