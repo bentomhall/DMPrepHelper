@@ -32,11 +32,18 @@ namespace libGenerator.Treasure
             var rolledItems = new List<string>();
             if (includeItems)
             {
-                var itemRolls = MathUtil.Roll(itemEntry.ItemDiceCount, itemEntry.ItemDiceSize, random);
-                for (int i = 0; i < itemRolls; i++ )
+
+                for (int j = 0; j < itemEntry.ItemTableIndex.Count; j++)
                 {
-                    var item = tables[i].GetItem(random.NextDouble());
-                    rolledItems.Add(item.Description);
+                    var itemRolls = MathUtil.Roll(itemEntry.ItemDiceCount[j], itemEntry.ItemDiceSize[j], random);
+                    for (int i = 0; i < itemRolls; i++)
+                    {
+                        var item = tables[i].GetItem(random.NextDouble());
+                        if (item.Description.Length > 0)
+                        {
+                            rolledItems.Add(item.Description);
+                        }
+                    }
                 }
             }
             return new Tuple<CashReward, List<string>>(cash, rolledItems);
@@ -83,8 +90,8 @@ namespace libGenerator.Treasure
         public int GemDice { get; set; } = 0;
         public int GemDiceSize { get; set; } = 6;
         public int GemValue { get; set; } = 0;
-        public int ItemDiceCount { get; set; } = 0;
-        public int ItemDiceSize { get; set; } = 6;
-        public int ItemTableIndex { get; set; } = 0;
+        public List<int> ItemDiceCount { get; set; } = new List<int>();
+        public List<int> ItemDiceSize { get; set; } = new List<int>();
+        public List<int> ItemTableIndex { get; set; } = new List<int>();
     }
 }

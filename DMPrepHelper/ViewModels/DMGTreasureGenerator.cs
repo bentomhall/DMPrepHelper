@@ -68,7 +68,7 @@ namespace DMPrepHelper.ViewModels
 
         private void Export()
         {
-            //var dummy = storage.WriteFile(DMPrepHelper.Export.ExportTypes.DMGDungeon, SelectedViewModels.Select(s => s.Dungeon));
+            var dummy = storage.WriteFile(DMPrepHelper.Export.ExportTypes.Treasure, SelectedViewModels.Select(s => s.Model));
         }
     }
 
@@ -78,13 +78,26 @@ namespace DMPrepHelper.ViewModels
 
         public DMGTreasureViewModel(TreasureTable.CashReward cash, List<string> items)
         {
-            this.cash = cash;
-            Items = items;
+            Model = new DMGTreasureHoard
+            {
+                Cash = cash,
+                Items = items
+            };
         }
 
-        public string Cash { get => cash.Description; }
-        public List<string> Items { get; }
+        public string Cash { get => Model.Cash.Description; }
+        public List<string> Items { get => (List<string>)Model.Items; }
 
         public bool HasItems { get => Items.Count > 0; }
+
+        public double Height { get => Items.Count * 25.0; }
+
+        public DMGTreasureHoard Model { get; }
+    }
+
+    public class DMGTreasureHoard
+    {
+        public TreasureTable.CashReward Cash;
+        public IEnumerable<string> Items;
     }
 }

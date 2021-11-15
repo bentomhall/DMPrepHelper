@@ -34,7 +34,8 @@ namespace DMPrepHelper.Export
         Person,
         Dungeon,
         Settlement,
-        DMGDungeon
+        DMGDungeon,
+        Treasure
     }
 
 
@@ -166,6 +167,33 @@ namespace DMPrepHelper.Export
                 }
                 output.Add($"Connects to: {string.Join(", ", d.AdjacencyFor(c.Id))}");
                 output.Add(internalSeparator);
+            }
+            return string.Join(Environment.NewLine, output);
+        }
+    }
+
+    public class DMGTreasureExporter : ExportBase<ViewModels.DMGTreasureHoard>, IExporter<ViewModels.DMGTreasureHoard>
+    {
+        public override string FormatData(object o)
+        {
+            return FormatData(o as ViewModels.DMGTreasureHoard);
+        }
+
+        public string FormatData(ViewModels.DMGTreasureHoard hoard)
+        {
+            var internalSeparator = "+++++++++++++";
+            var output = new List<string>()
+            {
+                $"Cash: {hoard.Cash.Description}"
+            };
+            if (hoard.Items.Count() > 0)
+            {
+                output.Add(internalSeparator);
+                output.Add("Items:");
+            }
+            foreach (var i in hoard.Items)
+            {
+                output.Add(i);
             }
             return string.Join(Environment.NewLine, output);
         }

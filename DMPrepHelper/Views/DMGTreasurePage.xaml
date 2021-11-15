@@ -41,14 +41,10 @@
                   Background="{StaticResource ItemPanelBackgroundBrush}">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:DMGTreasureViewModel">
-                    <Grid  Margin="8,12,12,8" Background="{StaticResource ItemBackgroundBrush}">
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="{x:Bind Cash}" Grid.Row="0" Margin="4,4,4,2"/>
-                        <ListView ItemsSource="{x:Bind Items}" Visibility="{x:Bind HasItems}" Grid.Row="1" SelectionMode="None" IsItemClickEnabled="False" ItemContainerStyle="{StaticResource ListStretchStyle}"/>
-                    </Grid>
+                    <StackPanel  Margin="8,12,12,8" Background="{StaticResource ItemBackgroundBrush}" Orientation="Vertical">
+                        <TextBlock Text="{x:Bind Cash}" Margin="4,4,4,2"/>
+                        <ListView ItemsSource="{x:Bind Items}" Visibility="{x:Bind HasItems}" Height="{x:Bind Height}" SelectionMode="None" IsItemClickEnabled="False" ItemContainerStyle="{StaticResource ListStretchStyle}"/>
+                    </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

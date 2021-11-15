@@ -197,6 +197,10 @@ namespace DMPrepHelper
                     isDataDirty["settlement"] = true;
                     isDataDirty["npc"] = true;
                     break;
+                case DataFile.DMGTreasure:
+                case DataFile.DMGTreasureTable:
+                    isDataDirty["treasure"] = true;
+                    break;
             }
             return;
         }
@@ -286,9 +290,18 @@ namespace DMPrepHelper
                 case Export.ExportTypes.DMGDungeon:
                     await WriteDMGDungeon(writer, data as IEnumerable<DMGDungeon>);
                     break;
+                case Export.ExportTypes.Treasure:
+                    await WriteTreasure(writer, data as IEnumerable<ViewModels.DMGTreasureHoard>);
+                    break;
             }
             return;
 
+        }
+
+        private async Task WriteTreasure(Export.ExportWriter e, IEnumerable<ViewModels.DMGTreasureHoard> data)
+        {
+            var exporter = new Export.DMGTreasureExporter();
+            await e.WriteFile(exporter, data);
         }
 
         private async Task WriteNPC(Export.ExportWriter e, IEnumerable<PersonData> data)
